@@ -1,7 +1,9 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronDown, Sparkles } from 'lucide-react';
 
 const FAQSection = () => {
+    const [expanded, setExpanded] = useState(null);
+
     const faqs = [
         {
             question: "Do I need prior programming experience?",
@@ -25,25 +27,73 @@ const FAQSection = () => {
         }
     ];
 
+    const toggleFAQ = (index) => {
+        setExpanded(expanded === index ? null : index);
+    };
+
     return (
-        <section className="py-12 md:py-16 lg:py-20 bg-slate-900">
-            <div className="container mx-auto px-4 sm:px-6">
-                <div className="text-center mb-10 md:mb-14 lg:mb-16">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4">Frequently Asked Questions</h2>
-                    <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-4">
-                        Everything you need to know about our courses
+        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute inset-0 opacity-30">
+                <div className="absolute top-20 left-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl"></div>
+            </div>
+
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                <div className="text-center mb-12 md:mb-16 lg:mb-20">
+                    <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 px-4 py-2 rounded-full mb-6">
+                        <Sparkles className="w-4 h-4 text-blue-400" />
+                        <span className="text-xs sm:text-sm font-semibold text-blue-400 uppercase tracking-widest">FAQ</span>
+                    </div>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 md:mb-6 bg-gradient-to-r from-blue-400 via-blue-300 to-purple-400 bg-clip-text text-transparent">
+                        Frequently Asked Questions
+                    </h2>
+                    <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                        Find answers to common questions about our courses, learning experience, and career support
                     </p>
                 </div>
-                <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
-                    {faqs.map((faq, index) => (
-                        <div key={index} className="bg-slate-800 p-4 sm:p-5 md:p-6 rounded-lg md:rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
-                            <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 md:mb-3 flex items-start gap-2 sm:gap-3">
-                                <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 flex-shrink-0 mt-0.5 sm:mt-1" />
-                                <span className="flex-1">{faq.question}</span>
-                            </h3>
-                            <p className="text-sm sm:text-base text-gray-400 leading-relaxed pl-7 sm:pl-9">{faq.answer}</p>
-                        </div>
-                    ))}
+
+                <div className="max-w-3xl mx-auto">
+                    <div className="space-y-3 sm:space-y-4">
+                        {faqs.map((faq, index) => (
+                            <div
+                                key={index}
+                                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-blue-500/50 rounded-lg md:rounded-xl transition-all duration-300"
+                            >
+                                <button
+                                    onClick={() => toggleFAQ(index)}
+                                    className="w-full text-left p-4 sm:p-5 md:p-6 flex items-center justify-between gap-4"
+                                >
+                                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-200 flex-1">
+                                        {faq.question}
+                                    </h3>
+                                    <ChevronDown
+                                        className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-blue-400 flex-shrink-0 transition-all duration-300 ${expanded === index ? 'rotate-180' : ''
+                                            }`}
+                                    />
+                                </button>
+
+                                <div
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${expanded === index ? 'max-h-96' : 'max-h-0'
+                                        }`}
+                                >
+                                    <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 border-t border-slate-700">
+                                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                                            {faq.answer}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* CTA after FAQs */}
+                    <div className="mt-10 md:mt-12 lg:mt-16 p-6 sm:p-8 md:p-10 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-lg md:rounded-xl text-center">
+                        <p className="text-gray-300 mb-4">Still have questions?</p>
+                        <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/50">
+                            Contact Our Team
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
