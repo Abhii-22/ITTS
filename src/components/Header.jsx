@@ -2,6 +2,46 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search, Phone } from 'lucide-react';
 
+// Creative Logo Component
+const LogoComponent = ({ isScrolled }) => {
+    return (
+        <svg
+            viewBox="0 0 100 100"
+            className={`${isScrolled ? 'w-9 h-9' : 'w-11 h-11'} transition-all duration-300`}
+        >
+            <defs>
+                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#60A5FA" />
+                    <stop offset="100%" stopColor="#1E40AF" />
+                </linearGradient>
+            </defs>
+
+            {/* Main circle background */}
+            <circle cx="50" cy="50" r="48" fill="url(#logoGrad)" opacity="0.95" />
+
+            {/* Outer ring accent */}
+            <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
+
+            {/* Tech pyramid - representing growth and learning */}
+            <g transform="translate(50, 50)">
+                {/* Bottom layer */}
+                <rect x="-18" y="8" width="36" height="6" rx="2" fill="rgba(255,255,255,0.3)" />
+                {/* Middle layer */}
+                <rect x="-12" y="0" width="24" height="6" rx="2" fill="rgba(255,255,255,0.65)" />
+                {/* Top layer */}
+                <rect x="-6" y="-8" width="12" height="6" rx="2" fill="rgba(255,255,255,1)" />
+
+                {/* Upward arrow accent */}
+                <path d="M 0,-14 L 4,-8 L -4,-8 Z" fill="rgba(255,255,255,0.9)" />
+
+                {/* Side accent dots */}
+                <circle cx="-22" cy="0" r="2" fill="rgba(255,255,255,0.4)" />
+                <circle cx="22" cy="0" r="2" fill="rgba(255,255,255,0.4)" />
+            </g>
+        </svg>
+    );
+};
+
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,15 +75,13 @@ const Header = () => {
         setOpenDropdown(null);
     }, [location.pathname]);
 
-    // Handle hash navigation on mount and location change
     useEffect(() => {
         if (location.hash) {
-            // Wait for page to render
             setTimeout(() => {
                 const id = location.hash.replace('#', '');
                 const element = document.getElementById(id);
                 if (element) {
-                    const headerOffset = 80; // Account for fixed header
+                    const headerOffset = 80;
                     const elementPosition = element.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -113,7 +151,6 @@ const Header = () => {
     const handleNavClick = (e, path) => {
         e.preventDefault();
 
-        // Close mobile menu and dropdown
         setIsMobileMenuOpen(false);
         setOpenDropdown(null);
 
@@ -122,10 +159,9 @@ const Header = () => {
             const targetRoute = route || '/';
 
             if (location.pathname === targetRoute) {
-                // Same page, just scroll to section
                 const element = document.getElementById(hash);
                 if (element) {
-                    const headerOffset = 80; // Account for fixed header
+                    const headerOffset = 80;
                     const elementPosition = element.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -135,13 +171,10 @@ const Header = () => {
                     });
                 }
             } else {
-                // Different page, navigate then scroll
                 navigate(targetRoute + '#' + hash);
             }
         } else {
-            // Regular navigation without hash
             navigate(path);
-            // Scroll to top for new page
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
@@ -151,7 +184,6 @@ const Header = () => {
             return location.pathname === '/' && !location.hash;
         }
 
-        // Handle hash links
         if (path.includes('#')) {
             const [route, hash] = path.split('#');
             const targetRoute = route || '/';
@@ -174,33 +206,39 @@ const Header = () => {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-slate-900/95 backdrop-blur-md shadow-lg py-3 border-b border-slate-800'
-                : 'bg-slate-950 py-4'
+                ? 'bg-gradient-to-b from-slate-900/98 to-slate-900/95 backdrop-blur-lg shadow-xl py-2 border-b border-slate-700/50'
+                : 'bg-gradient-to-b from-slate-950 to-slate-900 py-4 border-b border-slate-800/50'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
-                    {/* Logo */}
+                    {/* Logo - Enhanced */}
                     <Link
                         to="/"
-                        className="flex items-center space-x-3 group"
+                        className="flex items-center space-x-2.5 group"
                         onClick={(e) => {
                             e.preventDefault();
                             navigate('/');
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
                     >
+                        {/* Creative SVG Logo */}
                         <div className="relative">
-                            <div className="w-11 h-11 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-xl shadow-md group-hover:shadow-lg group-hover:bg-blue-700 transition-all duration-300">
-                                E
-                            </div>
+                            <LogoComponent isScrolled={isScrolled} />
+
+                            {/* Subtle glow effect on hover */}
+                            <div className="absolute inset-0 bg-blue-500/20 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
-                        <div className="hidden sm:block">
-                            <span className="text-white font-bold text-xl block leading-tight group-hover:text-blue-400 transition-colors duration-300">
-                                EduTech Academy
+
+                        {/* Logo Text */}
+                        <div className="hidden sm:flex flex-col">
+                            <span className={`font-bold leading-tight group-hover:text-blue-400 transition-colors duration-300 ${isScrolled ? 'text-base text-white' : 'text-lg text-white'
+                                }`}>
+                                ITTS
                             </span>
-                            <span className="text-slate-400 text-xs font-medium tracking-wide">
-                                Excellence in Education
+                            <span className={`font-semibold tracking-wide group-hover:text-blue-300 transition-colors duration-300 ${isScrolled ? 'text-xs text-slate-400' : 'text-xs text-slate-400'
+                                }`}>
+                                Tech Education
                             </span>
                         </div>
                     </Link>
@@ -217,9 +255,9 @@ const Header = () => {
                                 >
                                     {item.hasDropdown ? (
                                         <button
-                                            className={`px-4 py-2 rounded-lg transition-all duration-200 flex items-center space-x-1 ${isActiveLink(item.path)
-                                                ? 'text-white bg-blue-600'
-                                                : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                                            className={`px-4 py-2 rounded-lg transition-all duration-200 flex items-center space-x-1 font-medium text-sm ${isActiveLink(item.path)
+                                                ? 'text-white bg-gradient-to-r from-blue-600 to-blue-500 shadow-lg'
+                                                : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                                                 }`}
                                             onClick={(e) => {
                                                 if (item.path !== '#') {
@@ -227,7 +265,7 @@ const Header = () => {
                                                 }
                                             }}
                                         >
-                                            <span className="font-medium text-sm">{item.name}</span>
+                                            <span>{item.name}</span>
                                             <ChevronDown
                                                 className={`w-4 h-4 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''
                                                     }`}
@@ -237,19 +275,19 @@ const Header = () => {
                                         <a
                                             href={item.path}
                                             onClick={(e) => handleNavClick(e, item.path)}
-                                            className={`px-4 py-2 rounded-lg transition-all duration-200 flex items-center ${isActiveLink(item.path)
-                                                ? 'text-white bg-blue-600'
-                                                : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                                            className={`px-4 py-2 rounded-lg transition-all duration-200 font-medium text-sm ${isActiveLink(item.path)
+                                                ? 'text-white bg-gradient-to-r from-blue-600 to-blue-500 shadow-lg'
+                                                : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                                                 }`}
                                         >
-                                            <span className="font-medium text-sm">{item.name}</span>
+                                            {item.name}
                                         </a>
                                     )}
 
                                     {/* Dropdown Menu */}
                                     {item.hasDropdown && item.submenu && (
                                         <div
-                                            className={`absolute left-0 mt-1 w-56 bg-slate-900 rounded-lg shadow-xl border border-slate-800 transition-all duration-200 ${openDropdown === item.name
+                                            className={`absolute left-0 mt-1 w-56 bg-slate-900/95 backdrop-blur-sm rounded-lg shadow-2xl border border-slate-700/50 transition-all duration-200 ${openDropdown === item.name
                                                 ? 'opacity-100 visible translate-y-0'
                                                 : 'opacity-0 invisible -translate-y-2 pointer-events-none'
                                                 }`}
@@ -263,8 +301,8 @@ const Header = () => {
                                                         href={sub.path}
                                                         onClick={(e) => handleNavClick(e, sub.path)}
                                                         className={`block px-4 py-2.5 text-sm transition-all duration-150 ${isActiveLink(sub.path)
-                                                                ? 'text-white bg-blue-600'
-                                                                : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                                                            ? 'text-white bg-blue-600 mx-1 rounded'
+                                                            : 'text-slate-300 hover:text-white hover:bg-slate-800/60 hover:mx-1 hover:rounded'
                                                             }`}
                                                     >
                                                         {sub.name}
@@ -283,16 +321,16 @@ const Header = () => {
                         {/* Phone Button */}
                         <a
                             href="tel:+918888888888"
-                            className="hidden xl:flex items-center space-x-2 text-slate-300 hover:text-white transition-all duration-200 px-4 py-2 rounded-lg hover:bg-slate-800"
+                            className="hidden xl:flex items-center space-x-2 text-slate-300 hover:text-blue-400 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-slate-800/60 font-medium text-sm"
                         >
                             <Phone className="w-4 h-4" />
-                            <span className="text-sm font-medium">+91 8888 888 888</span>
+                            <span>+91 8888 888 888</span>
                         </a>
 
                         {/* CTA Button */}
                         <Link
                             to="/contact"
-                            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-md hover:bg-blue-700 hover:shadow-lg transform hover:scale-105 active:scale-95"
+                            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-blue-500/50 hover:scale-105 active:scale-95"
                         >
                             Enroll Now
                         </Link>
@@ -301,7 +339,7 @@ const Header = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="lg:hidden text-white p-2 rounded-lg hover:bg-slate-800 transition-all duration-200"
+                        className="lg:hidden text-white p-2 rounded-lg hover:bg-slate-800/60 transition-all duration-200"
                         aria-label="Toggle menu"
                     >
                         {isMobileMenuOpen ? (
@@ -317,7 +355,7 @@ const Header = () => {
                     className={`lg:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0'
                         }`}
                 >
-                    <div className="pb-4 border-t border-slate-800 pt-4 space-y-2">
+                    <div className="pb-4 border-t border-slate-700/50 pt-4 space-y-2">
                         {navItems.map((item) => (
                             <div key={item.name}>
                                 {item.hasDropdown ? (
@@ -325,12 +363,12 @@ const Header = () => {
                                         onClick={() => {
                                             setOpenDropdown(openDropdown === item.name ? null : item.name);
                                         }}
-                                        className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 ${isActiveLink(item.path)
-                                            ? 'bg-blue-600 text-white'
-                                            : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                                        className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 font-medium ${isActiveLink(item.path)
+                                            ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white'
+                                            : 'text-slate-300 hover:bg-slate-800/60 hover:text-white'
                                             }`}
                                     >
-                                        <span className="font-medium">{item.name}</span>
+                                        <span>{item.name}</span>
                                         <ChevronDown
                                             className={`w-4 h-4 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''
                                                 }`}
@@ -340,12 +378,12 @@ const Header = () => {
                                     <a
                                         href={item.path}
                                         onClick={(e) => handleNavClick(e, item.path)}
-                                        className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 ${isActiveLink(item.path)
-                                            ? 'bg-blue-600 text-white'
-                                            : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                                        className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 font-medium ${isActiveLink(item.path)
+                                            ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white'
+                                            : 'text-slate-300 hover:bg-slate-800/60 hover:text-white'
                                             }`}
                                     >
-                                        <span className="font-medium">{item.name}</span>
+                                        <span>{item.name}</span>
                                     </a>
                                 )}
 
@@ -357,15 +395,15 @@ const Header = () => {
                                             : 'max-h-0 opacity-0'
                                             }`}
                                     >
-                                        <div className="ml-4 space-y-1 border-l-2 border-slate-700 pl-4">
+                                        <div className="ml-4 space-y-1 border-l-2 border-slate-700/50 pl-4">
                                             {item.submenu.map((sub, idx) => (
                                                 <a
                                                     key={idx}
                                                     href={sub.path}
                                                     onClick={(e) => handleNavClick(e, sub.path)}
-                                                    className={`block px-3 py-2 text-sm rounded-lg transition-all duration-150 ${isActiveLink(sub.path)
-                                                            ? 'text-white bg-blue-600'
-                                                            : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                                                    className={`block px-3 py-2 text-sm rounded-lg transition-all duration-150 font-medium ${isActiveLink(sub.path)
+                                                        ? 'text-white bg-blue-600'
+                                                        : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
                                                         }`}
                                                 >
                                                     {sub.name}
@@ -385,7 +423,7 @@ const Header = () => {
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     placeholder="Search courses..."
-                                    className="w-full bg-slate-800 text-white placeholder-slate-400 px-4 py-3 pl-10 rounded-lg border border-slate-700 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all duration-200"
+                                    className="w-full bg-slate-800/60 text-white placeholder-slate-500 px-4 py-3 pl-10 rounded-lg border border-slate-700/50 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 transition-all duration-200"
                                 />
                                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                             </div>
@@ -395,13 +433,13 @@ const Header = () => {
                         <div className="pt-4 space-y-2">
                             <Link
                                 to="/contact"
-                                className="block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-md hover:bg-blue-700 hover:shadow-lg active:scale-95"
+                                className="block w-full text-center bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-blue-500/50 active:scale-95"
                             >
                                 Enroll Now
                             </Link>
                             <a
                                 href="tel:+918888888888"
-                                className="w-full flex items-center justify-center space-x-2 text-slate-300 bg-slate-800 px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-200 border border-slate-700"
+                                className="w-full flex items-center justify-center space-x-2 text-slate-300 bg-slate-800/60 px-6 py-3 rounded-lg font-medium hover:bg-slate-700/60 transition-all duration-200 border border-slate-700/50"
                             >
                                 <Phone className="w-4 h-4" />
                                 <span>+91 8888 888 888</span>
