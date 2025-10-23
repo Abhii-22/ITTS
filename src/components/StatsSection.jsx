@@ -21,7 +21,7 @@ const StatsSection = () => {
                     observer.unobserve(entry.target);
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.2 }
         );
 
         if (sectionRef.current) {
@@ -34,18 +34,19 @@ const StatsSection = () => {
     useEffect(() => {
         if (!isVisible) return;
 
-        const duration = 2000;
+        const duration = 2500;
         const startTime = Date.now();
 
         const animateCounter = () => {
             const now = Date.now();
             const progress = Math.min((now - startTime) / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 3);
 
             setCounts({
-                students: Math.floor(stats[0].value * progress),
-                courses: Math.floor(stats[1].value * progress),
-                success: Math.floor(stats[2].value * progress),
-                countries: Math.floor(stats[3].value * progress)
+                students: Math.floor(stats[0].value * easeOut),
+                courses: Math.floor(stats[1].value * easeOut),
+                success: Math.floor(stats[2].value * easeOut),
+                countries: Math.floor(stats[3].value * easeOut)
             });
 
             if (progress < 1) {
@@ -61,76 +62,89 @@ const StatsSection = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative py-24 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
+            className="relative py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 overflow-hidden"
         >
-            {/* Animated background elements */}
+            {/* Dynamic animated background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-2000" />
+                <div className="absolute top-1/2 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-blob animation-delay-4000" />
             </div>
 
             <div className="relative container mx-auto px-6 z-10">
-                {/* Section Title */}
-                <div className="text-center mb-20">
+                {/* Section Header */}
+                <div className="text-center mb-24">
+                    <div
+                        className={`inline-block mb-6 transition-all duration-1000 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                            }`}
+                    >
+                        <div className="px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm">
+                            <span className="text-sm font-semibold text-blue-400">Why We're Leading</span>
+                        </div>
+                    </div>
+
                     <h2
-                        className={`text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-white to-purple-400 bg-clip-text text-transparent mb-4 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        className={`text-6xl md:text-7xl font-black leading-tight mb-6 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                             }`}
+                        style={{ transitionDelay: '100ms' }}
                     >
-                        Our Impact
+                        <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                            Trusted by Thousands
+                        </span>
                     </h2>
+
                     <p
-                        className={`text-xl text-gray-400 max-w-2xl mx-auto transition-all duration-1000 delay-200 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        className={`text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                             }`}
+                        style={{ transitionDelay: '200ms' }}
                     >
-                        Join thousands of learners transforming their careers
+                        Our community spans across the globe, with learners achieving their dreams every single day
                     </p>
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     {stats.map((stat, index) => {
                         const Icon = stat.icon;
-                        const delay = index * 100;
+                        const delay = index * 150;
+                        const displayValue = displayValues[index];
 
                         return (
                             <div
                                 key={index}
-                                className={`group transition-all duration-1000 transform ${isVisible
+                                className={`flex flex-col items-center text-center transition-all duration-1000 transform ${isVisible
                                         ? 'opacity-100 translate-y-0'
-                                        : 'opacity-0 translate-y-8'
+                                        : 'opacity-0 translate-y-12'
                                     }`}
-                                style={{
-                                    transitionDelay: `${delay}ms`
-                                }}
+                                style={{ transitionDelay: `${delay + 300}ms` }}
                             >
-                                <div className="relative h-full">
-                                    {/* Glowing background on hover */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
-
-                                    {/* Card */}
-                                    <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 group-hover:border-blue-500/50 transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-2">
-                                        {/* Icon Container */}
-                                        <div className="inline-flex p-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl mb-6 group-hover:from-blue-600/40 group-hover:to-purple-600/40 transition-all duration-300 transform group-hover:scale-110">
-                                            <Icon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
-                                        </div>
-
-                                        {/* Value with animation */}
-                                        <div className="relative mb-3">
-                                            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                                                {displayValues[index].toLocaleString()}
-                                                <span className="text-blue-400">{stat.suffix}</span>
-                                            </div>
-                                        </div>
-
-                                        {/* Label */}
-                                        <div className="text-gray-400 text-lg font-medium group-hover:text-gray-300 transition-colors duration-300">
-                                            {stat.label}
-                                        </div>
-
-                                        {/* Bottom accent line */}
-                                        <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-b-2xl w-0 group-hover:w-full transition-all duration-500" />
+                                {/* Icon Box */}
+                                <div className="relative group mb-8">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-150" />
+                                    <div className="relative p-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-500 backdrop-blur-sm">
+                                        <Icon className="w-10 h-10 text-blue-400 group-hover:text-blue-300 transition-all duration-300 group-hover:scale-110" />
                                     </div>
                                 </div>
+
+                                {/* Number - Large and Bold */}
+                                <div className="mb-3 relative">
+                                    <div className="text-7xl md:text-8xl font-black tracking-tight leading-none">
+                                        <span className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
+                                            {displayValue.toLocaleString()}
+                                        </span>
+                                        <span className="text-4xl md:text-5xl ml-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-bold">
+                                            {stat.suffix}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Label */}
+                                <p className="text-gray-300 text-lg md:text-xl font-semibold mb-4">
+                                    {stat.label}
+                                </p>
+
+                                {/* Divider */}
+                                <div className="w-12 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:w-20" />
                             </div>
                         );
                     })}
@@ -138,19 +152,28 @@ const StatsSection = () => {
             </div>
 
             <style>{`
-                @keyframes fadeInUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(20px);
+                @keyframes blob {
+                    0%, 100% {
+                        transform: translate(0, 0) scale(1);
                     }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
+                    33% {
+                        transform: translate(30px, -50px) scale(1.1);
+                    }
+                    66% {
+                        transform: translate(-20px, 20px) scale(0.9);
                     }
                 }
 
-                .delay-1000 {
-                    animation-delay: 1s;
+                .animate-blob {
+                    animation: blob 7s infinite;
+                }
+
+                .animation-delay-2000 {
+                    animation-delay: 2s;
+                }
+
+                .animation-delay-4000 {
+                    animation-delay: 4s;
                 }
             `}</style>
         </section>
