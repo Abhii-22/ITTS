@@ -36,25 +36,25 @@ const FeaturesSection = () => {
     ];
 
     return (
-        <section className="py-20 bg-slate-800">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold text-white mb-4">Why Choose Us?</h2>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+        <section className="py-12 md:py-16 lg:py-20 bg-slate-800">
+            <div className="container mx-auto px-4 sm:px-6">
+                <div className="text-center mb-10 md:mb-14 lg:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4">Why Choose Us?</h2>
+                    <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-4">
                         We provide everything you need to succeed in your tech career
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
                         return (
-                            <div key={index} className="bg-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300 group hover:transform hover:scale-105">
-                                <div className="inline-flex p-4 bg-blue-600/10 rounded-xl mb-6 group-hover:bg-blue-600/20 transition-all">
-                                    <Icon className="w-8 h-8 text-blue-400" />
+                            <div key={index} className="bg-slate-900 p-6 sm:p-7 md:p-8 rounded-xl md:rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300 group hover:transform hover:scale-105">
+                                <div className="inline-flex p-3 md:p-4 bg-blue-600/10 rounded-lg md:rounded-xl mb-4 md:mb-6 group-hover:bg-blue-600/20 transition-all">
+                                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-blue-400" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-                             </div>
+                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 md:mb-4">{feature.title}</h3>
+                                <p className="text-sm sm:text-base text-gray-400 leading-relaxed">{feature.description}</p>
+                            </div>
                         );
                     })}
                 </div>

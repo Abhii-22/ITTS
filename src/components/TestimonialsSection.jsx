@@ -27,28 +27,28 @@ const TestimonialsSection = () => {
     ];
 
     return (
-        <section className="py-20 bg-slate-800">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold text-white mb-4">Student Success Stories</h2>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+        <section className="py-12 md:py-16 lg:py-20 bg-slate-800">
+            <div className="container mx-auto px-4 sm:px-6">
+                <div className="text-center mb-10 md:mb-14 lg:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4">Student Success Stories</h2>
+                    <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-4">
                         Hear from our graduates who transformed their careers
                     </p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="bg-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                        <div key={index} className="bg-slate-900 p-6 sm:p-7 md:p-8 rounded-xl md:rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
                             <div className="flex items-center gap-1 mb-4">
                                 {[...Array(testimonial.rating)].map((_, i) => (
-                                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                                    <Star key={i} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-yellow-400" />
                                 ))}
                             </div>
-                            <p className="text-gray-300 mb-6 leading-relaxed italic">"{testimonial.content}"</p>
-                            <div className="flex items-center gap-4">
-                                <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover" />
-                                <div>
-                                    <div className="font-semibold text-white">{testimonial.name}</div>
-                                    <div className="text-sm text-gray-400">{testimonial.role}</div>
+                            <p className="text-sm sm:text-base text-gray-300 mb-6 leading-relaxed italic">"{testimonial.content}"</p>
+                            <div className="flex items-center gap-3 md:gap-4">
+                                <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover flex-shrink-0" />
+                                <div className="min-w-0">
+                                    <div className="font-semibold text-white text-sm sm:text-base truncate">{testimonial.name}</div>
+                                    <div className="text-xs sm:text-sm text-gray-400 truncate">{testimonial.role}</div>
                                 </div>
                             </div>
                         </div>
