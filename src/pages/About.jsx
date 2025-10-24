@@ -153,25 +153,25 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-slate-900 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900/20">
-        <div className="container mx-auto px-6">
+      <section className="pt-16 sm:pt-24 md:pt-32 pb-16 sm:pb-20 md:pb-24 bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900/20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-blue-400 font-semibold text-sm">Welcome to TechLearn</span>
+            <div className="inline-block px-3 sm:px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-4 sm:mb-6 backdrop-blur-sm">
+              <span className="text-blue-400 font-semibold text-xs sm:text-sm">Welcome to TechLearn</span>
             </div>
-            <h1 className="text-7xl md:text-8xl font-bold text-white mb-8 leading-tight bg-clip-text">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight break-words">
               Empowering Tech Leaders Worldwide
             </h1>
-            <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
               We transform passionate learners into job-ready professionals by combining world-class instruction, real projects, and guaranteed career support.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition-all">
+            <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center px-2">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-bold transition-all text-xs sm:text-sm md:text-base whitespace-nowrap">
                 Start Free Trial
               </button>
-              <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-3 rounded-lg font-bold transition-all">
+              <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-bold transition-all text-xs sm:text-sm md:text-base whitespace-nowrap">
                 View Courses
               </button>
             </div>
@@ -180,18 +180,18 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-800 border-t border-slate-700">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
                 <div key={index} className="text-center group cursor-pointer transform hover:scale-105 transition-transform">
-                  <div className="inline-flex p-4 bg-slate-900 border border-slate-700 rounded-full mb-4 group-hover:bg-blue-500/20 group-hover:border-blue-400 transition-all">
-                    <Icon className="w-8 h-8 text-blue-400" />
+                  <div className="inline-flex p-2 sm:p-3 md:p-4 bg-slate-900 border border-slate-700 rounded-full mb-2 sm:mb-3 md:mb-4 group-hover:bg-blue-500/20 group-hover:border-blue-400 transition-all">
+                    <Icon className="w-5 sm:w-6 md:w-8 h-5 sm:h-6 md:h-8 text-blue-400" />
                   </div>
-                  <div className="text-5xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">{stat.value}</div>
-                  <div className="text-gray-400 font-medium text-sm">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2 group-hover:text-blue-300 transition-colors">{stat.value}</div>
+                  <div className="text-gray-400 font-medium text-xs sm:text-sm">{stat.label}</div>
                 </div>
               );
             })}
@@ -200,21 +200,21 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-32 bg-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-4">Why Choose TechLearn?</h2>
-            <p className="text-xl text-gray-400">What sets us apart in the crowded EdTech space</p>
+      <section className="py-16 sm:py-24 md:py-32 bg-slate-900 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-10 sm:mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 break-words">Why Choose TechLearn?</h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">What sets us apart in the crowded EdTech space</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {whyChoose.map((item, index) => (
-              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all group">
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">{item.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{item.description}</p>
+              <div key={index} className="bg-slate-800 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all group">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <CheckCircle className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-blue-400 flex-shrink-0 mt-0.5 sm:mt-1" />
+                  <div className="min-w-0">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-blue-300 transition-colors">{item.title}</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -224,10 +224,10 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-32 bg-slate-800 border-t border-slate-700">
-        <div className="container mx-auto px-6">
+      <section className="py-16 sm:py-24 md:py-32 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center">
               <div className="order-2 md:order-1">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
@@ -235,29 +235,29 @@ const About = () => {
                   className="rounded-2xl w-full border border-slate-600 shadow-2xl"
                 />
               </div>
-              <div className="order-1 md:order-2 space-y-6">
-                <h2 className="text-5xl font-bold text-white">Our Story</h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
+              <div className="order-1 md:order-2 space-y-4 sm:space-y-5 md:space-y-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white break-words">Our Story</h2>
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
                   In 2018, our founders—tech veterans from Google, Amazon, and Microsoft—witnessed firsthand how traditional education was failing the industry. Students were learning outdated tools, irrelevant frameworks, and theories without practical application.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
                   They decided to build the education they wished existed: hands-on, current, and directly tied to job readiness. Every course is taught by active engineers solving real problems, ensuring students learn what actually matters.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
                   Today, our 15,000+ graduates are shipping features at startups, architecting systems at Fortune 500s, and building the future of technology. We're just getting started.
                 </p>
-                <div className="pt-4 flex gap-8">
+                <div className="pt-2 sm:pt-4 flex flex-wrap gap-4 sm:gap-6 md:gap-8">
                   <div>
-                    <div className="text-3xl font-bold text-blue-400">5K+</div>
-                    <div className="text-gray-400">Career Transitions</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">5K+</div>
+                    <div className="text-xs sm:text-sm md:text-base text-gray-400">Career Transitions</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-blue-400">87%</div>
-                    <div className="text-gray-400">6-Month Placement</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">87%</div>
+                    <div className="text-xs sm:text-sm md:text-base text-gray-400">6-Month Placement</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-blue-400">$65K</div>
-                    <div className="text-gray-400">Avg. First Salary</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">$65K</div>
+                    <div className="text-xs sm:text-sm md:text-base text-gray-400">Avg. First Salary</div>
                   </div>
                 </div>
               </div>
@@ -267,14 +267,14 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-32 bg-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-400">Principles that guide every decision</p>
+      <section className="py-16 sm:py-24 md:py-32 bg-slate-900 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-10 sm:mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 break-words">Our Core Values</h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">Principles that guide every decision</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               const isExpanded = expandedValue === index;
@@ -282,21 +282,21 @@ const About = () => {
                 <div
                   key={index}
                   onClick={() => setExpandedValue(isExpanded ? null : index)}
-                  className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 cursor-pointer transition-all transform hover:scale-105"
+                  className="bg-slate-800 p-5 sm:p-6 md:p-8 rounded-2xl border border-slate-700 hover:border-blue-500 cursor-pointer transition-all transform hover:scale-105"
                 >
-                  <div className="inline-flex p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6 group-hover:bg-blue-500/20 transition-all">
-                    <Icon className="w-8 h-8 text-blue-400" />
+                  <div className="inline-flex p-2 sm:p-3 md:p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-3 sm:mb-4 md:mb-6 group-hover:bg-blue-500/20 transition-all">
+                    <Icon className="w-5 sm:w-6 md:w-8 h-5 sm:h-6 md:h-8 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">{value.description}</p>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3 break-words">{value.title}</h3>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed mb-2 sm:mb-3 md:mb-4">{value.description}</p>
                   {isExpanded && (
-                    <div className="pt-4 border-t border-slate-700 animate-in fade-in duration-300">
-                      <p className="text-gray-200 text-sm leading-relaxed">{value.details}</p>
+                    <div className="pt-3 sm:pt-4 border-t border-slate-700 animate-in fade-in duration-300">
+                      <p className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed">{value.details}</p>
                     </div>
                   )}
-                  <div className="text-blue-400 font-semibold flex items-center gap-2 mt-4">
+                  <div className="text-blue-400 font-semibold flex items-center gap-2 mt-3 sm:mt-4 text-xs sm:text-sm md:text-base">
                     {isExpanded ? 'Show less' : 'Learn more'}
-                    <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-3 sm:w-4 h-3 sm:h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                   </div>
                 </div>
               );
@@ -306,41 +306,41 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-32 bg-slate-800 border-t border-slate-700">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-400">Major milestones in our growth story</p>
+      <section className="py-16 sm:py-24 md:py-32 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-10 sm:mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 break-words">Our Journey</h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">Major milestones in our growth story</p>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {milestones.map((milestone, index) => (
                 <div
                   key={index}
                   onClick={() => setExpandedMilestone(expandedMilestone === index ? null : index)}
                   className="cursor-pointer"
                 >
-                  <div className="flex gap-8 items-start">
-                    <div className="flex flex-col items-center pt-2">
-                      <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full border-4 border-slate-800 shadow-lg"></div>
+                  <div className="flex gap-3 sm:gap-6 md:gap-8 items-start">
+                    <div className="flex flex-col items-center pt-1 sm:pt-2 flex-shrink-0">
+                      <div className="w-5 sm:w-6 md:w-8 h-5 sm:h-6 md:h-8 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full border-3 md:border-4 border-slate-800 shadow-lg"></div>
                       {index < milestones.length - 1 && (
-                        <div className="w-1 h-32 bg-gradient-to-b from-blue-500 to-transparent mt-3"></div>
+                        <div className="w-1 h-20 sm:h-24 md:h-32 bg-gradient-to-b from-blue-500 to-transparent mt-2 sm:mt-3"></div>
                       )}
                     </div>
-                    <div className="flex-1 pb-8">
-                      <div className="bg-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 hover:bg-slate-900/80 transition-all">
-                        <div className="flex justify-between items-start mb-2">
-                          <div>
-                            <div className="text-sm font-bold text-blue-400 mb-1">{milestone.year}</div>
-                            <h3 className="text-2xl font-bold text-white">{milestone.title}</h3>
+                    <div className="flex-1 pb-6 sm:pb-8 min-w-0">
+                      <div className="bg-slate-900 p-4 sm:p-5 md:p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 hover:bg-slate-900/80 transition-all">
+                        <div className="flex justify-between items-start mb-2 gap-2">
+                          <div className="min-w-0">
+                            <div className="text-xs sm:text-sm font-bold text-blue-400 mb-1">{milestone.year}</div>
+                            <h3 className="text-base sm:text-lg md:text-2xl font-bold text-white break-words">{milestone.title}</h3>
                           </div>
-                          <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform flex-shrink-0 ${expandedMilestone === index ? 'rotate-180' : ''}`} />
+                          <ChevronDown className={`w-4 sm:w-5 h-4 sm:h-5 text-gray-500 transition-transform flex-shrink-0 mt-1 ${expandedMilestone === index ? 'rotate-180' : ''}`} />
                         </div>
-                        <p className="text-gray-400 mb-3">{milestone.description}</p>
+                        <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-3">{milestone.description}</p>
                         {expandedMilestone === index && (
                           <div className="pt-3 border-t border-slate-700 animate-in fade-in duration-300">
-                            <p className="text-gray-300 leading-relaxed">{milestone.details}</p>
+                            <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">{milestone.details}</p>
                           </div>
                         )}
                       </div>
@@ -354,14 +354,14 @@ const About = () => {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-32 bg-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-4">Meet Our Leadership</h2>
-            <p className="text-xl text-gray-400">Industry veterans committed to your success</p>
+      <section className="py-16 sm:py-24 md:py-32 bg-slate-900 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-10 sm:mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 break-words">Meet Our Leadership</h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">Industry veterans committed to your success</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
             {team.map((member, index) => (
               <div
                 key={index}
@@ -370,7 +370,7 @@ const About = () => {
                 className="group"
               >
                 <div className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all transform hover:scale-105">
-                  <div className="relative h-80 overflow-hidden bg-slate-800">
+                  <div className="relative h-48 sm:h-56 md:h-64 lg:h-80 overflow-hidden bg-slate-800">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -378,31 +378,31 @@ const About = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                    <div className="text-blue-400 font-semibold text-sm mb-3">{member.role}</div>
+                  <div className="p-4 sm:p-5 md:p-6">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 break-words">{member.name}</h3>
+                    <div className="text-blue-400 font-semibold text-xs sm:text-sm mb-3">{member.role}</div>
 
                     {activeTeam === index ? (
-                      <div className="space-y-4 animate-in fade-in duration-300">
-                        <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
-                        <div className="flex flex-wrap gap-2">
+                      <div className="space-y-2 sm:space-y-3 md:space-y-4 animate-in fade-in duration-300">
+                        <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">{member.description}</p>
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                           {member.expertise.map((skill, i) => (
-                            <span key={i} className="px-3 py-1 bg-blue-500/15 border border-blue-500/40 text-blue-300 text-xs rounded-full font-medium">
+                            <span key={i} className="px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-500/15 border border-blue-500/40 text-blue-300 text-xs rounded-full font-medium">
                               {skill}
                             </span>
                           ))}
                         </div>
-                        <div className="flex gap-3 pt-2">
-                          <button className="p-2 bg-slate-900 hover:bg-blue-500/20 border border-slate-600 hover:border-blue-400 rounded-lg transition-all">
-                            <Linkedin className="w-4 h-4 text-gray-400 hover:text-blue-400" />
+                        <div className="flex gap-2 pt-2">
+                          <button className="p-1.5 sm:p-2 bg-slate-900 hover:bg-blue-500/20 border border-slate-600 hover:border-blue-400 rounded-lg transition-all">
+                            <Linkedin className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-gray-400 hover:text-blue-400" />
                           </button>
-                          <button className="p-2 bg-slate-900 hover:bg-blue-500/20 border border-slate-600 hover:border-blue-400 rounded-lg transition-all">
-                            <Twitter className="w-4 h-4 text-gray-400 hover:text-blue-400" />
+                          <button className="p-1.5 sm:p-2 bg-slate-900 hover:bg-blue-500/20 border border-slate-600 hover:border-blue-400 rounded-lg transition-all">
+                            <Twitter className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-gray-400 hover:text-blue-400" />
                           </button>
                         </div>
                       </div>
                     ) : (
-                      <p className="text-gray-400 text-sm line-clamp-2">Hover to see full profile</p>
+                      <p className="text-gray-400 text-xs sm:text-sm line-clamp-2">Hover to see full profile</p>
                     )}
                   </div>
                 </div>
@@ -413,24 +413,24 @@ const About = () => {
       </section>
 
       {/* Achievements */}
-      <section className="py-32 bg-slate-800 border-t border-slate-700">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-4">Awards & Recognition</h2>
-            <p className="text-xl text-gray-400">Recognized globally for educational excellence</p>
+      <section className="py-16 sm:py-24 md:py-32 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-10 sm:mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 break-words">Awards & Recognition</h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">Recognized globally for educational excellence</p>
           </div>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {achievements.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="bg-slate-900 p-8 rounded-xl border border-slate-700 hover:border-blue-500 hover:bg-slate-900/80 transition-all group transform hover:scale-105">
-                  <div className="inline-flex p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg mb-4 group-hover:bg-blue-500/20 transition-all">
-                    <Icon className="w-6 h-6 text-blue-400" />
+                <div key={index} className="bg-slate-900 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-700 hover:border-blue-500 hover:bg-slate-900/80 transition-all group transform hover:scale-105">
+                  <div className="inline-flex p-2 sm:p-3 md:p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg mb-2 sm:mb-3 md:mb-4 group-hover:bg-blue-500/20 transition-all">
+                    <Icon className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400 font-medium mb-2">{item.subtitle}</p>
-                  <p className="text-gray-500 text-sm">{item.detail}</p>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2 break-words">{item.title}</h3>
+                  <p className="text-gray-400 font-medium mb-2 text-xs sm:text-sm md:text-base">{item.subtitle}</p>
+                  <p className="text-gray-500 text-xs sm:text-sm">{item.detail}</p>
                 </div>
               );
             })}
@@ -438,62 +438,41 @@ const About = () => {
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="py-32 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Rocket className="w-20 h-20 text-white mx-auto mb-8" />
-            <h2 className="text-6xl font-bold text-white mb-8">Building Careers, Changing Lives</h2>
-            <p className="text-xl text-blue-100 mb-12 leading-relaxed">
-              From career transitions to first tech jobs, our 15,000+ graduates are solving real problems, building innovative products, and driving technology forward across the globe. They're at Google, Meta, Apple, Amazon, and leading startups everywhere.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-white text-blue-600 px-10 py-4 rounded-xl font-bold hover:bg-gray-100 hover:scale-105 transition-all text-lg shadow-lg">
-                Join Our Community
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 hover:scale-105 transition-all text-lg">
-                View Success Stories
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="py-32 bg-slate-900">
-        <div className="container mx-auto px-6">
+      <section className="py-16 sm:py-24 md:py-32 bg-slate-900 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-white mb-4">Get In Touch</h2>
-              <p className="text-xl text-gray-400">Questions? We'd love to hear from you</p>
+            <div className="text-center mb-10 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 break-words">Get In Touch</h2>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">Questions? We'd love to hear from you</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all text-center transform hover:scale-105">
-                <div className="inline-flex p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-4">
-                  <Mail className="w-6 h-6 text-blue-400" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+              <div className="bg-slate-800 rounded-xl p-5 sm:p-6 md:p-8 border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all text-center transform hover:scale-105">
+                <div className="inline-flex p-2 sm:p-3 md:p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-3 sm:mb-4">
+                  <Mail className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Email</h3>
-                <p className="text-gray-400 mb-2">hello@techlearn.com</p>
-                <p className="text-gray-500 text-sm">Response within 24 hours</p>
+                <h3 className="text-base sm:text-lg md:text-lg font-bold text-white mb-2">Email</h3>
+                <p className="text-gray-400 mb-2 text-xs sm:text-sm md:text-base">hello@techlearn.com</p>
+                <p className="text-gray-500 text-xs sm:text-sm">Response within 24 hours</p>
               </div>
 
-              <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all text-center transform hover:scale-105">
-                <div className="inline-flex p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-4">
-                  <Users className="w-6 h-6 text-blue-400" />
+              <div className="bg-slate-800 rounded-xl p-5 sm:p-6 md:p-8 border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all text-center transform hover:scale-105">
+                <div className="inline-flex p-2 sm:p-3 md:p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-3 sm:mb-4">
+                  <Users className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Community</h3>
-                <p className="text-gray-400 mb-2">Join our Discord server</p>
-                <p className="text-gray-500 text-sm">15,000+ active members</p>
+                <h3 className="text-base sm:text-lg md:text-lg font-bold text-white mb-2">Community</h3>
+                <p className="text-gray-400 mb-2 text-xs sm:text-sm md:text-base">Join our Discord server</p>
+                <p className="text-gray-500 text-xs sm:text-sm">15,000+ active members</p>
               </div>
 
-              <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all text-center transform hover:scale-105">
-                <div className="inline-flex p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-4">
-                  <Globe className="w-6 h-6 text-blue-400" />
+              <div className="bg-slate-800 rounded-xl p-5 sm:p-6 md:p-8 border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all text-center transform hover:scale-105">
+                <div className="inline-flex p-2 sm:p-3 md:p-4 bg-blue-500/10 border border-blue-500/30 rounded-full mb-3 sm:mb-4">
+                  <Globe className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Social Media</h3>
-                <p className="text-gray-400 mb-2">Twitter, LinkedIn, Instagram</p>
-                <p className="text-gray-500 text-sm">Daily tech insights & updates</p>
+                <h3 className="text-base sm:text-lg md:text-lg font-bold text-white mb-2">Social Media</h3>
+                <p className="text-gray-400 mb-2 text-xs sm:text-sm md:text-base">Twitter, LinkedIn, Instagram</p>
+                <p className="text-gray-500 text-xs sm:text-sm">Daily tech insights & updates</p>
               </div>
             </div>
           </div>
@@ -501,15 +480,15 @@ const About = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-slate-800 border-t border-slate-700">
-        <div className="container mx-auto px-6">
+      <section className="py-16 sm:py-20 md:py-24 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-5xl font-bold text-white mb-6">Ready to Transform Your Career?</h2>
-            <p className="text-lg text-gray-400 mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 break-words">Ready to Transform Your Career?</h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-lg text-gray-400 mb-6 sm:mb-10">
               Join 15,000+ students building successful tech careers. Start with a free trial, no credit card required.
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all hover:scale-105 inline-flex items-center gap-3 shadow-lg">
-              Start Learning Today <Rocket className="w-6 h-6" />
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 sm:px-10 md:px-12 py-3 sm:py-4 md:py-5 rounded-xl font-bold text-sm sm:text-base md:text-lg transition-all hover:scale-105 inline-flex items-center gap-2 sm:gap-3 shadow-lg whitespace-nowrap">
+              Start Learning Today <Rocket className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
             </button>
           </div>
         </div>

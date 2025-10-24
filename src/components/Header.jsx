@@ -120,18 +120,6 @@ const Header = () => {
             ]
         },
         { name: 'Batches', path: '/batches' },
-        {
-            name: 'Branches',
-            path: '#',
-            hasDropdown: true,
-            submenu: [
-                { name: 'Delhi', path: '/branches/delhi' },
-                { name: 'Mumbai', path: '/branches/mumbai' },
-                { name: 'Bangalore', path: '/branches/bangalore' },
-                { name: 'Pune', path: '/branches/pune' },
-                { name: 'Hyderabad', path: '/branches/hyderabad' }
-            ]
-        },
         { name: 'Placements', path: '/placement' },
     ];
 

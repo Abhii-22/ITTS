@@ -18,8 +18,8 @@ const Courses = () => {
       duration: "6 weeks",
       students: 2450,
       rating: 4.8,
-      price: "$49",
-      icon: <DiReact className='text-violet-400 size-8' />,
+      price: "49",
+      icon: <DiReact className='text-violet-400 size-6 sm:size-8' />,
       description: "Master React basics, hooks, and component architecture",
       color: "from-purple-500 to-pink-500"
     },
@@ -31,8 +31,8 @@ const Courses = () => {
       duration: "8 weeks",
       students: 1890,
       rating: 4.7,
-      price: "$59",
-      icon: <DiPython className='text-blue-400 size-8' />,
+      price: "59",
+      icon: <DiPython className='text-blue-400 size-6 sm:size-8' />,
       description: "Build scalable APIs with Python and Flask",
       color: "from-emerald-500 to-teal-500"
     },
@@ -44,8 +44,8 @@ const Courses = () => {
       duration: "10 weeks",
       students: 1623,
       rating: 4.9,
-      price: "$79",
-      icon: <DiAws className='text-orange-400 size-8' />,
+      price: "79",
+      icon: <DiAws className='text-orange-400 size-6 sm:size-8' />,
       description: "Design and deploy scalable cloud solutions on AWS",
       color: "from-orange-500 to-red-500"
     },
@@ -57,8 +57,8 @@ const Courses = () => {
       duration: "5 weeks",
       students: 1234,
       rating: 4.6,
-      price: "$44",
-      icon: <DiDocker className='text-cyan-400 size-8' />,
+      price: "44",
+      icon: <DiDocker className='text-cyan-400 size-6 sm:size-8' />,
       description: "Master Docker for modern application deployment",
       color: "from-blue-500 to-indigo-500"
     },
@@ -70,8 +70,8 @@ const Courses = () => {
       duration: "6 weeks",
       students: 1456,
       rating: 4.7,
-      price: "$49",
-      icon: <DiMongodb className='text-green-400 size-8' />,
+      price: "49",
+      icon: <DiMongodb className='text-green-400 size-6 sm:size-8' />,
       description: "Build NoSQL applications with MongoDB",
       color: "from-green-500 to-emerald-500"
     },
@@ -83,8 +83,8 @@ const Courses = () => {
       duration: "8 weeks",
       students: 987,
       rating: 4.8,
-      price: "$69",
-      icon: <SiVuedotjs className='text-emerald-400 size-8' />,
+      price: "69",
+      icon: <SiVuedotjs className='text-emerald-400 size-6 sm:size-8' />,
       description: "Advanced Vue.js concepts and performance optimization",
       color: "from-green-500 to-teal-500"
     },
@@ -96,8 +96,8 @@ const Courses = () => {
       duration: "7 weeks",
       students: 2101,
       rating: 4.7,
-      price: "$59",
-      icon: <DiNodejsSmall className='text-green-400 size-8' />,
+      price: "59",
+      icon: <DiNodejsSmall className='text-green-400 size-6 sm:size-8' />,
       description: "Build real-time applications with Node.js and WebSockets",
       color: "from-green-500 to-cyan-500"
     },
@@ -109,8 +109,8 @@ const Courses = () => {
       duration: "12 weeks",
       students: 654,
       rating: 4.9,
-      price: "$99",
-      icon: <SiTensorflow className='text-amber-400 size-8' />,
+      price: "99",
+      icon: <SiTensorflow className='text-amber-400 size-6 sm:size-8' />,
       description: "Build neural networks with TensorFlow and Keras",
       color: "from-yellow-500 to-orange-500"
     },
@@ -122,8 +122,8 @@ const Courses = () => {
       duration: "9 weeks",
       students: 876,
       rating: 4.8,
-      price: "$79",
-      icon: <SiKubernetes className='text-blue-400 size-8' />,
+      price: "79",
+      icon: <SiKubernetes className='text-blue-400 size-6 sm:size-8' />,
       description: "Master container orchestration with Kubernetes",
       color: "from-blue-500 to-cyan-500"
     },
@@ -135,8 +135,8 @@ const Courses = () => {
       duration: "7 weeks",
       students: 1345,
       rating: 4.6,
-      price: "$49",
-      icon: <SiPostgresql className='text-blue-400 size-8' />,
+      price: "49",
+      icon: <SiPostgresql className='text-blue-400 size-6 sm:size-8' />,
       description: "Design and optimize relational databases with PostgreSQL",
       color: "from-blue-500 to-indigo-500"
     },
@@ -148,8 +148,8 @@ const Courses = () => {
       duration: "10 weeks",
       students: 1123,
       rating: 4.7,
-      price: "$74",
-      icon: <DiAngularSimple className='text-red-400 size-8' />,
+      price: "74",
+      icon: <DiAngularSimple className='text-red-400 size-6 sm:size-8' />,
       description: "Build enterprise-scale applications with Angular",
       color: "from-red-500 to-pink-500"
     },
@@ -161,8 +161,8 @@ const Courses = () => {
       duration: "6 weeks",
       students: 3214,
       rating: 4.9,
-      price: "$39",
-      icon: <DiJsBadge className='text-yellow-400 size-8' />,
+      price: "39",
+      icon: <DiJsBadge className='text-yellow-400 size-6 sm:size-8' />,
       description: "Learn modern JavaScript ES6+ and best practices",
       color: "from-yellow-500 to-orange-500"
     }
@@ -173,38 +173,38 @@ const Courses = () => {
     : courseData.filter(course => course.category === selectedCategory);
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-96 h-96 bg-purple-500 opacity-5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-500 opacity-5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 opacity-5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -top-20 -right-20 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-purple-500 opacity-5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-20 -left-20 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-blue-500 opacity-5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-cyan-500 opacity-5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-24">
-          <div className="inline-block mb-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30">
-              <Zap size={16} className="text-purple-400" />
-              <span className="text-sm font-semibold text-purple-300">Featured Courses</span>
+        <div className="text-center mb-10 sm:mb-14 md:mb-16 lg:mb-24">
+          <div className="inline-block mb-3 sm:mb-4">
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30">
+              <Zap size={14} className="text-purple-400 sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm font-semibold text-purple-300">Featured Courses</span>
             </div>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-2 sm:mb-3 md:mb-4 leading-tight">
             Learn In-Demand Skills
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-400 max-w-2xl sm:max-w-3xl mx-auto px-2 sm:px-0">
             Comprehensive courses designed by industry experts to accelerate your tech career
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 md:mb-16 px-1">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${selectedCategory === cat
+              className={`px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm transition-all duration-300 ${selectedCategory === cat
                 ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg'
                 : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'
                 }`}
@@ -215,7 +215,7 @@ const Courses = () => {
         </div>
 
         {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
           {filteredCourses.map((course, index) => (
             <div
               key={course.id}
@@ -224,60 +224,61 @@ const Courses = () => {
               className="group relative h-full"
             >
               {/* Card */}
-              <div className="relative h-full p-6 rounded-2xl bg-gradient-to-br from-slate-800/30 to-slate-900/30 border border-slate-700/50 group-hover:border-purple-500/50 transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-2xl flex flex-col backdrop-blur-sm">
+              <div className="relative h-full p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl bg-gradient-to-br from-slate-800/30 to-slate-900/30 border border-slate-700/50 group-hover:border-purple-500/50 transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-2xl flex flex-col backdrop-blur-sm">
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-0 group-hover:opacity-10 rounded-lg sm:rounded-xl md:rounded-2xl transition-opacity duration-300`}></div>
 
                 <div className="relative flex-1 flex flex-col">
                   {/* Icon */}
-                  <div className="mb-4">
+                  <div className="mb-3 sm:mb-4">
                     <div className="group-hover:scale-110 transition-transform duration-300">
                       {course.icon}
                     </div>
                   </div>
 
                   {/* Badge and Title Row */}
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="text-lg font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-cyan-300 group-hover:bg-clip-text transition-all line-clamp-2 flex-1">
+                  <div className="flex items-start justify-between gap-2 sm:gap-3 mb-2 sm:mb-3">
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-cyan-300 group-hover:bg-clip-text transition-all line-clamp-2 flex-1">
                       {course.title}
                     </h3>
-                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 whitespace-nowrap">
+                    <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-semibold rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 whitespace-nowrap">
                       {course.level}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-gray-400 mb-4 line-clamp-2 flex-1">
+                  <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 line-clamp-2 flex-1">
                     {course.description}
                   </p>
 
                   {/* Meta Info */}
-                  <div className="space-y-2 mb-4 text-sm text-gray-400">
+                  <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4 text-xs sm:text-sm text-gray-400">
                     <div className="flex items-center gap-2">
-                      <Clock size={16} className="text-gray-500" />
+                      <Clock size={14} className="text-gray-500 sm:w-4 sm:h-4" />
                       <span>{course.duration}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Users size={16} className="text-gray-500" />
+                      <Users size={14} className="text-gray-500 sm:w-4 sm:h-4" />
                       <span>{course.students.toLocaleString()} students</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Star size={16} className="fill-yellow-400 text-yellow-400" />
+                      <Star size={14} className="fill-yellow-400 text-yellow-400 sm:w-4 sm:h-4" />
                       <span>{course.rating} rating</span>
                     </div>
                   </div>
 
                   {/* Divider */}
-                  <div className="h-px bg-gradient-to-r from-slate-700/0 via-slate-700/50 to-slate-700/0 mb-4"></div>
+                  <div className="h-px bg-gradient-to-r from-slate-700/0 via-slate-700/50 to-slate-700/0 mb-3 sm:mb-4"></div>
 
                   {/* Footer */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                      {course.price}
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                      {'\u20B9'}{course.price}
                     </span>
-                    <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold text-sm transition-all flex items-center gap-2 group/btn">
-                      Enroll
-                      <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                    <button className="px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold text-xs sm:text-sm transition-all flex items-center gap-1 sm:gap-2 group/btn">
+                      <span className="hidden sm:inline">Enroll</span>
+                      <span className="sm:hidden">Join</span>
+                      <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform sm:w-4 sm:h-4" />
                     </button>
                   </div>
                 </div>
@@ -287,13 +288,13 @@ const Courses = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-12 sm:mt-16 md:mt-20">
           <div className="inline-block">
-            <button className="relative px-8 py-4 rounded-xl font-semibold text-white overflow-hidden group">
+            <button className="relative px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-white text-sm sm:text-base overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 group-hover:from-purple-500 group-hover:to-cyan-500 transition-all duration-300"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
               <span className="relative flex items-center gap-2">
-                View All Courses <Zap size={18} />
+                View All Courses <Zap size={16} className="sm:w-4.5 sm:h-4.5" />
               </span>
             </button>
           </div>
