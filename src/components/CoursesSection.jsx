@@ -15,7 +15,7 @@ const CoursesSection = () => {
             reviews: 320,
             image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=800&q=80",
             tags: ["React", "Node.js", "MongoDB", "Express"],
-            price: "$499",
+            price: "499",
             trending: true,
             completion: "95%"
         },
@@ -28,7 +28,7 @@ const CoursesSection = () => {
             reviews: 285,
             image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80",
             tags: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
-            price: "$599",
+            price: "599",
             trending: true,
             completion: "92%"
         },
@@ -41,7 +41,7 @@ const CoursesSection = () => {
             reviews: 198,
             image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
             tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-            price: "$699",
+            price: "699",
             trending: false,
             completion: "88%"
         },
@@ -54,7 +54,7 @@ const CoursesSection = () => {
             reviews: 156,
             image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
             tags: ["React Native", "Flutter", "iOS", "Android"],
-            price: "$549",
+            price: "549",
             trending: false,
             completion: "90%"
         },
@@ -67,7 +67,7 @@ const CoursesSection = () => {
             reviews: 267,
             image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
             tags: ["SQL", "Tableau", "Python", "Statistics"],
-            price: "$579",
+            price: "579",
             trending: true,
             completion: "93%"
         },
@@ -80,7 +80,7 @@ const CoursesSection = () => {
             reviews: 142,
             image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
             tags: ["Security", "Ethical Hacking", "Network", "Cryptography"],
-            price: "$749",
+            price: "749",
             trending: false,
             completion: "87%"
         }
@@ -165,7 +165,7 @@ const CoursesSection = () => {
 
                                 {/* Price Tag */}
                                 <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 bg-slate-900/90 backdrop-blur-sm text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg border border-slate-700">
-                                    {course.price}
+                                  {'\u20B9'}  {course.price}
                                 </div>
                             </div>
 
