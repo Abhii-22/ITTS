@@ -7,6 +7,16 @@ import Batches from './pages/Batches';
 import Contact from './pages/Contact';
 import Courses from './pages/Courses';
 import Placement from './pages/Placement';
+import WebDevelopment from './coursespage/WebDevelopment';
+import DataScience from './coursespage/DataScience';
+import AIandML from './coursespage/AIandML';
+import DevOps from './coursespage/DevOps';
+import CloudComputing from './coursespage/CloudComputing';
+import PythonFullstack from './coursespage/PythonFullstack';
+import JavaFullstack from './coursespage/JavaFullstack';
+import FrontendDeveloper from './coursespage/FrontendDeveloper';
+import BackendDeveloper from './coursespage/BackendDeveloper';
+import DataAnalytics from './coursespage/DataAnalytics';
 
 function App() {
   return (
@@ -19,6 +29,16 @@ function App() {
           <Route path="/batches" element={<Batches />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/web-development" element={<WebDevelopment />} />
+          <Route path="/courses/data-science" element={<DataScience />} />
+          <Route path="/courses/ai-ml" element={<AIandML />} />
+          <Route path="/courses/devops" element={<DevOps />} />
+          <Route path="/courses/cloud-computing" element={<CloudComputing />} />
+          <Route path="/courses/python-fullstack" element={<PythonFullstack />} />
+          <Route path="/courses/java-fullstack" element={<JavaFullstack />} />
+          <Route path="/courses/frontend-developer" element={<FrontendDeveloper />} />
+          <Route path="/courses/backend-developer" element={<BackendDeveloper />} />
+          <Route path="/courses/data-analytics" element={<DataAnalytics />} />
           <Route path="/placement" element={<Placement />} />
 
           {/* Branch routes */}

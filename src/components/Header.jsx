@@ -112,11 +112,16 @@ const Header = () => {
             path: '/courses',
             hasDropdown: true,
             submenu: [
-                { name: 'Web Development', path: '/courses#web-dev' },
-                { name: 'Data Science', path: '/courses#data-science' },
-                { name: 'AI/ML', path: '/courses#ai-ml' },
-                { name: 'DevOps', path: '/courses#devops' },
-                { name: 'Cloud Computing', path: '/courses#cloud' }
+                { name: 'Web Development', path: '/courses/web-development' },
+                { name: 'Data Science', path: '/courses/data-science' },
+                { name: 'Data Analytics', path: '/courses/data-analytics' },
+                { name: 'AI/ML', path: '/courses/ai-ml' },
+                { name: 'DevOps', path: '/courses/devops' },
+                { name: 'Cloud Computing', path: '/courses/cloud-computing' },
+                { name: 'Python Fullstack', path: '/courses/python-fullstack' },
+                { name: 'Java Fullstack', path: '/courses/java-fullstack' },
+                { name: 'Frontend Developer', path: '/courses/frontend-developer' },
+                { name: 'Backend Developer', path: '/courses/backend-developer' }
             ]
         },
         { name: 'Batches', path: '/batches' },
