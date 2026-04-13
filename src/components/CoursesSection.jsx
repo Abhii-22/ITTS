@@ -103,9 +103,9 @@ const CoursesSection = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Header */}
                 <div className="text-center mb-8 sm:mb-10 md:mb-12">
-                    <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
-                        <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
-                        <span className="text-blue-400 text-xs sm:text-sm font-semibold">EXPLORE COURSES</span>
+                    <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
+                        <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 text-indigo-300" />
+                        <span className="text-indigo-300 text-xs sm:text-sm font-semibold">EXPLORE COURSES</span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent px-4">
                         Popular Courses
@@ -122,7 +122,7 @@ const CoursesSection = () => {
                             key={level}
                             onClick={() => setSelectedLevel(level)}
                             className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${selectedLevel === level
-                                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
+                                    ? 'bg-gradient-to-r from-indigo-400 to-purple-600 text-white shadow-lg shadow-indigo-500/30 scale-105'
                                     : 'bg-slate-800 text-gray-400 hover:bg-slate-700 hover:text-white border border-slate-700'
                                 }`}
                         >
@@ -138,7 +138,7 @@ const CoursesSection = () => {
                             key={index}
                             onMouseEnter={() => setHoveredCard(index)}
                             onMouseLeave={() => setHoveredCard(null)}
-                            className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-500 group hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1 sm:hover:-translate-y-2"
+                            className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-700 hover:border-indigo-400 transition-all duration-500 group hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-1 sm:hover:-translate-y-2"
                         >
                             {/* Image Container */}
                             <div className="relative h-44 sm:h-52 md:h-56 overflow-hidden">
@@ -158,7 +158,7 @@ const CoursesSection = () => {
                                             <span className="xs:hidden">HOT</span>
                                         </div>
                                     )}
-                                    <div className="bg-blue-600/90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold ml-auto shadow-lg">
+                                    <div className="bg-indigo-400/90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold ml-auto shadow-lg">
                                         {course.level}
                                     </div>
                                 </div>
@@ -171,14 +171,14 @@ const CoursesSection = () => {
 
                             {/* Content */}
                             <div className="p-4 sm:p-5 md:p-6">
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3 group-hover:text-indigo-300 transition-colors line-clamp-2">
                                     {course.title}
                                 </h3>
 
                                 {/* Stats */}
                                 <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 flex-wrap">
                                     <span className="flex items-center gap-1 sm:gap-1.5">
-                                        <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-400 flex-shrink-0" />
+                                        <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-300 flex-shrink-0" />
                                         <span className="whitespace-nowrap">{course.duration}</span>
                                     </span>
                                     <span className="flex items-center gap-1 sm:gap-1.5">
@@ -213,7 +213,7 @@ const CoursesSection = () => {
                                     {course.tags.slice(0, 4).map((tag, i) => (
                                         <span
                                             key={i}
-                                            className="bg-slate-700/50 text-gray-300 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md sm:rounded-lg text-xs font-medium border border-slate-600 hover:border-blue-500 hover:bg-slate-700 transition-all"
+                                            className="bg-slate-700/50 text-gray-300 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md sm:rounded-lg text-xs font-medium border border-slate-600 hover:border-indigo-400 hover:bg-slate-700 transition-all"
                                         >
                                             {tag}
                                         </span>
@@ -221,14 +221,14 @@ const CoursesSection = () => {
                                 </div>
 
                                 {/* CTA Button */}
-                                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl text-sm sm:text-base font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50">
+                                <button className="w-full bg-gradient-to-r from-indigo-400 to-purple-600 hover:from-indigo-500 hover:to-purple-700 text-white py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl text-sm sm:text-base font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50">
                                     Enroll Now
                                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </div>
 
                             {/* Hover Effect Overlay */}
-                            <div className={`absolute inset-0 bg-gradient-to-t from-blue-600/10 to-transparent pointer-events-none transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-0'
+                            <div className={`absolute inset-0 bg-gradient-to-t from-indigo-400/10 to-transparent pointer-events-none transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-0'
                                 }`}></div>
                         </div>
                     ))}
@@ -236,7 +236,7 @@ const CoursesSection = () => {
 
                 {/* View All Button */}
                 <div className="text-center px-4">
-                    <button className="bg-slate-800 hover:bg-slate-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 border border-slate-700 hover:border-blue-500 inline-flex items-center gap-2 group">
+                    <button className="bg-slate-800 hover:bg-slate-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 border border-slate-700 hover:border-indigo-400 inline-flex items-center gap-2 group">
                         View All Courses
                         <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                     </button>

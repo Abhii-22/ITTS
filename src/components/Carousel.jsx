@@ -124,34 +124,34 @@ const Carousel = () => {
                             <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 md:py-0">
                                 <div className="max-w-full sm:max-w-2xl md:max-w-3xl">
                                     <h1
-                                        className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight transform transition-all duration-1000 delay-300 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
+                                        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight transform transition-all duration-1000 delay-300 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                             }`}
                                     >
                                         {slide.title}
                                     </h1>
                                     <h2
-                                        className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-400 font-semibold mb-4 sm:mb-6 transform transition-all duration-1000 delay-400 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
+                                        className={`text-base sm:text-lg md:text-xl lg:text-2xl text-indigo-300 font-semibold mb-3 sm:mb-4 transform transition-all duration-1000 delay-400 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                             }`}
                                     >
                                         {slide.subtitle}
                                     </h2>
                                     <p
-                                        className={`text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-10 leading-relaxed transform transition-all duration-1000 delay-500 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
+                                        className={`text-xs sm:text-sm md:text-base lg:text-lg text-gray-200 mb-4 sm:mb-6 leading-relaxed transform transition-all duration-1000 delay-500 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                             }`}
                                     >
                                         {slide.description}
                                     </p>
                                     <div
-                                        className={`grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-10 transform transition-all duration-1000 delay-600 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
+                                        className={`grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 transform transition-all duration-1000 delay-600 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                             }`}
                                     >
                                         {Object.entries(slide.stats).map(([key, value]) => (
                                             <div
                                                 key={key}
-                                                className="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 border border-white/20 hover:bg-white/20 transition-colors"
+                                                className="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl px-3 sm:px-4 md:px-6 py-2 sm:py-3 border border-white/20 hover:bg-white/20 transition-colors"
                                             >
-                                                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">{value}</div>
-                                                <div className="text-xs sm:text-sm md:text-base text-gray-300 capitalize">{key}</div>
+                                                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{value}</div>
+                                                <div className="text-xs text-gray-300 capitalize">{key}</div>
                                             </div>
                                         ))}
                                     </div>
@@ -159,7 +159,7 @@ const Carousel = () => {
                                         className={`transform transition-all duration-1000 delay-700 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                             }`}
                                     >
-                                        <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full font-bold text-sm sm:text-base md:text-lg shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300 active:scale-95">
+                                        <button className="w-full sm:w-auto bg-indigo-400 hover:bg-indigo-500 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-2xl hover:shadow-indigo-400/50 transform hover:scale-105 transition-all duration-300 active:scale-95">
                                             Start Learning Today
                                         </button>
                                     </div>
