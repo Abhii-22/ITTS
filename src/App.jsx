@@ -16,6 +16,7 @@ import PythonFullstack from './coursespage/PythonFullstack';
 import JavaFullstack from './coursespage/JavaFullstack';
 import FrontendDeveloper from './coursespage/FrontendDeveloper';
 import BackendDeveloper from './coursespage/BackendDeveloper';
+import DataAnalytics from './coursespage/DataAnalytics';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/courses/java-fullstack" element={<JavaFullstack />} />
           <Route path="/courses/frontend-developer" element={<FrontendDeveloper />} />
           <Route path="/courses/backend-developer" element={<BackendDeveloper />} />
+          <Route path="/courses/data-analytics" element={<DataAnalytics />} />
           <Route path="/placement" element={<Placement />} />
 
           {/* Branch routes */}

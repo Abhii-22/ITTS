@@ -114,7 +114,7 @@ const Header = () => {
             submenu: [
                 { name: 'Web Development', path: '/courses/web-development' },
                 { name: 'Data Science', path: '/courses/data-science' },
-                { name: 'Data Analytics', path: '/courses#data-analytics' },
+                { name: 'Data Analytics', path: '/courses/data-analytics' },
                 { name: 'AI/ML', path: '/courses/ai-ml' },
                 { name: 'DevOps', path: '/courses/devops' },
                 { name: 'Cloud Computing', path: '/courses/cloud-computing' },
