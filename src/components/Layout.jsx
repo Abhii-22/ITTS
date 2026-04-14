@@ -8,7 +8,7 @@ const Layout = () => {
         <div className="min-h-screen bg-slate-950 flex flex-col">
             <Header />
             {/* Main content area with padding for fixed header */}
-            <main className="flex-1 pt-20">
+            <main className="flex-1 pt-10">
                 <Outlet />
             </main>
             <Footer />
