@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaBrain, FaChartBar, FaDatabase, FaBolt, FaUsers, FaAward, FaBriefcase, FaClock, FaCheckCircle, FaStar, FaBullseye, FaBook, FaRocket, FaShieldAlt, FaMicrochip, FaChartPie, FaChartLine } from 'react-icons/fa';
+import dataScienceImage from '../assets/images/datascience.jpg';
 
 const DataScience = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +102,7 @@ const DataScience = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80"
+                        src={dataScienceImage}
                         alt="Data Science Background"
                         className="w-full h-full object-cover"
                     />

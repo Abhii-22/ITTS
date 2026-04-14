@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaBrain, FaChartBar, FaDatabase, FaBolt, FaUsers, FaAward, FaBriefcase, FaClock, FaCheckCircle, FaStar, FaBullseye, FaBook, FaRocket, FaShieldAlt, FaMicrochip, FaChartPie, FaChartLine, FaCloud } from 'react-icons/fa';
+import cloudComputingImage from '../assets/images/cloudcomputing.jpeg';
 
 const CloudComputing = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +102,7 @@ const CloudComputing = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
+                        src={cloudComputingImage}
                         alt="Cloud Computing Background"
                         className="w-full h-full object-cover"
                     />

@@ -96,17 +96,7 @@ const Header = () => {
 
     const navItems = [
         { name: 'Home', path: '/' },
-        {
-            name: 'About',
-            path: '/about',
-            hasDropdown: true,
-            submenu: [
-                { name: 'Our Mission', path: '/about#mission' },
-                { name: 'Team', path: '/about#team' },
-                { name: 'Testimonials', path: '/about#testimonials' },
-                { name: 'Career', path: '/about#career' }
-            ]
-        },
+        { name: 'About', path: '/about' },
         {
             name: 'Courses',
             path: '/courses',

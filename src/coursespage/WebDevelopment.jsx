@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code, Monitor, Globe, Zap, Users, Award, TrendingUp, Briefcase, Clock, CheckCircle, Star, Target, BookOpen, Rocket, Shield, Database, Palette, Terminal, Smartphone } from 'lucide-react';
+import webDevelopmentImage from '../assets/images/webdeelopment.jpeg';
 
 const WebDevelopment = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +102,7 @@ const WebDevelopment = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1920&q=80"
+                        src={webDevelopmentImage}
                         alt="Web Development Background"
                         className="w-full h-full object-cover"
                     />

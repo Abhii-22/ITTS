@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaBrain, FaChartBar, FaDatabase, FaBolt, FaUsers, FaAward, FaBriefcase, FaClock, FaCheckCircle, FaStar, FaBullseye, FaBook, FaRocket, FaShieldAlt, FaMicrochip, FaChartPie, FaChartLine, FaJava } from 'react-icons/fa';
+import javaImage from '../assets/images/java.jpg';
 
 const JavaFullstack = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +102,7 @@ const JavaFullstack = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1920&q=80"
+                        src={javaImage}
                         alt="Java Fullstack Background"
                         className="w-full h-full object-cover"
                     />

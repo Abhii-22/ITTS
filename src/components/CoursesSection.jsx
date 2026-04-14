@@ -1,96 +1,85 @@
 import React, { useState } from 'react';
 import { Clock, Users, Star, ArrowRight, Filter, TrendingUp, Award, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CoursesSection = () => {
-    const [selectedLevel, setSelectedLevel] = useState('All');
     const [hoveredCard, setHoveredCard] = useState(null);
+    const navigate = useNavigate();
 
     const courses = [
         {
-            title: "Full Stack Web Development",
+            title: "Data Science",
             duration: "6 Months",
-            level: "Beginner",
-            students: "2,500+",
-            rating: 4.8,
-            reviews: 320,
-            image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=800&q=80",
-            tags: ["React", "Node.js", "MongoDB", "Express"],
-            price: "499",
-            trending: true,
-            completion: "95%"
-        },
-        {
-            title: "Python & AI/ML",
-            duration: "5 Months",
-            level: "Intermediate",
-            students: "1,800+",
-            rating: 4.9,
-            reviews: 285,
-            image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80",
-            tags: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
-            price: "599",
-            trending: true,
-            completion: "92%"
-        },
-        {
-            title: "Cloud DevOps Engineering",
-            duration: "4 Months",
-            level: "Advanced",
-            students: "1,500+",
-            rating: 4.7,
-            reviews: 198,
-            image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
-            tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-            price: "699",
-            trending: false,
-            completion: "88%"
-        },
-        {
-            title: "Mobile App Development",
-            duration: "5 Months",
-            level: "Beginner",
-            students: "1,200+",
-            rating: 4.8,
-            reviews: 156,
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
-            tags: ["React Native", "Flutter", "iOS", "Android"],
-            price: "549",
-            trending: false,
-            completion: "90%"
-        },
-        {
-            title: "Data Science & Analytics",
-            duration: "6 Months",
-            level: "Intermediate",
             students: "2,100+",
             rating: 4.9,
             reviews: 267,
             image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
             tags: ["SQL", "Tableau", "Python", "Statistics"],
-            price: "579",
-            trending: true,
-            completion: "93%"
+            trending: false,
+            completion: "93%",
+            route: "/courses/data-science"
         },
         {
-            title: "Cybersecurity Specialist",
+            title: "AI & Machine Learning",
             duration: "5 Months",
-            level: "Advanced",
-            students: "980+",
-            rating: 4.8,
-            reviews: 142,
-            image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
-            tags: ["Security", "Ethical Hacking", "Network", "Cryptography"],
-            price: "749",
+            students: "1,800+",
+            rating: 4.9,
+            reviews: 285,
+            image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80",
+            tags: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
             trending: false,
-            completion: "87%"
+            completion: "92%",
+            route: "/courses/ai-ml"
+        },
+        {
+            title: "Cloud Computing",
+            duration: "4 Months",
+            students: "1,500+",
+            rating: 4.7,
+            reviews: 198,
+            image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
+            tags: ["AWS", "Azure", "Google Cloud", "Serverless"],
+            trending: false,
+            completion: "88%",
+            route: "/courses/cloud-computing"
+        },
+        {
+            title: "DevOps Engineering",
+            duration: "4 Months",
+            students: "1,500+",
+            rating: 4.7,
+            reviews: 198,
+            image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
+            tags: ["Docker", "Kubernetes", "CI/CD", "Jenkins"],
+            trending: false,
+            completion: "88%",
+            route: "/courses/devops"
+        },
+        {
+            title: "Python Full Stack Development",
+            duration: "6 Months",
+            students: "2,500+",
+            rating: 4.8,
+            reviews: 320,
+            image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=800&q=80",
+            tags: ["Python", "Django", "React", "PostgreSQL"],
+            trending: false,
+            completion: "95%",
+            route: "/courses/python-fullstack"
+        },
+        {
+            title: "Java Full Stack Development",
+            duration: "6 Months",
+            students: "2,200+",
+            rating: 4.8,
+            reviews: 295,
+            image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=800&q=80",
+            tags: ["Java", "Spring Boot", "React", "MySQL"],
+            trending: false,
+            completion: "94%",
+            route: "/courses/java-fullstack"
         }
     ];
-
-    const levels = ['All', 'Beginner', 'Intermediate', 'Advanced'];
-
-    const filteredCourses = selectedLevel === 'All'
-        ? courses
-        : courses.filter(course => course.level === selectedLevel);
 
     return (
         <section className="min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
@@ -115,25 +104,9 @@ const CoursesSection = () => {
                     </p>
                 </div>
 
-                {/* Filter Buttons */}
-                <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 md:mb-12 px-4">
-                    {levels.map((level) => (
-                        <button
-                            key={level}
-                            onClick={() => setSelectedLevel(level)}
-                            className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${selectedLevel === level
-                                    ? 'bg-gradient-to-r from-indigo-400 to-purple-600 text-white shadow-lg shadow-indigo-500/30 scale-105'
-                                    : 'bg-slate-800 text-gray-400 hover:bg-slate-700 hover:text-white border border-slate-700'
-                                }`}
-                        >
-                            {level}
-                        </button>
-                    ))}
-                </div>
-
                 {/* Courses Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
-                    {filteredCourses.map((course, index) => (
+                    {courses.map((course, index) => (
                         <div
                             key={index}
                             onMouseEnter={() => setHoveredCard(index)}
@@ -158,16 +131,9 @@ const CoursesSection = () => {
                                             <span className="xs:hidden">HOT</span>
                                         </div>
                                     )}
-                                    <div className="bg-indigo-400/90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold ml-auto shadow-lg">
-                                        {course.level}
-                                    </div>
                                 </div>
 
-                                {/* Price Tag */}
-                                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 bg-slate-900/90 backdrop-blur-sm text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg border border-slate-700">
-                                  {'\u20B9'}  {course.price}
-                                </div>
-                            </div>
+                                                            </div>
 
                             {/* Content */}
                             <div className="p-4 sm:p-5 md:p-6">
@@ -221,7 +187,13 @@ const CoursesSection = () => {
                                 </div>
 
                                 {/* CTA Button */}
-                                <button className="w-full bg-gradient-to-r from-indigo-400 to-purple-600 hover:from-indigo-500 hover:to-purple-700 text-white py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl text-sm sm:text-base font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50">
+                                <button 
+                                    onClick={() => {
+                                        window.scrollTo(0, 0);
+                                        navigate(course.route);
+                                    }}
+                                    className="w-full bg-gradient-to-r from-indigo-400 to-purple-600 hover:from-indigo-500 hover:to-purple-700 text-white py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl text-sm sm:text-base font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50"
+                                >
                                     Enroll Now
                                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>
@@ -234,14 +206,7 @@ const CoursesSection = () => {
                     ))}
                 </div>
 
-                {/* View All Button */}
-                <div className="text-center px-4">
-                    <button className="bg-slate-800 hover:bg-slate-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 border border-slate-700 hover:border-indigo-400 inline-flex items-center gap-2 group">
-                        View All Courses
-                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                </div>
-            </div>
+                            </div>
 
             <style jsx>{`
                 @media (min-width: 475px) {

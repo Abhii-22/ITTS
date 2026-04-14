@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaBrain, FaChartBar, FaDatabase, FaBolt, FaUsers, FaAward, FaBriefcase, FaClock, FaCheckCircle, FaStar, FaBullseye, FaBook, FaRocket, FaShieldAlt, FaMicrochip, FaChartPie, FaChartLine } from 'react-icons/fa';
+import devopsImage from '../assets/images/devops.jpg';
 
 const DevOps = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +102,7 @@ const DevOps = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
+                        src={devopsImage}
                         alt="DevOps Background"
                         className="w-full h-full object-cover"
                     />

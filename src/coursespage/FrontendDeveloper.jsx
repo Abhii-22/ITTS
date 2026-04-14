@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaBrain, FaChartBar, FaDatabase, FaBolt, FaUsers, FaAward, FaBriefcase, FaClock, FaCheckCircle, FaStar, FaBullseye, FaBook, FaRocket, FaShieldAlt, FaMicrochip, FaChartPie, FaChartLine, FaReact, FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import frontendImage from '../assets/images/frontend.jpg';
 
 const FrontendDeveloper = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +102,7 @@ const FrontendDeveloper = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1920&q=80"
+                        src={frontendImage}
                         alt="Frontend Developer Background"
                         className="w-full h-full object-cover"
                     />

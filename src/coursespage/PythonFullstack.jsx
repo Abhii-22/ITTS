@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaBrain, FaChartBar, FaDatabase, FaBolt, FaUsers, FaAward, FaBriefcase, FaClock, FaCheckCircle, FaStar, FaBullseye, FaBook, FaRocket, FaShieldAlt, FaMicrochip, FaChartPie, FaChartLine, FaPython } from 'react-icons/fa';
+import pythonImage from '../assets/images/python.jpg';
 
 const PythonFullstack = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +102,7 @@ const PythonFullstack = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1920&q=80"
+                        src={pythonImage}
                         alt="Python Fullstack Background"
                         className="w-full h-full object-cover"
                     />

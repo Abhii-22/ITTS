@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaChartBar, FaDatabase, FaBolt, FaUsers, FaAward, FaBriefcase, FaClock, FaCheckCircle, FaStar, FaBullseye, FaBook, FaRocket, FaShieldAlt, FaChartPie, FaChartLine, FaFileExcel, FaTable, FaChartArea } from 'react-icons/fa';
+import dataAnalyticImage from '../assets/images/dataanalytic.jpg';
 
 const DataAnalytics = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -102,7 +103,7 @@ const DataAnalytics = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80"
+                        src={dataAnalyticImage}
                         alt="Data Analytics Background"
                         className="w-full h-full object-cover"
                     />
