@@ -9,61 +9,58 @@ const DevOps = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        // Trigger animation after component mounts
         const timer = setTimeout(() => setIsLoaded(true), 100);
         return () => clearTimeout(timer);
     }, []);
-
-    // Animation variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 60 },
-        visible: { 
-            opacity: 1, 
-            y: 0, 
-            transition: { 
-                duration: 0.8, 
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
                 ease: "easeOut",
                 whileInView: { opacity: 1 }
-            } 
+            }
         }
     };
 
     const fadeInLeft = {
         hidden: { opacity: 0, x: -60 },
-        visible: { 
-            opacity: 1, 
-            x: 0, 
-            transition: { 
-                duration: 0.8, 
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
                 ease: "easeOut",
                 whileInView: { opacity: 1 }
-            } 
+            }
         }
     };
 
     const fadeInRight = {
         hidden: { opacity: 0, x: 60 },
-        visible: { 
-            opacity: 1, 
-            x: 0, 
-            transition: { 
-                duration: 0.8, 
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
                 ease: "easeOut",
                 whileInView: { opacity: 1 }
-            } 
+            }
         }
     };
 
     const scaleIn = {
         hidden: { opacity: 0, scale: 0.8 },
-        visible: { 
-            opacity: 1, 
-            scale: 1, 
-            transition: { 
-                duration: 0.8, 
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.8,
                 ease: "easeOut",
                 whileInView: { opacity: 1 }
-            } 
+            }
         }
     };
 
@@ -78,7 +75,6 @@ const DevOps = () => {
         }
     };
 
-    // Scroll-triggered section component
     const ScrollSection = ({ children, variants = fadeInUp, className = "" }) => {
         const ref = useRef(null);
         const isInView = useInView(ref, { once: false, margin: "-100px" });
@@ -127,7 +123,7 @@ const DevOps = () => {
                             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105">
                                 Enroll Now
                             </button>
-                                                    </div>
+                        </div>
                     </div>
                 </div>
 
@@ -142,7 +138,7 @@ const DevOps = () => {
             {/* Course Curriculum Section - Moved up */}
             <ScrollSection className="py-20 bg-gray-900">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div 
+                    <motion.div
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
@@ -154,21 +150,21 @@ const DevOps = () => {
                         </p>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className="grid grid-cols-1 lg:grid-cols-2 gap-12"
                         variants={staggerContainer}
                     >
                         {/* Foundation Track */}
-                        <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                        <motion.div
+                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300"
                             variants={fadeInLeft}
-                            whileHover={{ 
-                                scale: 1.02, 
-                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" 
+                            whileHover={{
+                                scale: 1.02,
+                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)"
                             }}
-                            whileInView={{ 
-                                y: 0, 
-                                opacity: 1 
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
@@ -177,7 +173,7 @@ const DevOps = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">DevOps Foundation</h3>
                             </div>
-                            
+
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
                                     <h4 className="text-lg font-semibold text-white mb-2">Linux & Shell Scripting</h4>
@@ -222,16 +218,16 @@ const DevOps = () => {
                         </motion.div>
 
                         {/* Advanced Track */}
-                        <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                        <motion.div
+                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300"
                             variants={fadeInRight}
-                            whileHover={{ 
-                                scale: 1.02, 
-                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" 
+                            whileHover={{
+                                scale: 1.02,
+                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)"
                             }}
-                            whileInView={{ 
-                                y: 0, 
-                                opacity: 1 
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
@@ -240,7 +236,7 @@ const DevOps = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">Advanced DevOps & Cloud</h3>
                             </div>
-                            
+
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
                                     <h4 className="text-lg font-semibold text-white mb-2">CI/CD Pipelines</h4>
@@ -290,7 +286,7 @@ const DevOps = () => {
             {/* Benefits Section - Grid Layout */}
             <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div 
+                    <motion.div
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                         variants={staggerContainer}
                     >
@@ -301,23 +297,23 @@ const DevOps = () => {
                             <p className="text-lg text-gray-400 mb-8">
                                 Discover the numerous advantages of becoming a DevOps engineer in today's cloud-native world
                             </p>
-                            
+
                             <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-6" variants={staggerContainer}>
-                                <motion.div 
-                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300" 
+                                <motion.div
+                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
                                     variants={fadeInUp}
-                                    whileHover={{ 
+                                    whileHover={{
                                         x: 5,
                                         transition: { duration: 0.2 }
                                     }}
-                                    whileInView={{ 
+                                    whileInView={{
                                         opacity: 1,
                                         x: 0
                                     }}
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0"
-                                        whileHover={{ 
+                                        whileHover={{
                                             scale: 1.1,
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
@@ -330,21 +326,21 @@ const DevOps = () => {
                                     </div>
                                 </motion.div>
 
-                                <motion.div 
-                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300" 
+                                <motion.div
+                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
                                     variants={fadeInUp}
-                                    whileHover={{ 
+                                    whileHover={{
                                         x: 5,
                                         transition: { duration: 0.2 }
                                     }}
-                                    whileInView={{ 
+                                    whileInView={{
                                         opacity: 1,
                                         x: 0
                                     }}
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0"
-                                        whileHover={{ 
+                                        whileHover={{
                                             scale: 1.1,
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
@@ -357,21 +353,21 @@ const DevOps = () => {
                                     </div>
                                 </motion.div>
 
-                                <motion.div 
-                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300" 
+                                <motion.div
+                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
                                     variants={fadeInUp}
-                                    whileHover={{ 
+                                    whileHover={{
                                         x: 5,
                                         transition: { duration: 0.2 }
                                     }}
-                                    whileInView={{ 
+                                    whileInView={{
                                         opacity: 1,
                                         x: 0
                                     }}
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0"
-                                        whileHover={{ 
+                                        whileHover={{
                                             scale: 1.1,
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
@@ -384,21 +380,21 @@ const DevOps = () => {
                                     </div>
                                 </motion.div>
 
-                                <motion.div 
-                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300" 
+                                <motion.div
+                                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
                                     variants={fadeInUp}
-                                    whileHover={{ 
+                                    whileHover={{
                                         x: 5,
                                         transition: { duration: 0.2 }
                                     }}
-                                    whileInView={{ 
+                                    whileInView={{
                                         opacity: 1,
                                         x: 0
                                     }}
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0"
-                                        whileHover={{ 
+                                        whileHover={{
                                             scale: 1.1,
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
@@ -440,7 +436,7 @@ const DevOps = () => {
             {/* Tools & Technologies Section - Moved up */}
             <ScrollSection className="py-20 bg-black">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div 
+                    <motion.div
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
@@ -452,17 +448,17 @@ const DevOps = () => {
                         </p>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className="grid grid-cols-1 lg:grid-cols-3 gap-8"
                         variants={staggerContainer}
                     >
                         {/* CI/CD & Automation */}
-                        <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                        <motion.div
+                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300"
                             variants={scaleIn}
-                            whileHover={{ 
-                                scale: 1.02, 
-                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" 
+                            whileHover={{
+                                scale: 1.02,
+                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)"
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
@@ -471,7 +467,7 @@ const DevOps = () => {
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Jenkins', 'GitLab CI', 'GitHub Actions', 'CircleCI', 'Azure DevOps', 'Bamboo'].map((tech, index) => (
-                                    <motion.div 
+                                    <motion.div
                                         key={tech}
                                         className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
                                         variants={fadeInUp}
@@ -484,12 +480,12 @@ const DevOps = () => {
                         </motion.div>
 
                         {/* Container & Orchestration */}
-                        <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                        <motion.div
+                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300"
                             variants={scaleIn}
-                            whileHover={{ 
-                                scale: 1.02, 
-                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" 
+                            whileHover={{
+                                scale: 1.02,
+                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)"
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
@@ -498,7 +494,7 @@ const DevOps = () => {
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Docker', 'Kubernetes', 'Docker Swarm', 'Helm', 'OpenShift', 'Nomad'].map((tech, index) => (
-                                    <motion.div 
+                                    <motion.div
                                         key={tech}
                                         className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
                                         variants={fadeInUp}
@@ -511,12 +507,12 @@ const DevOps = () => {
                         </motion.div>
 
                         {/* Infrastructure & Monitoring */}
-                        <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                        <motion.div
+                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300"
                             variants={scaleIn}
-                            whileHover={{ 
-                                scale: 1.02, 
-                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" 
+                            whileHover={{
+                                scale: 1.02,
+                                boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)"
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
@@ -525,7 +521,7 @@ const DevOps = () => {
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Terraform', 'Ansible', 'Prometheus', 'Grafana', 'ELK Stack', 'Nagios'].map((tech, index) => (
-                                    <motion.div 
+                                    <motion.div
                                         key={tech}
                                         className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
                                         variants={fadeInUp}
@@ -543,7 +539,7 @@ const DevOps = () => {
             {/* Applications & Career Impact - Combined Section */}
             <ScrollSection className="py-20 bg-gradient-to-b from-black to-gray-900">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div 
+                    <motion.div
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16"
                         variants={staggerContainer}
                     >
@@ -641,7 +637,7 @@ const DevOps = () => {
             {/* Learning Methodology Section */}
             <ScrollSection className="py-20 bg-gray-900">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div 
+                    <motion.div
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
@@ -653,7 +649,7 @@ const DevOps = () => {
                         </p>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
                         variants={staggerContainer}
                     >
@@ -700,7 +696,7 @@ const DevOps = () => {
                 </div>
             </ScrollSection>
 
-            
+
             {/* Final CTA Section */}
             <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
