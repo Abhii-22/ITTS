@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Clock, Users, Star, ArrowRight, Filter, TrendingUp, Award, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import dataScienceImage from '../assets/images/datascience.jpg';
+import aiandmlImage from '../assets/images/aiandml.jpg';
+import cloudComputingImage from '../assets/images/cloudcomputing.jpeg';
+import devopsImage from '../assets/images/devops.jpg';
+import pythonImage from '../assets/images/python.jpg';
+import javaImage from '../assets/images/java.jpg';
 
 const CoursesSection = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
@@ -11,9 +17,9 @@ const CoursesSection = () => {
             title: "Data Science",
             duration: "6 Months",
             students: "2,100+",
-            rating: 4.9,
-            reviews: 267,
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+            rating: 4.8,
+            reviews: 320,
+            image: dataScienceImage,
             tags: ["SQL", "Tableau", "Python", "Statistics"],
             trending: false,
             completion: "93%",
@@ -25,7 +31,7 @@ const CoursesSection = () => {
             students: "1,800+",
             rating: 4.9,
             reviews: 285,
-            image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80",
+            image: aiandmlImage,
             tags: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
             trending: false,
             completion: "92%",
@@ -37,7 +43,7 @@ const CoursesSection = () => {
             students: "1,500+",
             rating: 4.7,
             reviews: 198,
-            image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
+            image: cloudComputingImage,
             tags: ["AWS", "Azure", "Google Cloud", "Serverless"],
             trending: false,
             completion: "88%",
@@ -49,7 +55,7 @@ const CoursesSection = () => {
             students: "1,500+",
             rating: 4.7,
             reviews: 198,
-            image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
+            image: devopsImage,
             tags: ["Docker", "Kubernetes", "CI/CD", "Jenkins"],
             trending: false,
             completion: "88%",
@@ -61,7 +67,7 @@ const CoursesSection = () => {
             students: "2,500+",
             rating: 4.8,
             reviews: 320,
-            image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=800&q=80",
+            image: pythonImage,
             tags: ["Python", "Django", "React", "PostgreSQL"],
             trending: false,
             completion: "95%",
@@ -73,7 +79,7 @@ const CoursesSection = () => {
             students: "2,200+",
             rating: 4.8,
             reviews: 295,
-            image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=800&q=80",
+            image: javaImage,
             tags: ["Java", "Spring Boot", "React", "MySQL"],
             trending: false,
             completion: "94%",
@@ -194,7 +200,7 @@ const CoursesSection = () => {
                                     }}
                                     className="w-full bg-gradient-to-r from-indigo-400 to-purple-600 hover:from-indigo-500 hover:to-purple-700 text-white py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl text-sm sm:text-base font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50"
                                 >
-                                    Enroll Now
+                                    Explore Now
                                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </div>

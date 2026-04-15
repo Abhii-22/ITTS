@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import homeWebImage from '../assets/images/homeweb.jpeg';
+import homeAimlImage from '../assets/images/homeaiml.jpeg';
+import homeCloudImage from '../assets/images/homecloud.jpeg';
 
 const Carousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,21 +16,21 @@ const Carousel = () => {
             title: "Master Modern Web Development",
             subtitle: "Learn React, Node.js, and Full-Stack Technologies",
             description: "Build production-ready applications with industry-standard tools and frameworks",
-            image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80",
+            image: homeWebImage,
             stats: { students: "5K+", courses: "50+" }
         },
         {
             title: "AI & Machine Learning",
             subtitle: "Dive into the Future of Technology",
             description: "Master Python, TensorFlow, and cutting-edge AI algorithms",
-            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80",
+            image: homeAimlImage,
             stats: { students: "3K+", courses: "30+" }
         },
         {
             title: "Cloud & DevOps Mastery",
             subtitle: "AWS, Azure, Docker & Kubernetes",
             description: "Learn to deploy, scale, and manage modern cloud infrastructure",
-            image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
+            image: homeCloudImage,
             stats: { students: "4K+", courses: "40+" }
         }
     ];

@@ -95,8 +95,9 @@ const WebDevelopment = () => {
             </motion.div>
         );
     };
+
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen overflow-x-hidden overflow-y-hidden">
             {/* Hero Section */}
             <section className="relative h-screen overflow-hidden">
                 {/* Background Image */}
@@ -126,20 +127,11 @@ const WebDevelopment = () => {
                             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105">
                                 Enroll Now
                             </button>
-                            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300">
-                                View Curriculum
-                            </button>
-                        </div>
+                                                    </div>
                     </div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                    <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-                        <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
-                    </div>
-                </div>
-            </section>
+                            </section>
 
             {/* Benefits Section */}
             <ScrollSection className="py-20 bg-gradient-to-b from-black to-gray-900">

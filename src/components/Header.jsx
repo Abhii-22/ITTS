@@ -243,8 +243,13 @@ const Header = () => {
                                                 : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                                                 }`}
                                             onClick={(e) => {
-                                                if (item.path !== '#') {
-                                                    handleNavClick(e, item.path);
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                // Don't navigate, just toggle dropdown
+                                                if (openDropdown === item.name) {
+                                                    setOpenDropdown(null);
+                                                } else {
+                                                    setOpenDropdown(item.name);
                                                 }
                                             }}
                                         >

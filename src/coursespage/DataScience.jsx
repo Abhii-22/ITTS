@@ -95,8 +95,9 @@ const DataScience = () => {
             </motion.div>
         );
     };
+
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen overflow-x-hidden overflow-y-hidden">
             {/* Hero Section */}
             <section className="relative h-screen overflow-hidden">
                 {/* Background Image */}
@@ -126,10 +127,7 @@ const DataScience = () => {
                             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105">
                                 Enroll Now
                             </button>
-                            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300">
-                                View Curriculum
-                            </button>
-                        </div>
+                                                    </div>
                     </div>
                 </div>
 
