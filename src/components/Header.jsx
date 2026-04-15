@@ -114,7 +114,6 @@ const Header = () => {
                 { name: 'Backend Developer', path: '/courses/backend-developer' }
             ]
         },
-        { name: 'Batches', path: '/batches' },
         { name: 'Placements', path: '/placement' },
     ];
 

@@ -224,7 +224,12 @@ const TechnologiesSection = () => {
                 {/* CTA Section */}
                 <div className="text-center mt-12 sm:mt-16">
                     <div className="inline-block">
-                        <button className="relative px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-white overflow-hidden group active:scale-95 transition-transform text-sm sm:text-base">
+                        <button className="relative px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-white overflow-hidden group active:scale-95 transition-transform text-sm sm:text-base" onClick={() => {
+                            const footer = document.querySelector('footer');
+                            if (footer) {
+                                footer.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}>
                             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 group-hover:from-purple-500 group-hover:to-cyan-500 transition-all duration-300"></div>
                             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
                             <span className="relative flex items-center gap-2">

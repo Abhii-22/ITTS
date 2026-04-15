@@ -162,7 +162,12 @@ const Carousel = () => {
                                         className={`transform transition-all duration-1000 delay-700 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                             }`}
                                     >
-                                        <button className="w-full sm:w-auto bg-indigo-400 hover:bg-indigo-500 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-2xl hover:shadow-indigo-400/50 transform hover:scale-105 transition-all duration-300 active:scale-95">
+                                        <button className="w-full sm:w-auto bg-indigo-400 hover:bg-indigo-500 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-2xl hover:shadow-indigo-400/50 transform hover:scale-105 transition-all duration-300 active:scale-95" onClick={() => {
+                                            const footer = document.querySelector('footer');
+                                            if (footer) {
+                                                footer.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }}>
                                             Start Learning Today
                                         </button>
                                     </div>
@@ -177,20 +182,20 @@ const Carousel = () => {
             <button
                 onClick={prevSlide}
                 aria-label="Previous slide"
-                className="absolute left-3 sm:left-6 md:left-12 top-1/2 -translate-y-1/2 z-30 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 sm:p-4 rounded-full transition-all duration-300 hover:scale-110 border border-white/30 active:scale-95"
+                className="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 z-40 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-1.5 sm:p-2 md:p-2.5 rounded-full transition-all duration-300 hover:scale-110 border border-white/30 active:scale-95"
             >
-                <ChevronLeft className="w-5 h-5 sm:w-8 sm:h-8" strokeWidth={2.5} />
+                <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" strokeWidth={2} />
             </button>
             <button
                 onClick={nextSlide}
                 aria-label="Next slide"
-                className="absolute right-3 sm:right-6 md:right-12 top-1/2 -translate-y-1/2 z-30 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 sm:p-4 rounded-full transition-all duration-300 hover:scale-110 border border-white/30 active:scale-95"
+                className="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 z-40 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-1.5 sm:p-2 md:p-2.5 rounded-full transition-all duration-300 hover:scale-110 border border-white/30 active:scale-95"
             >
-                <ChevronRight className="w-5 h-5 sm:w-8 sm:h-8" strokeWidth={2.5} />
+                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" strokeWidth={2} />
             </button>
 
             {/* Dots Navigation */}
-            <div className="absolute bottom-16 sm:bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-2 sm:gap-3 px-4">
+            <div className="absolute bottom-20 sm:bottom-16 left-1/2 -translate-x-1/2 z-40 flex gap-2 sm:gap-3 px-4">
                 {slides.map((_, index) => (
                     <button
                         key={index}
@@ -208,7 +213,7 @@ const Carousel = () => {
             <button
                 onClick={toggleAutoPlay}
                 aria-label={isAutoPlaying ? "Pause autoplay" : "Play autoplay"}
-                className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 z-30 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 border border-white/30 active:scale-95"
+                className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 border border-white/30 active:scale-95"
             >
                 {isAutoPlaying ? (
                     <Pause className="w-4 h-4 sm:w-6 sm:h-6" />
@@ -218,7 +223,7 @@ const Carousel = () => {
             </button>
 
             {/* Slide Counter */}
-            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 z-30 text-white text-xs sm:text-sm font-semibold">
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 z-40 text-white text-xs sm:text-sm font-semibold">
                 {currentSlide + 1} / {slides.length}
             </div>
         </div>

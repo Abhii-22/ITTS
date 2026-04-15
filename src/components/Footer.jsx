@@ -93,12 +93,26 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Popular Courses</h4>
                         <ul className="space-y-2 sm:space-y-3">
-                            {['Web Development', 'Data Science', 'Cloud Computing', 'Mobile Development', 'AI & Machine Learning'].map((course) => (
-                                <li key={course}>
-                                    <div className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group cursor-pointer text-sm sm:text-base">
+                            {[
+                                { name: 'Web Development', path: '/courses/web-development' },
+                                { name: 'Data Science', path: '/courses/data-science' },
+                                { name: 'Cloud Computing', path: '/courses/cloud-computing' },
+                                { name: 'Frontend Developer', path: '/courses/frontend-developer' },
+                                { name: 'Backend Developer', path: '/courses/backend-developer' },
+                                { name: 'Python Fullstack', path: '/courses/python-fullstack' },
+                                { name: 'Java Fullstack', path: '/courses/java-fullstack' },
+                                { name: 'Data Analytics', path: '/courses/data-analytics' },
+                                { name: 'AI & Machine Learning', path: '/courses/ai-ml' },
+                                { name: 'DevOps', path: '/courses/devops' }
+                            ].map((course) => (
+                                <li key={course.name}>
+                                    <a 
+                                        href={course.path}
+                                        className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group text-sm sm:text-base"
+                                    >
                                         <span className="w-1.5 h-1.5 bg-blue-500 rounded-full group-hover:w-2 group-hover:h-2 transition-all flex-shrink-0"></span>
-                                        <span className="leading-tight">{course}</span>
-                                    </div>
+                                        <span className="leading-tight">{course.name}</span>
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -108,27 +122,19 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
                         <ul className="space-y-2 sm:space-y-3">
-                            {['About Us', 'Instructors', 'Careers', 'Blog', 'Contact'].map((item) => (
-                                <li key={item}>
-                                    <div className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group cursor-pointer text-sm sm:text-base">
+                            {[
+                                { name: 'Home', path: '/' },
+                                { name: 'About', path: '/about' },
+                                { name: 'Placement', path: '/placement' }
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <a 
+                                        href={item.path}
+                                        className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group text-sm sm:text-base"
+                                    >
                                         <span className="w-1.5 h-1.5 bg-blue-500 rounded-full group-hover:w-2 group-hover:h-2 transition-all flex-shrink-0"></span>
-                                        <span className="leading-tight">{item}</span>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Support */}
-                    <div>
-                        <h4 className="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Support</h4>
-                        <ul className="space-y-2 sm:space-y-3">
-                            {['Help Center', 'Terms of Service', 'Privacy Policy', 'Refund Policy', 'FAQs'].map((item) => (
-                                <li key={item}>
-                                    <div className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group cursor-pointer text-sm sm:text-base">
-                                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full group-hover:w-2 group-hover:h-2 transition-all flex-shrink-0"></span>
-                                        <span className="leading-tight">{item}</span>
-                                    </div>
+                                        <span className="leading-tight">{item.name}</span>
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -138,7 +144,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="border-t border-slate-800 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
                     <p className="text-gray-400 text-xs sm:text-sm text-center md:text-left">
-                        © 2025 TechAcademy. All rights reserved.
+                        2025 TechAcademy. All rights reserved.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-400">
                         <div className="hover:text-blue-400 transition-colors cursor-pointer">Sitemap</div>

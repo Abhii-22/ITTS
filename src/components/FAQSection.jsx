@@ -86,14 +86,6 @@ const FAQSection = () => {
                             </div>
                         ))}
                     </div>
-
-                    {/* CTA after FAQs */}
-                    <div className="mt-10 md:mt-12 lg:mt-16 p-6 sm:p-8 md:p-10 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-lg md:rounded-xl text-center">
-                        <p className="text-gray-300 mb-4">Still have questions?</p>
-                        <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/50">
-                            Contact Our Team
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>

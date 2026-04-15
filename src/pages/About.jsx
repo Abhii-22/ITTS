@@ -400,15 +400,14 @@ const About = () => {
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all hover:scale-105 flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const footer = document.querySelector('footer');
+                if (footer) {
+                  footer.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Start Your Journey <Rocket className="w-5 h-5" />
-            </motion.button>
-            <motion.button
-              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-bold transition-all"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Download Brochure
             </motion.button>
           </motion.div>
         </div>
@@ -850,7 +849,12 @@ const About = () => {
             </p>
             
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <motion.button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all hover:scale-105 flex items-center justify-center gap-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all hover:scale-105 flex items-center justify-center gap-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => {
+                const footer = document.querySelector('footer');
+                if (footer) {
+                  footer.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}>
                 Start Learning Today <Rocket className="w-5 h-5" />
               </motion.button>
               <motion.button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-bold transition-all" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
