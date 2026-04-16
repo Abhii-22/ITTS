@@ -30,7 +30,7 @@ const LearningPathSection = () => {
     ];
 
     return (
-        <section className="py-12 md:py-16 lg:py-20 bg-slate-900">
+        <section className="py-12 md:py-16 lg:py-20 bg-black">
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="text-center mb-10 md:mb-14 lg:mb-16">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4">Your Learning Journey</h2>

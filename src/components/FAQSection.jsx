@@ -32,7 +32,7 @@ const FAQSection = () => {
     };
 
     return (
-        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-20 bg-black relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute inset-0 opacity-30">
                 <div className="absolute top-20 left-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl"></div>

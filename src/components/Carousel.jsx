@@ -17,21 +17,21 @@ const Carousel = () => {
             subtitle: "Learn React, Node.js, and Full-Stack Technologies",
             description: "Build production-ready applications with industry-standard tools and frameworks",
             image: homeWebImage,
-            stats: { students: "5K+", courses: "50+" }
+            stats: { students: "5K+", Technologies: "15+" }
         },
         {
             title: "AI & Machine Learning",
             subtitle: "Dive into the Future of Technology",
             description: "Master Python, TensorFlow, and cutting-edge AI algorithms",
             image: homeAimlImage,
-            stats: { students: "3K+", courses: "30+" }
+            stats: { students: "3K+", Technologies: "10+" }
         },
         {
             title: "Cloud & DevOps Mastery",
             subtitle: "AWS, Azure, Docker & Kubernetes",
             description: "Learn to deploy, scale, and manage modern cloud infrastructure",
             image: homeCloudImage,
-            stats: { students: "4K+", courses: "40+" }
+            stats: { students: "4K+", Technologies: "15+" }
         }
     ];
 

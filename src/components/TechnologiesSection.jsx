@@ -73,7 +73,7 @@ const TechnologiesSection = () => {
     };
 
     return (
-        <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-black">
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-20 -right-20 w-64 h-64 sm:w-96 sm:h-96 bg-purple-500 opacity-5 rounded-full blur-3xl animate-pulse"></div>

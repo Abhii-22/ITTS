@@ -88,7 +88,7 @@ const CoursesSection = () => {
     ];
 
     return (
-        <section className="min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <section className="min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 bg-black relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 opacity-10 sm:opacity-15 md:opacity-20">
                 <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
