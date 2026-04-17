@@ -315,12 +315,14 @@ const Header = () => {
                         </a>
 
                         {/* CTA Button */}
-                        <Link
-                            to="/contact"
-                            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-blue-500/50 hover:scale-105 active:scale-95"
+                        <a
+                            href="https://register.medinitechnologies.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-blue-500/50 hover:scale-105 active:scale-95 cursor-pointer inline-block"
                         >
                             Enroll Now
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -377,8 +379,8 @@ const Header = () => {
                                 {/* Mobile Dropdown */}
                                 {item.hasDropdown && item.submenu && (
                                     <div
-                                        className={`overflow-hidden transition-all duration-300 ${openDropdown === item.name
-                                            ? 'max-h-64 opacity-100 mt-2'
+                                        className={`overflow-y-auto transition-all duration-300 ${openDropdown === item.name
+                                            ? 'max-h-80 opacity-100 mt-2'
                                             : 'max-h-0 opacity-0'
                                             }`}
                                     >

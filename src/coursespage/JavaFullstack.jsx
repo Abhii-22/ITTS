@@ -124,9 +124,14 @@ const JavaFullstack = () => {
                             Master enterprise-grade fullstack development with Java, Spring Boot, and modern frontend technologies to build robust, scalable, and secure web applications
                         </p>
                         <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-700 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
-                            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105">
+                            <a 
+                                href="https://register.medinitechnologies.in/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 cursor-pointer inline-block"
+                            >
                                 Enroll Now
-                            </button>
+                            </a>
                                                     </div>
                     </div>
                 </div>
@@ -712,12 +717,17 @@ const JavaFullstack = () => {
                             Join thousands of successful Java developers who started their journey with our comprehensive program. Your enterprise career starts here!
                         </p>
                         <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={staggerContainer}>
-                            <motion.button variants={scaleIn} className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105">
+                            <motion.a 
+                                href="https://register.medinitechnologies.in/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                variants={scaleIn} 
+                                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 cursor-pointer inline-block"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 Enroll Now - Save 25%
-                            </motion.button>
-                            <motion.button variants={scaleIn} className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300">
-                                Download Syllabus
-                            </motion.button>
+                            </motion.a>
                         </motion.div>
                         <motion.div className="mt-8 flex items-center justify-center gap-6 text-gray-400" variants={staggerContainer}>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>

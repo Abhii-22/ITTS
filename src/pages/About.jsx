@@ -457,7 +457,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 sm:py-20 md:py-24 bg-slate-900 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-12"
@@ -561,7 +561,7 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-slate-800 to-slate-900 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 bg-black border-t border-slate-700 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-16"
@@ -715,7 +715,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-slate-900 to-slate-800 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-16"
@@ -786,7 +786,7 @@ const About = () => {
 
       
       {/* Achievements */}
-      <section className="py-16 sm:py-20 md:py-24 bg-slate-900 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Achievements & Recognition</h2>
@@ -819,7 +819,7 @@ const About = () => {
       </section>
 
       {/* Impact Section */}
-      <section className="py-16 sm:py-20 md:py-24 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 bg-black border-t border-slate-700 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Our Impact</h2>
@@ -839,7 +839,7 @@ const About = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 sm:py-20 md:py-24 bg-slate-900 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <motion.div className="max-w-3xl mx-auto text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Career?</h2>
