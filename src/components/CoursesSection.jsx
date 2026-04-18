@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Clock, Users, Star, ArrowRight, Filter, TrendingUp, Award, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import dataScienceImage from '../assets/images/datascience.jpg';
@@ -11,6 +12,27 @@ import javaImage from '../assets/images/java.jpg';
 const CoursesSection = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
     const navigate = useNavigate();
+
+    // Animation variants
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const scaleIn = {
+        hidden: { opacity: 0, scale: 0.9 },
+        visible: { opacity: 1, scale: 1 }
+    };
 
     const courses = [
         {
@@ -97,7 +119,14 @@ const CoursesSection = () => {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Header */}
-                <div className="text-center mb-8 sm:mb-10 md:mb-12">
+                <motion.div 
+                    className="text-center mb-8 sm:mb-10 md:mb-12"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeInUp}
+                    transition={{ duration: 0.6 }}
+                >
                     <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
                         <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 text-indigo-300" />
                         <span className="text-indigo-300 text-xs sm:text-sm font-semibold">EXPLORE COURSES</span>
@@ -108,16 +137,29 @@ const CoursesSection = () => {
                     <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-4">
                         Master in-demand skills with our industry-leading programs designed by experts
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Courses Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
+                <motion.div 
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={staggerContainer}
+                    transition={{ duration: 0.6 }}
+                >
                     {courses.map((course, index) => (
-                        <div
+                        <motion.div
                             key={index}
                             onMouseEnter={() => setHoveredCard(index)}
                             onMouseLeave={() => setHoveredCard(null)}
-                            className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-700 hover:border-indigo-400 transition-all duration-500 group hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-1 sm:hover:-translate-y-2"
+                            className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-700 hover:border-indigo-400 transition-all duration-500 group hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-1 sm:hover:-translate-y-2 relative"
+                            variants={scaleIn}
+                            whileHover={{ 
+                                scale: 1.02,
+                                boxShadow: "0 20px 40px rgba(99, 102, 241, 0.3)"
+                            }}
+                            whileTap={{ scale: 0.98 }}
                         >
                             {/* Image Container */}
                             <div className="relative h-44 sm:h-52 md:h-56 overflow-hidden">
@@ -193,24 +235,36 @@ const CoursesSection = () => {
                                 </div>
 
                                 {/* CTA Button */}
-                                <button 
+                                <motion.button 
                                     onClick={() => {
                                         window.scrollTo(0, 0);
                                         navigate(course.route);
                                     }}
                                     className="w-full bg-gradient-to-r from-indigo-400 to-purple-600 hover:from-indigo-500 hover:to-purple-700 text-white py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl text-sm sm:text-base font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
                                     Explore Now
-                                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                                </button>
+                                    <motion.div
+                                        whileHover={{ x: 5 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                                    </motion.div>
+                                </motion.button>
                             </div>
 
                             {/* Hover Effect Overlay */}
-                            <div className={`absolute inset-0 bg-gradient-to-t from-indigo-400/10 to-transparent pointer-events-none transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-0'
-                                }`}></div>
-                        </div>
+                            <motion.div 
+                                className={`absolute inset-0 bg-gradient-to-t from-indigo-400/10 to-transparent pointer-events-none transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-0'
+                                }`}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: hoveredCard === index ? 1 : 0 }}
+                                transition={{ duration: 0.3 }}
+                            ></motion.div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                             </div>
 
