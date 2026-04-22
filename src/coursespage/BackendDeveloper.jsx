@@ -97,7 +97,7 @@ const BackendDeveloper = () => {
     };
 
     return (
-        <div className="min-h-screen overflow-x-hidden overflow-y-hidden">
+        <div className="min-h-screen bg-white overflow-x-hidden overflow-y-hidden">
             {/* Hero Section */}
             <section className="relative h-screen overflow-hidden">
                 {/* Background Image */}
@@ -145,16 +145,16 @@ const BackendDeveloper = () => {
             </section>
 
             {/* Course Curriculum Section - Moved up */}
-            <ScrollSection className="py-20 bg-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Comprehensive Backend Development Curriculum
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Master backend development through our structured learning path designed by industry experts
                         </p>
                     </motion.div>
@@ -165,7 +165,7 @@ const BackendDeveloper = () => {
                     >
                         {/* Foundation Track */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={fadeInLeft}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -178,49 +178,49 @@ const BackendDeveloper = () => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                                    <FaDatabase className="w-6 h-6 text-white" />
+                                    <FaDatabase className="w-6 h-6 text-gray-900" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Backend Fundamentals</h3>
+                                <h3 className="text-2xl font-bold text-gray-900">Backend Fundamentals</h3>
                             </div>
                             
                             <motion.div className="space-y-4" variants={staggerContainer}>
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Programming Languages</h4>
-                                    <p className="text-gray-400 mb-3">Master Python, JavaScript/Node.js, Java, and choose your backend specialization.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Programming Languages</h4>
+                                    <p className="text-black mb-3">Master Python, JavaScript/Node.js, Java, and choose your backend specialization.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Python</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Node.js</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Java</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Python</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Node.js</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Java</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Database Fundamentals</h4>
-                                    <p className="text-gray-400 mb-3">Learn SQL, NoSQL databases, database design, and data modeling principles.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Database Fundamentals</h4>
+                                    <p className="text-black mb-3">Learn SQL, NoSQL databases, database design, and data modeling principles.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">SQL</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">NoSQL</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Database Design</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">SQL</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">NoSQL</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Database Design</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">API Development</h4>
-                                    <p className="text-gray-400 mb-3">Build RESTful APIs, understand HTTP protocols, and API design best practices.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">API Development</h4>
+                                    <p className="text-black mb-3">Build RESTful APIs, understand HTTP protocols, and API design best practices.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">REST APIs</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">HTTP</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">API Design</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">REST APIs</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">HTTP</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">API Design</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Version Control & Git</h4>
-                                    <p className="text-gray-400 mb-3">Master Git workflows, branching strategies, and collaborative development.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Version Control & Git</h4>
+                                    <p className="text-black mb-3">Master Git workflows, branching strategies, and collaborative development.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Git</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">GitHub</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Git Flow</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Git</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">GitHub</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Git Flow</span>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -228,7 +228,7 @@ const BackendDeveloper = () => {
 
                         {/* Advanced Track */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={fadeInRight}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -241,49 +241,49 @@ const BackendDeveloper = () => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                                    <FaMicrochip className="w-6 h-6 text-white" />
+                                    <FaMicrochip className="w-6 h-6 text-gray-900" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Advanced Backend & Cloud</h3>
+                                <h3 className="text-2xl font-bold text-gray-900">Advanced Backend & Cloud</h3>
                             </div>
                             
                             <motion.div className="space-y-4" variants={staggerContainer}>
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Microservices Architecture</h4>
-                                    <p className="text-gray-400 mb-3">Design and implement microservices, service mesh, and distributed systems.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Microservices Architecture</h4>
+                                    <p className="text-black mb-3">Design and implement microservices, service mesh, and distributed systems.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Microservices</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Service Mesh</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Distributed Systems</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Microservices</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Service Mesh</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Distributed Systems</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Cloud & DevOps</h4>
-                                    <p className="text-gray-400 mb-3">Deploy to cloud platforms, containerization, CI/CD pipelines, and infrastructure as code.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Cloud & DevOps</h4>
+                                    <p className="text-black mb-3">Deploy to cloud platforms, containerization, CI/CD pipelines, and infrastructure as code.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">AWS</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Docker</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">CI/CD</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">AWS</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Docker</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">CI/CD</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Security & Authentication</h4>
-                                    <p className="text-gray-400 mb-3">Implement security best practices, authentication, authorization, and data protection.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Security & Authentication</h4>
+                                    <p className="text-black mb-3">Implement security best practices, authentication, authorization, and data protection.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">JWT</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">OAuth</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Security</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">JWT</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">OAuth</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Security</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Performance & Scaling</h4>
-                                    <p className="text-gray-400 mb-3">Optimize database queries, implement caching, load balancing, and system monitoring.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Performance & Scaling</h4>
+                                    <p className="text-black mb-3">Optimize database queries, implement caching, load balancing, and system monitoring.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Performance</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Caching</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Load Balancing</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Performance</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Caching</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Load Balancing</span>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -293,17 +293,17 @@ const BackendDeveloper = () => {
             </ScrollSection>
 
             {/* Benefits Section - Grid Layout */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                         variants={staggerContainer}
                     >
                         <motion.div variants={fadeInLeft}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                                 Why Learn Backend Development?
                             </h2>
-                            <p className="text-lg text-gray-400 mb-8">
+                            <p className="text-lg text-black mb-8">
                                 Discover the numerous advantages of becoming a backend developer in today's tech landscape
                             </p>
                             
@@ -327,11 +327,11 @@ const BackendDeveloper = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaChartLine className="w-5 h-5 text-white" />
+                                        <FaChartLine className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Core Infrastructure</h3>
-                                        <p className="text-gray-400 text-sm">Build the foundation that powers all applications</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Core Infrastructure</h3>
+                                        <p className="text-black text-sm">Build the foundation that powers all applications</p>
                                     </div>
                                 </motion.div>
 
@@ -354,11 +354,11 @@ const BackendDeveloper = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaBriefcase className="w-5 h-5 text-white" />
+                                        <FaBriefcase className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Essential Skills</h3>
-                                        <p className="text-gray-400 text-sm">Every application needs robust backend systems</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Essential Skills</h3>
+                                        <p className="text-black text-sm">Every application needs robust backend systems</p>
                                     </div>
                                 </motion.div>
 
@@ -381,11 +381,11 @@ const BackendDeveloper = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaAward className="w-5 h-5 text-white" />
+                                        <FaAward className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">High Salaries</h3>
-                                        <p className="text-gray-400 text-sm">Backend engineers command excellent compensation</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">High Salaries</h3>
+                                        <p className="text-black text-sm">Backend engineers command excellent compensation</p>
                                     </div>
                                 </motion.div>
 
@@ -408,33 +408,33 @@ const BackendDeveloper = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaBolt className="w-5 h-5 text-white" />
+                                        <FaBolt className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Cutting-Edge Tech</h3>
-                                        <p className="text-gray-400 text-sm">Work with cloud, AI, and distributed systems</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Cutting-Edge Tech</h3>
+                                        <p className="text-black text-sm">Work with cloud, AI, and distributed systems</p>
                                     </div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
 
-                        <motion.div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700" variants={fadeInRight}>
+                        <motion.div className="bg-gray-50/50 p-8 rounded-xl border border-gray-700" variants={fadeInRight}>
                             <motion.div className="grid grid-cols-2 gap-6" variants={staggerContainer}>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">$250B</div>
-                                    <div className="text-sm text-gray-400">Backend Market Size</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">$250B</div>
+                                    <div className="text-sm text-black">Backend Market Size</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">6.8M</div>
-                                    <div className="text-sm text-gray-400">Backend Jobs</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">6.8M</div>
+                                    <div className="text-sm text-black">Backend Jobs</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">98%</div>
-                                    <div className="text-sm text-gray-400">Company Demand</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
+                                    <div className="text-sm text-black">Company Demand</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">35%</div>
-                                    <div className="text-sm text-gray-400">Annual Growth</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">35%</div>
+                                    <div className="text-sm text-black">Annual Growth</div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
@@ -443,16 +443,16 @@ const BackendDeveloper = () => {
             </ScrollSection>
 
             {/* Tools & Technologies Section - Moved up */}
-            <ScrollSection className="py-20 bg-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Master Backend Tools
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Learn the exact tools and technologies used by backend developers worldwide
                         </p>
                     </motion.div>
@@ -463,7 +463,7 @@ const BackendDeveloper = () => {
                     >
                         {/* Programming Languages */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -471,18 +471,18 @@ const BackendDeveloper = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <FaPython className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Programming Languages</h3>
+                                <FaPython className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Programming Languages</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Python', 'Node.js', 'Java', 'Go', 'Ruby', 'PHP'].map((lang, index) => (
                                     <motion.div 
                                         key={lang}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg"
                                         variants={fadeInUp}
                                     >
-                                        <span className="text-gray-300">{lang}</span>
-                                        <FaCheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{lang}</span>
+                                        <FaCheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -490,7 +490,7 @@ const BackendDeveloper = () => {
 
                         {/* Databases & Storage */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -498,18 +498,18 @@ const BackendDeveloper = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <FaDatabase className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Databases & Storage</h3>
+                                <FaDatabase className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Databases & Storage</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Cassandra'].map((db, index) => (
                                     <motion.div 
                                         key={db}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg"
                                         variants={fadeInUp}
                                     >
-                                        <span className="text-gray-300">{db}</span>
-                                        <FaCheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{db}</span>
+                                        <FaCheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -517,7 +517,7 @@ const BackendDeveloper = () => {
 
                         {/* Cloud & DevOps */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -525,18 +525,18 @@ const BackendDeveloper = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <FaServer className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Cloud & DevOps</h3>
+                                <FaServer className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Cloud & DevOps</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Terraform', 'Nginx'].map((tool, index) => (
                                     <motion.div 
                                         key={tool}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg"
                                         variants={fadeInUp}
                                     >
-                                        <span className="text-gray-300">{tool}</span>
-                                        <FaCheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{tool}</span>
+                                        <FaCheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -546,7 +546,7 @@ const BackendDeveloper = () => {
             </ScrollSection>
 
             {/* Applications & Career Impact - Combined Section */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-black to-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16"
@@ -554,36 +554,36 @@ const BackendDeveloper = () => {
                     >
                         {/* Applications */}
                         <motion.div variants={fadeInLeft}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                                 Real-World Applications
                             </h2>
                             <motion.div className="space-y-6" variants={staggerContainer}>
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <FaRocket className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">Enterprise Systems</h3>
+                                        <FaRocket className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">Enterprise Systems</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Build scalable enterprise backend systems with microservices architecture
                                     </p>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <FaChartLine className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">API Platforms</h3>
+                                        <FaChartLine className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">API Platforms</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Create powerful APIs that connect frontend applications to data and services
                                     </p>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <FaChartPie className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">Cloud Services</h3>
+                                        <FaChartPie className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">Cloud Services</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Develop cloud-native applications and serverless backend solutions
                                     </p>
                                 </motion.div>
@@ -592,17 +592,17 @@ const BackendDeveloper = () => {
 
                         {/* Career Impact */}
                         <motion.div variants={fadeInRight}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                                 Career Transformation
                             </h2>
                             <motion.div className="space-y-6" variants={staggerContainer}>
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <FaDatabase className="w-6 h-6 text-white" />
+                                        <FaDatabase className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Master Backend Skills</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Master Backend Skills</h3>
+                                        <p className="text-black">
                                             Learn server-side programming to build robust and scalable applications
                                         </p>
                                     </div>
@@ -610,11 +610,11 @@ const BackendDeveloper = () => {
 
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <FaAward className="w-6 h-6 text-white" />
+                                        <FaAward className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Build System Architecture</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Build System Architecture</h3>
+                                        <p className="text-black">
                                             Create impressive backend projects showcasing your system design skills
                                         </p>
                                     </div>
@@ -622,18 +622,18 @@ const BackendDeveloper = () => {
 
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <FaBriefcase className="w-6 h-6 text-white" />
+                                        <FaBriefcase className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Launch Backend Career</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Launch Backend Career</h3>
+                                        <p className="text-black">
                                             Get placed at top tech companies with our career support and interview prep
                                         </p>
                                     </div>
                                 </motion.div>
 
                                 <motion.div className="mt-8" variants={scaleIn}>
-                                    <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 w-full">
+                                    <button className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 w-full">
                                         Start Your Backend Journey
                                     </button>
                                 </motion.div>
@@ -644,16 +644,16 @@ const BackendDeveloper = () => {
             </ScrollSection>
 
             {/* Learning Methodology Section */}
-            <ScrollSection className="py-20 bg-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Our Backend Learning Approach
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Experience a revolutionary approach to learning backend development through our proven methodology
                         </p>
                     </motion.div>
@@ -663,41 +663,41 @@ const BackendDeveloper = () => {
                         variants={staggerContainer}
                     >
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaBullseye className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaBullseye className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Real-World Projects</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Real-World Projects</h3>
+                            <p className="text-black leading-relaxed">
                                 Build 25+ backend projects including APIs, databases, and cloud deployments
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaUsers className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaUsers className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Expert Mentorship</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Expert Mentorship</h3>
+                            <p className="text-black leading-relaxed">
                                 Learn from backend engineers working at Amazon, Google, and top tech companies
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-purple-600/20 to-orange-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaChartLine className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaChartLine className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Hands-On Practice</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Hands-On Practice</h3>
+                            <p className="text-black leading-relaxed">
                                 Access cloud labs, real servers, and enterprise development environments
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-red-600/20 to-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaRocket className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaRocket className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Career Excellence</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Career Excellence</h3>
+                            <p className="text-black leading-relaxed">
                                 Get system design interviews, portfolio reviews, and direct referrals to tech companies
                             </p>
                         </motion.div>
@@ -707,13 +707,13 @@ const BackendDeveloper = () => {
 
             
             {/* Final CTA Section */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div variants={fadeInUp}>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                             Ready to Master Backend Development?
                         </h2>
-                        <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                        <p className="text-xl text-black mb-8 max-w-3xl mx-auto">
                             Join thousands of successful backend developers who started their journey with our comprehensive program. Your backend career starts here!
                         </p>
                         <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={staggerContainer}>
@@ -722,24 +722,24 @@ const BackendDeveloper = () => {
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 variants={scaleIn} 
-                                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 cursor-pointer inline-block"
+                                className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 cursor-pointer inline-block"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 Enroll Now - Save 25%
                             </motion.a>
                         </motion.div>
-                        <motion.div className="mt-8 flex items-center justify-center gap-6 text-gray-400" variants={staggerContainer}>
+                        <motion.div className="mt-8 flex items-center justify-center gap-6 text-black" variants={staggerContainer}>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <FaClock className="w-5 h-5 text-white" />
+                                <FaClock className="w-5 h-5 text-gray-900" />
                                 <span>Limited Time Offer</span>
                             </motion.div>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <FaUsers className="w-5 h-5 text-white" />
+                                <FaUsers className="w-5 h-5 text-gray-900" />
                                 <span>12000+ Students Enrolled</span>
                             </motion.div>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <FaAward className="w-5 h-5 text-white" />
+                                <FaAward className="w-5 h-5 text-gray-900" />
                                 <span>Industry Recognized</span>
                             </motion.div>
                         </motion.div>

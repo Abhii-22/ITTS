@@ -163,10 +163,7 @@ const Carousel = () => {
                                             }`}
                                     >
                                         <button className="w-full sm:w-auto bg-indigo-400 hover:bg-indigo-500 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-2xl hover:shadow-indigo-400/50 transform hover:scale-105 transition-all duration-300 active:scale-95" onClick={() => {
-                                            const footer = document.querySelector('footer');
-                                            if (footer) {
-                                                footer.scrollIntoView({ behavior: 'smooth' });
-                                            }
+                                            window.location.href = '/contact';
                                         }}>
                                             Start Learning Today
                                         </button>

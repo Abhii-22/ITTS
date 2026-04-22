@@ -97,7 +97,7 @@ const DataScience = () => {
     };
 
     return (
-        <div className="min-h-screen overflow-x-hidden overflow-y-hidden">
+        <div className="min-h-screen bg-white overflow-x-hidden overflow-y-hidden">
             {/* Hero Section */}
             <section className="relative h-screen overflow-hidden">
                 {/* Background Image */}
@@ -145,16 +145,16 @@ const DataScience = () => {
             </section>
 
             {/* Course Curriculum Section - Moved up */}
-            <ScrollSection className="py-20 bg-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Comprehensive Data Science Curriculum
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Master data science through our structured learning path designed by industry experts
                         </p>
                     </motion.div>
@@ -165,7 +165,7 @@ const DataScience = () => {
                     >
                         {/* Foundation Track */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={fadeInLeft}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -178,49 +178,49 @@ const DataScience = () => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                                    <FaDatabase className="w-6 h-6 text-white" />
+                                    <FaDatabase className="w-6 h-6 text-gray-900" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Data Foundation</h3>
+                                <h3 className="text-2xl font-bold text-gray-900">Data Foundation</h3>
                             </div>
                             
                             <motion.div className="space-y-4" variants={staggerContainer}>
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Python for Data Science</h4>
-                                    <p className="text-gray-400 mb-3">Master Python programming, NumPy, Pandas, and data manipulation techniques for handling large datasets efficiently.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Python for Data Science</h4>
+                                    <p className="text-black mb-3">Master Python programming, NumPy, Pandas, and data manipulation techniques for handling large datasets efficiently.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Python</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">NumPy</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Pandas</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Python</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">NumPy</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Pandas</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Statistics & Probability</h4>
-                                    <p className="text-gray-400 mb-3">Learn statistical concepts, hypothesis testing, probability distributions, and apply them to real-world data problems.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Statistics & Probability</h4>
+                                    <p className="text-black mb-3">Learn statistical concepts, hypothesis testing, probability distributions, and apply them to real-world data problems.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Descriptive Stats</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Inferential Stats</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Hypothesis Testing</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Descriptive Stats</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Inferential Stats</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Hypothesis Testing</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Data Visualization</h4>
-                                    <p className="text-gray-400 mb-3">Create compelling visualizations using Matplotlib, Seaborn, and Tableau to communicate insights effectively.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Visualization</h4>
+                                    <p className="text-black mb-3">Create compelling visualizations using Matplotlib, Seaborn, and Tableau to communicate insights effectively.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Matplotlib</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Seaborn</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Tableau</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Matplotlib</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Seaborn</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Tableau</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">SQL & Big Data</h4>
-                                    <p className="text-gray-400 mb-3">Master database queries, data warehousing, and work with big data technologies like Hadoop and Spark.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">SQL & Big Data</h4>
+                                    <p className="text-black mb-3">Master database queries, data warehousing, and work with big data technologies like Hadoop and Spark.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">SQL</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Hadoop</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Spark</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">SQL</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Hadoop</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Spark</span>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -228,7 +228,7 @@ const DataScience = () => {
 
                         {/* Advanced Track */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={fadeInRight}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -241,49 +241,49 @@ const DataScience = () => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                                    <FaBrain className="w-6 h-6 text-white" />
+                                    <FaBrain className="w-6 h-6 text-gray-900" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Machine Learning & AI</h3>
+                                <h3 className="text-2xl font-bold text-gray-900">Machine Learning & AI</h3>
                             </div>
                             
                             <motion.div className="space-y-4" variants={staggerContainer}>
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Machine Learning Fundamentals</h4>
-                                    <p className="text-gray-400 mb-3">Learn supervised and unsupervised learning, model evaluation, and implement algorithms from scratch.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Machine Learning Fundamentals</h4>
+                                    <p className="text-black mb-3">Learn supervised and unsupervised learning, model evaluation, and implement algorithms from scratch.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Regression</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Classification</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Clustering</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Regression</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Classification</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Clustering</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Deep Learning & Neural Networks</h4>
-                                    <p className="text-gray-400 mb-3">Build neural networks, CNNs, RNNs, and work with TensorFlow and PyTorch for advanced AI applications.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Deep Learning & Neural Networks</h4>
+                                    <p className="text-black mb-3">Build neural networks, CNNs, RNNs, and work with TensorFlow and PyTorch for advanced AI applications.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">TensorFlow</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">PyTorch</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">CNN/RNN</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">TensorFlow</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">PyTorch</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">CNN/RNN</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Natural Language Processing</h4>
-                                    <p className="text-gray-400 mb-3">Process and analyze text data, build chatbots, sentiment analysis models, and work with transformers.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Natural Language Processing</h4>
+                                    <p className="text-black mb-3">Process and analyze text data, build chatbots, sentiment analysis models, and work with transformers.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">NLP</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Transformers</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">BERT</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">NLP</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Transformers</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">BERT</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Computer Vision & AI Ethics</h4>
-                                    <p className="text-gray-400 mb-3">Build image recognition systems, understand AI ethics, bias in ML models, and responsible AI practices.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Computer Vision & AI Ethics</h4>
+                                    <p className="text-black mb-3">Build image recognition systems, understand AI ethics, bias in ML models, and responsible AI practices.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Computer Vision</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">AI Ethics</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Model Deployment</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Computer Vision</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">AI Ethics</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Model Deployment</span>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -293,17 +293,17 @@ const DataScience = () => {
             </ScrollSection>
 
             {/* Benefits Section - Grid Layout */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                         variants={staggerContainer}
                     >
                         <motion.div variants={fadeInLeft}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                                 Why Learn Data Science?
                             </h2>
-                            <p className="text-lg text-gray-400 mb-8">
+                            <p className="text-lg text-black mb-8">
                                 Discover the numerous advantages of becoming a data scientist in today's data-driven world
                             </p>
                             
@@ -327,11 +327,11 @@ const DataScience = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaChartLine className="w-5 h-5 text-white" />
+                                        <FaChartLine className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Highest Demand</h3>
-                                        <p className="text-gray-400 text-sm">0% unemployment rate with premium salary packages</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Highest Demand</h3>
+                                        <p className="text-black text-sm">0% unemployment rate with premium salary packages</p>
                                     </div>
                                 </motion.div>
 
@@ -354,11 +354,11 @@ const DataScience = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaBriefcase className="w-5 h-5 text-white" />
+                                        <FaBriefcase className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Industry Agnostic</h3>
-                                        <p className="text-gray-400 text-sm">Work across any industry that generates data</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Industry Agnostic</h3>
+                                        <p className="text-black text-sm">Work across any industry that generates data</p>
                                     </div>
                                 </motion.div>
 
@@ -381,11 +381,11 @@ const DataScience = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaAward className="w-5 h-5 text-white" />
+                                        <FaAward className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Elite Salaries</h3>
-                                        <p className="text-gray-400 text-sm">Earn 40% more than other tech roles</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Elite Salaries</h3>
+                                        <p className="text-black text-sm">Earn 40% more than other tech roles</p>
                                     </div>
                                 </motion.div>
 
@@ -408,33 +408,33 @@ const DataScience = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <FaBolt className="w-5 h-5 text-white" />
+                                        <FaBolt className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Cutting-Edge Tech</h3>
-                                        <p className="text-gray-400 text-sm">Work with AI, ML, and advanced technologies</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Cutting-Edge Tech</h3>
+                                        <p className="text-black text-sm">Work with AI, ML, and advanced technologies</p>
                                     </div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
 
-                        <motion.div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700" variants={fadeInRight}>
+                        <motion.div className="bg-gray-50/50 p-8 rounded-xl border border-gray-700" variants={fadeInRight}>
                             <motion.div className="grid grid-cols-2 gap-6" variants={staggerContainer}>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">$180B</div>
-                                    <div className="text-sm text-gray-400">Market Size</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">$180B</div>
+                                    <div className="text-sm text-black">Market Size</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">2.5M</div>
-                                    <div className="text-sm text-gray-400">Job Openings</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">2.5M</div>
+                                    <div className="text-sm text-black">Job Openings</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">97ZB</div>
-                                    <div className="text-sm text-gray-400">Data Daily</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">97ZB</div>
+                                    <div className="text-sm text-black">Data Daily</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">35%</div>
-                                    <div className="text-sm text-gray-400">Annual Growth</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">35%</div>
+                                    <div className="text-sm text-black">Annual Growth</div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
@@ -443,16 +443,16 @@ const DataScience = () => {
             </ScrollSection>
 
             {/* Tools & Technologies Section - Moved up */}
-            <ScrollSection className="py-20 bg-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Master Data Science Tools
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Learn the exact tools and technologies used by data scientists worldwide
                         </p>
                     </motion.div>
@@ -463,7 +463,7 @@ const DataScience = () => {
                     >
                         {/* Programming & Analysis */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -471,18 +471,18 @@ const DataScience = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <FaMicrochip className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Programming & Analysis</h3>
+                                <FaMicrochip className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Programming & Analysis</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Python', 'R Programming', 'SQL', 'Excel', 'Jupyter Notebooks', 'Google Colab'].map((tech, index) => (
                                     <motion.div 
                                         key={tech}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg"
                                         variants={fadeInUp}
                                     >
-                                        <span className="text-gray-300">{tech}</span>
-                                        <FaCheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{tech}</span>
+                                        <FaCheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -490,7 +490,7 @@ const DataScience = () => {
 
                         {/* Machine Learning */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -498,18 +498,18 @@ const DataScience = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <FaBrain className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Machine Learning</h3>
+                                <FaBrain className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Machine Learning</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Scikit-Learn', 'TensorFlow', 'PyTorch', 'Keras', 'XGBoost', 'OpenCV'].map((tech, index) => (
                                     <motion.div 
                                         key={tech}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg"
                                         variants={fadeInUp}
                                     >
-                                        <span className="text-gray-300">{tech}</span>
-                                        <FaCheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{tech}</span>
+                                        <FaCheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -517,7 +517,7 @@ const DataScience = () => {
 
                         {/* Big Data & Visualization */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -525,18 +525,18 @@ const DataScience = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <FaChartPie className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Big Data & Visualization</h3>
+                                <FaChartPie className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Big Data & Visualization</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Tableau', 'Power BI', 'Hadoop', 'Spark', 'AWS SageMaker', 'Azure ML'].map((tech, index) => (
                                     <motion.div 
                                         key={tech}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg"
                                         variants={fadeInUp}
                                     >
-                                        <span className="text-gray-300">{tech}</span>
-                                        <FaCheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{tech}</span>
+                                        <FaCheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -546,7 +546,7 @@ const DataScience = () => {
             </ScrollSection>
 
             {/* Applications & Career Impact - Combined Section */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-black to-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16"
@@ -554,36 +554,36 @@ const DataScience = () => {
                     >
                         {/* Applications */}
                         <motion.div variants={fadeInLeft}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                                 Real-World Applications
                             </h2>
                             <motion.div className="space-y-6" variants={staggerContainer}>
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <FaBrain className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">Predictive Analytics</h3>
+                                        <FaBrain className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">Predictive Analytics</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Forecast customer behavior, market trends, and business outcomes using advanced statistical models and machine learning algorithms
                                     </p>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <FaChartLine className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">Healthcare Innovation</h3>
+                                        <FaChartLine className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">Healthcare Innovation</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Develop diagnostic models, predict disease outbreaks, personalize treatments, and optimize patient care using medical data
                                     </p>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <FaChartPie className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">Financial Modeling</h3>
+                                        <FaChartPie className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">Financial Modeling</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Build risk assessment models, detect fraud, optimize investment strategies, and automate trading decisions
                                     </p>
                                 </motion.div>
@@ -592,17 +592,17 @@ const DataScience = () => {
 
                         {/* Career Impact */}
                         <motion.div variants={fadeInRight}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                                 Career Transformation
                             </h2>
                             <motion.div className="space-y-6" variants={staggerContainer}>
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <FaDatabase className="w-6 h-6 text-white" />
+                                        <FaDatabase className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Master Data Skills</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Master Data Skills</h3>
+                                        <p className="text-black">
                                             Learn Python, SQL, statistics, and data visualization to handle any data challenge confidently
                                         </p>
                                     </div>
@@ -610,11 +610,11 @@ const DataScience = () => {
 
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <FaAward className="w-6 h-6 text-white" />
+                                        <FaAward className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Build ML Expertise</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Build ML Expertise</h3>
+                                        <p className="text-black">
                                             Develop expertise in machine learning, deep learning, and AI to create predictive models
                                         </p>
                                     </div>
@@ -622,11 +622,11 @@ const DataScience = () => {
 
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <FaBriefcase className="w-6 h-6 text-white" />
+                                        <FaBriefcase className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Launch Your Career</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Launch Your Career</h3>
+                                        <p className="text-black">
                                             Get placed at top companies with our career support, interview prep, and alumni network
                                         </p>
                                     </div>
@@ -637,7 +637,7 @@ const DataScience = () => {
                                         href="https://register.medinitechnologies.in/" 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 w-full cursor-pointer inline-block text-center"
+                                        className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-gray-500/50 transform hover:scale-105 w-full cursor-pointer inline-block text-center"
                                     >
                                         Start Your Data Science Journey
                                     </a>
@@ -649,16 +649,16 @@ const DataScience = () => {
             </ScrollSection>
 
             {/* Learning Methodology Section */}
-            <ScrollSection className="py-20 bg-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Our Data Science Learning Approach
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Experience a revolutionary approach to learning data science through our proven methodology
                         </p>
                     </motion.div>
@@ -668,41 +668,41 @@ const DataScience = () => {
                         variants={staggerContainer}
                     >
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaBullseye className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaBullseye className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Real-World Projects</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Real-World Projects</h3>
+                            <p className="text-black leading-relaxed">
                                 Work on 25+ industry projects including fraud detection, customer segmentation, and predictive maintenance systems.
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaUsers className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaUsers className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Expert Mentorship</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Expert Mentorship</h3>
+                            <p className="text-black leading-relaxed">
                                 Learn from data scientists working at Google, Amazon, and Microsoft through personalized mentoring sessions.
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-purple-600/20 to-orange-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaChartBar className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaChartBar className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Hands-On Practice</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Hands-On Practice</h3>
+                            <p className="text-black leading-relaxed">
                                 Access cloud-based Jupyter notebooks, real datasets, and GPU instances for deep learning experiments.
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-red-600/20 to-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <FaRocket className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <FaRocket className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Career Excellence</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Career Excellence</h3>
+                            <p className="text-black leading-relaxed">
                                 Get Kaggle competition support, portfolio building, and direct referrals to top data science companies.
                             </p>
                         </motion.div>
@@ -712,13 +712,13 @@ const DataScience = () => {
 
             
             {/* Final CTA Section */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div variants={fadeInUp}>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                             Ready to Master Data Science?
                         </h2>
-                        <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                        <p className="text-xl text-black mb-8 max-w-3xl mx-auto">
                             Join thousands of successful data scientists who started their journey with our comprehensive program. Your data science career starts here!
                         </p>
                         <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={staggerContainer}>
@@ -727,24 +727,24 @@ const DataScience = () => {
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 variants={scaleIn} 
-                                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 cursor-pointer inline-block"
+                                className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-gray-500/50 transform hover:scale-105 cursor-pointer inline-block"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 Enroll Now - Save 25%
                             </motion.a>
                         </motion.div>
-                        <motion.div className="mt-8 flex items-center justify-center gap-6 text-gray-400" variants={staggerContainer}>
+                        <motion.div className="mt-8 flex items-center justify-center gap-6 text-black" variants={staggerContainer}>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <FaClock className="w-5 h-5 text-white" />
+                                <FaClock className="w-5 h-5 text-gray-900" />
                                 <span>Limited Time Offer</span>
                             </motion.div>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <FaUsers className="w-5 h-5 text-white" />
+                                <FaUsers className="w-5 h-5 text-gray-900" />
                                 <span>8000+ Students Enrolled</span>
                             </motion.div>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <FaAward className="w-5 h-5 text-white" />
+                                <FaAward className="w-5 h-5 text-gray-900" />
                                 <span>Industry Recognized</span>
                             </motion.div>
                         </motion.div>

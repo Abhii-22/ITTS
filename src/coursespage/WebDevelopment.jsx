@@ -97,7 +97,7 @@ const WebDevelopment = () => {
     };
 
     return (
-        <div className="min-h-screen overflow-x-hidden overflow-y-hidden">
+        <div className="min-h-screen bg-white overflow-x-hidden overflow-y-hidden">
             {/* Hero Section */}
             <section className="relative h-screen overflow-hidden">
                 {/* Background Image */}
@@ -145,16 +145,16 @@ const WebDevelopment = () => {
             </section>
 
             {/* Course Curriculum Section - Moved up */}
-            <ScrollSection className="py-20 bg-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Comprehensive Web Development Curriculum
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Master web development through our structured learning path designed by industry experts
                         </p>
                     </motion.div>
@@ -165,7 +165,7 @@ const WebDevelopment = () => {
                     >
                         {/* Frontend Track */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={fadeInLeft}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -178,49 +178,49 @@ const WebDevelopment = () => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                                    <Palette className="w-6 h-6 text-white" />
+                                    <Palette className="w-6 h-6 text-gray-900" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Frontend Development</h3>
+                                <h3 className="text-2xl font-bold text-gray-900">Frontend Development</h3>
                             </div>
                             
                             <motion.div className="space-y-4" variants={staggerContainer}>
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">HTML5 & Semantic Markup</h4>
-                                    <p className="text-gray-400 mb-3">Learn modern HTML5 features, semantic elements, accessibility standards, and SEO best practices for creating well-structured web pages.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">HTML5 & Semantic Markup</h4>
+                                    <p className="text-black mb-3">Learn modern HTML5 features, semantic elements, accessibility standards, and SEO best practices for creating well-structured web pages.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Semantic HTML</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Accessibility</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">SEO</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Semantic HTML</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Accessibility</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">SEO</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Advanced CSS3 & Responsive Design</h4>
-                                    <p className="text-gray-400 mb-3">Master CSS3 animations, Flexbox, Grid, custom properties, and create responsive designs that work perfectly across all devices and screen sizes.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced CSS3 & Responsive Design</h4>
+                                    <p className="text-black mb-3">Master CSS3 animations, Flexbox, Grid, custom properties, and create responsive designs that work perfectly across all devices and screen sizes.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Flexbox & Grid</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Animations</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Responsive Design</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Flexbox & Grid</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Animations</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Responsive Design</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">JavaScript ES6+ & DOM Manipulation</h4>
-                                    <p className="text-gray-400 mb-3">Dive deep into modern JavaScript, async programming, DOM manipulation, event handling, and build interactive web applications.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">JavaScript ES6+ & DOM Manipulation</h4>
+                                    <p className="text-black mb-3">Dive deep into modern JavaScript, async programming, DOM manipulation, event handling, and build interactive web applications.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">ES6+ Features</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Async/Await</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">DOM API</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">ES6+ Features</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Async/Await</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">DOM API</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">React.js & Modern Frameworks</h4>
-                                    <p className="text-gray-400 mb-3">Learn React.js, component-based architecture, state management, hooks, and build scalable single-page applications.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">React.js & Modern Frameworks</h4>
+                                    <p className="text-black mb-3">Learn React.js, component-based architecture, state management, hooks, and build scalable single-page applications.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">React Hooks</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">State Management</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">SPA Development</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">React Hooks</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">State Management</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">SPA Development</span>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -228,7 +228,7 @@ const WebDevelopment = () => {
 
                         {/* Backend Track */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={fadeInRight}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -241,49 +241,49 @@ const WebDevelopment = () => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                                    <Database className="w-6 h-6 text-white" />
+                                    <Database className="w-6 h-6 text-gray-900" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Backend Development</h3>
+                                <h3 className="text-2xl font-bold text-gray-900">Backend Development</h3>
                             </div>
                             
                             <motion.div className="space-y-4" variants={staggerContainer}>
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Node.js & Express.js</h4>
-                                    <p className="text-gray-400 mb-3">Build robust server-side applications with Node.js, create RESTful APIs, handle authentication, and manage server-side routing.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Node.js & Express.js</h4>
+                                    <p className="text-black mb-3">Build robust server-side applications with Node.js, create RESTful APIs, handle authentication, and manage server-side routing.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">REST APIs</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Express.js</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Authentication</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">REST APIs</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Express.js</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Authentication</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Database Management</h4>
-                                    <p className="text-gray-400 mb-3">Master SQL and NoSQL databases, design efficient schemas, implement data relationships, and optimize database performance.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Database Management</h4>
+                                    <p className="text-black mb-3">Master SQL and NoSQL databases, design efficient schemas, implement data relationships, and optimize database performance.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">MongoDB</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">PostgreSQL</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Redis</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">MongoDB</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">PostgreSQL</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Redis</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">API Development & Integration</h4>
-                                    <p className="text-gray-400 mb-3">Design and implement RESTful and GraphQL APIs, handle third-party integrations, and ensure API security and performance.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">API Development & Integration</h4>
+                                    <p className="text-black mb-3">Design and implement RESTful and GraphQL APIs, handle third-party integrations, and ensure API security and performance.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">GraphQL</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">API Security</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Webhooks</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">GraphQL</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">API Security</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Webhooks</span>
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-900/50 p-4 rounded-lg" variants={fadeInUp}>
-                                    <h4 className="text-lg font-semibold text-white mb-2">Cloud Deployment & DevOps</h4>
-                                    <p className="text-gray-400 mb-3">Deploy applications to cloud platforms, implement CI/CD pipelines, manage containers with Docker, and monitor application performance.</p>
+                                <motion.div className="bg-white/50 p-4 rounded-lg" variants={fadeInUp}>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Cloud Deployment & DevOps</h4>
+                                    <p className="text-black mb-3">Deploy applications to cloud platforms, implement CI/CD pipelines, manage containers with Docker, and monitor application performance.</p>
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">AWS/Azure</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Docker</span>
-                                        <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">CI/CD</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">AWS/Azure</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">Docker</span>
+                                        <span className="px-3 py-1 bg-white/10 text-gray-900 rounded-full text-sm">CI/CD</span>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -293,17 +293,17 @@ const WebDevelopment = () => {
             </ScrollSection>
 
             {/* Benefits Section - Grid Layout */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                         variants={staggerContainer}
                     >
                         <motion.div variants={fadeInLeft}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                                 Why Learn Web Development?
                             </h2>
-                            <p className="text-lg text-gray-400 mb-8">
+                            <p className="text-lg text-black mb-8">
                                 Discover the numerous advantages of becoming a web developer in today's digital world
                             </p>
                             
@@ -327,11 +327,11 @@ const WebDevelopment = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <TrendingUp className="w-5 h-5 text-white" />
+                                        <TrendingUp className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">High Demand</h3>
-                                        <p className="text-gray-400 text-sm">Web developers are among the most sought-after professionals</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">High Demand</h3>
+                                        <p className="text-black text-sm">Web developers are among the most sought-after professionals</p>
                                     </div>
                                 </motion.div>
 
@@ -354,11 +354,11 @@ const WebDevelopment = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <Briefcase className="w-5 h-5 text-white" />
+                                        <Briefcase className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Flexible Work</h3>
-                                        <p className="text-gray-400 text-sm">Enjoy remote work and freelance opportunities</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Flexible Work</h3>
+                                        <p className="text-black text-sm">Enjoy remote work and freelance opportunities</p>
                                     </div>
                                 </motion.div>
 
@@ -381,11 +381,11 @@ const WebDevelopment = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <Award className="w-5 h-5 text-white" />
+                                        <Award className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Lucrative Salaries</h3>
-                                        <p className="text-gray-400 text-sm">Command competitive salaries with growth potential</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Lucrative Salaries</h3>
+                                        <p className="text-black text-sm">Command competitive salaries with growth potential</p>
                                     </div>
                                 </motion.div>
 
@@ -408,33 +408,33 @@ const WebDevelopment = () => {
                                             backgroundColor: "rgba(147, 51, 234, 0.3)"
                                         }}
                                     >
-                                        <Zap className="w-5 h-5 text-white" />
+                                        <Zap className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Constant Innovation</h3>
-                                        <p className="text-gray-400 text-sm">Work with cutting-edge technologies</p>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Constant Innovation</h3>
+                                        <p className="text-black text-sm">Work with cutting-edge technologies</p>
                                     </div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
 
-                        <motion.div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700" variants={fadeInRight}>
+                        <motion.div className="bg-gray-50/50 p-8 rounded-xl border border-gray-700" variants={fadeInRight}>
                             <motion.div className="grid grid-cols-2 gap-6" variants={staggerContainer}>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">5.2B</div>
-                                    <div className="text-sm text-gray-400">Internet Users</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">5.2B</div>
+                                    <div className="text-sm text-black">Internet Users</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">1.8B</div>
-                                    <div className="text-sm text-gray-400">Websites</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">1.8B</div>
+                                    <div className="text-sm text-black">Websites</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">$7T</div>
-                                    <div className="text-sm text-gray-400">E-Commerce Market</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">$7T</div>
+                                    <div className="text-sm text-black">E-Commerce Market</div>
                                 </motion.div>
                                 <motion.div className="text-center" variants={scaleIn}>
-                                    <div className="text-3xl font-bold text-white mb-2">27M</div>
-                                    <div className="text-sm text-gray-400">Developers</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">27M</div>
+                                    <div className="text-sm text-black">Developers</div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
@@ -443,16 +443,16 @@ const WebDevelopment = () => {
             </ScrollSection>
 
             {/* Tools & Technologies Section - Moved up */}
-            <ScrollSection className="py-20 bg-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Master Industry-Standard Tools
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Learn the exact technologies and tools used by top tech companies worldwide
                         </p>
                     </motion.div>
@@ -463,7 +463,7 @@ const WebDevelopment = () => {
                     >
                         {/* Frontend Tools */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -471,19 +471,19 @@ const WebDevelopment = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <Smartphone className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Frontend Stack</h3>
+                                <Smartphone className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Frontend Stack</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['HTML5/CSS3', 'JavaScript ES6+', 'React.js', 'TypeScript', 'Tailwind CSS', 'Next.js'].map((tool, index) => (
                                     <motion.div 
                                         key={index}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg hover:bg-gray-900 transition-colors"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg hover:bg-white transition-colors"
                                         variants={fadeInUp}
                                         whileHover={{ x: 5 }}
                                     >
-                                        <span className="text-gray-300">{tool}</span>
-                                        <CheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{tool}</span>
+                                        <CheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -491,7 +491,7 @@ const WebDevelopment = () => {
 
                         {/* Backend Tools */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -499,19 +499,19 @@ const WebDevelopment = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <Database className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">Backend Stack</h3>
+                                <Database className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">Backend Stack</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Redis', 'GraphQL'].map((tool, index) => (
                                     <motion.div 
                                         key={index}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg hover:bg-gray-900 transition-colors"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg hover:bg-white transition-colors"
                                         variants={fadeInUp}
                                         whileHover={{ x: 5 }}
                                     >
-                                        <span className="text-gray-300">{tool}</span>
-                                        <CheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{tool}</span>
+                                        <CheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -519,7 +519,7 @@ const WebDevelopment = () => {
 
                         {/* DevOps Tools */}
                         <motion.div 
-                            className="bg-gray-800/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
+                            className="bg-gray-50/50 rounded-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300" 
                             variants={scaleIn}
                             whileHover={{ 
                                 scale: 1.02, 
@@ -527,19 +527,19 @@ const WebDevelopment = () => {
                             }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <Shield className="w-8 h-8 text-white" />
-                                <h3 className="text-2xl font-bold text-white">DevOps & Tools</h3>
+                                <Shield className="w-8 h-8 text-gray-900" />
+                                <h3 className="text-2xl font-bold text-gray-900">DevOps & Tools</h3>
                             </div>
                             <motion.div className="space-y-4" variants={staggerContainer}>
                                 {['Git & GitHub', 'Docker', 'AWS', 'Vercel/Netlify', 'Jest/Cypress', 'Webpack/Vite'].map((tool, index) => (
                                     <motion.div 
                                         key={index}
-                                        className="flex items-center justify-between p-3 bg-gray-900/50 rounded-lg hover:bg-gray-900 transition-colors"
+                                        className="flex items-center justify-between p-3 bg-white/50 rounded-lg hover:bg-white transition-colors"
                                         variants={fadeInUp}
                                         whileHover={{ x: 5 }}
                                     >
-                                        <span className="text-gray-300">{tool}</span>
-                                        <CheckCircle className="w-5 h-5 text-white" />
+                                        <span className="text-black">{tool}</span>
+                                        <CheckCircle className="w-5 h-5 text-gray-900" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -549,7 +549,7 @@ const WebDevelopment = () => {
             </ScrollSection>
 
             {/* Applications & Career Impact - Combined Section */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-black to-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16"
@@ -557,46 +557,46 @@ const WebDevelopment = () => {
                     >
                         {/* Applications */}
                         <motion.div variants={fadeInLeft}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                                 Real-World Web Applications
                             </h2>
                             <motion.div className="space-y-6" variants={staggerContainer}>
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <Monitor className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">Progressive Web Apps</h3>
+                                        <Monitor className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">Progressive Web Apps</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Build app-like experiences that work offline, load instantly, and engage users with push notifications
                                     </p>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <Globe className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">E-Commerce Platforms</h3>
+                                        <Globe className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">E-Commerce Platforms</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Create powerful online stores with secure payment processing, inventory management, and customer analytics
                                     </p>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <Users className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">Social Networks</h3>
+                                        <Users className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">Social Networks</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Develop engaging social platforms with real-time messaging, content sharing, and community features
                                     </p>
                                 </motion.div>
 
-                                <motion.div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
+                                <motion.div className="bg-gray-50/50 p-6 rounded-xl border border-gray-700" variants={fadeInUp}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <Zap className="w-6 h-6 text-white" />
-                                        <h3 className="text-xl font-bold text-white">SaaS Solutions</h3>
+                                        <Zap className="w-6 h-6 text-gray-900" />
+                                        <h3 className="text-xl font-bold text-gray-900">SaaS Solutions</h3>
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p className="text-black">
                                         Build scalable software-as-a-service applications with subscription billing and multi-tenant architecture
                                     </p>
                                 </motion.div>
@@ -605,17 +605,17 @@ const WebDevelopment = () => {
 
                         {/* Career Impact */}
                         <motion.div variants={fadeInRight}>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                                 Career Transformation
                             </h2>
                             <motion.div className="space-y-6" variants={staggerContainer}>
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <Code className="w-6 h-6 text-white" />
+                                        <Code className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Build Real Projects</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Build Real Projects</h3>
+                                        <p className="text-black">
                                             Create portfolio-worthy projects including e-commerce sites, social media platforms, and business applications
                                         </p>
                                     </div>
@@ -623,11 +623,11 @@ const WebDevelopment = () => {
 
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <Award className="w-6 h-6 text-white" />
+                                        <Award className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Get Certified</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Get Certified</h3>
+                                        <p className="text-black">
                                             Earn industry-recognized certificates that validate your skills and boost your employability
                                         </p>
                                     </div>
@@ -635,18 +635,18 @@ const WebDevelopment = () => {
 
                                 <motion.div className="flex items-start gap-4" variants={fadeInUp}>
                                     <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <Briefcase className="w-6 h-6 text-white" />
+                                        <Briefcase className="w-6 h-6 text-gray-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Land Your Dream Job</h3>
-                                        <p className="text-gray-400">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Land Your Dream Job</h3>
+                                        <p className="text-black">
                                             Access our job placement program and connect with top tech companies looking for skilled developers
                                         </p>
                                     </div>
                                 </motion.div>
 
                                 <motion.div className="mt-8" variants={scaleIn}>
-                                    <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 w-full">
+                                    <button className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-gray-500/50 transform hover:scale-105 w-full">
                                         Start Your Web Development Journey
                                     </button>
                                 </motion.div>
@@ -657,16 +657,16 @@ const WebDevelopment = () => {
             </ScrollSection>
 
             {/* Learning Methodology Section */}
-            <ScrollSection className="py-20 bg-gray-900">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Our Web Development Learning Approach
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             Experience a revolutionary approach to learning web development through our proven methodology
                         </p>
                     </motion.div>
@@ -676,41 +676,41 @@ const WebDevelopment = () => {
                         variants={staggerContainer}
                     >
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Target className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <Target className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Project-Based Learning</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Project-Based Learning</h3>
+                            <p className="text-black leading-relaxed">
                                 Build 20+ real-world projects including e-commerce platforms, social networks, and enterprise applications
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Users className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <Users className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Mentor-Led Training</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Mentor-Led Training</h3>
+                            <p className="text-black leading-relaxed">
                                 Get personalized guidance from industry experts with 10+ years of experience through 1-on-1 sessions
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Terminal className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <Terminal className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Hands-On Coding</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Hands-On Coding</h3>
+                            <p className="text-black leading-relaxed">
                                 Spend 80% of your time writing actual code in our cloud-based IDE with instant feedback and testing
                             </p>
                         </motion.div>
 
                         <motion.div className="text-center group" variants={scaleIn}>
-                            <div className="w-20 h-20 bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Rocket className="w-10 h-10 text-white" />
+                            <div className="w-20 h-20 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <Rocket className="w-10 h-10 text-gray-900" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Career Acceleration</h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Career Acceleration</h3>
+                            <p className="text-black leading-relaxed">
                                 Access our exclusive job network, participate in hackathons, and get guaranteed interview opportunities
                             </p>
                         </motion.div>
@@ -720,13 +720,13 @@ const WebDevelopment = () => {
 
             
             {/* Final CTA Section */}
-            <ScrollSection className="py-20 bg-gradient-to-b from-gray-900 to-black">
+            <ScrollSection className="py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div variants={fadeInUp}>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                             Ready to Start Your Web Development Journey?
                         </h2>
-                        <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                        <p className="text-xl text-black mb-8 max-w-3xl mx-auto">
                             Join thousands of successful developers who started their careers with our comprehensive web development course. Your future in tech starts here!
                         </p>
                         <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={staggerContainer}>
@@ -735,24 +735,24 @@ const WebDevelopment = () => {
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 variants={scaleIn} 
-                                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 cursor-pointer inline-block"
+                                className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-gray-500/50 transform hover:scale-105 cursor-pointer inline-block"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Enroll Now - Save 20%
+                                Enroll Now
                             </motion.a>
                         </motion.div>
-                        <motion.div className="mt-8 flex items-center justify-center gap-6 text-gray-400" variants={staggerContainer}>
+                        <motion.div className="mt-8 flex items-center justify-center gap-6 text-black" variants={staggerContainer}>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <Clock className="w-5 h-5 text-white" />
+                                <Clock className="w-5 h-5 text-gray-900" />
                                 <span>Limited Time Offer</span>
                             </motion.div>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <Users className="w-5 h-5 text-white" />
+                                <Users className="w-5 h-5 text-gray-900" />
                                 <span>5000+ Students Enrolled</span>
                             </motion.div>
                             <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                                <Award className="w-5 h-5 text-white" />
+                                <Award className="w-5 h-5 text-gray-900" />
                                 <span>Industry Recognized</span>
                             </motion.div>
                         </motion.div>

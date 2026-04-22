@@ -1,26 +1,18 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
-import StatsSection from '../components/StatsSection';
-import FeaturesSection from '../components/FeaturesSection';
-import CoursesSection from '../components/CoursesSection';
-import TestimonialsSection from '../components/TestimonialsSection';
-import CTASection from '../components/CTASection';
-import LearningPathSection from '../components/LearningPathSection';
-import TechnologiesSection from '../components/TechnologiesSection';
-import FAQSection from '../components/FAQSection';
+import PartnersSection from '../components/PartnersSection';
+import OurAlumnies from '../components/ouralumnies';
+import Ourinstitutionalpartners from '../components/Ourinstitutionalpartners';
+import Feedback from '../components/Feedback';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-slate-900" style={{ fontFamily: 'Arial, sans-serif' }}>
+    <div className="min-h-screen bg-white" style={{ fontFamily: 'Arial, sans-serif' }}>
       <Carousel />
-      <StatsSection />
-      <FeaturesSection />
-      <CoursesSection />
-      <TestimonialsSection />
-      {/* <CTASection /> */}
-      <LearningPathSection />
-      <TechnologiesSection />
-      <FAQSection />
+      <PartnersSection />
+      <OurAlumnies />
+      <Ourinstitutionalpartners />
+      <Feedback />
     </div>
   );
 };

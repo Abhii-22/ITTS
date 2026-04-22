@@ -198,37 +198,37 @@ const About = () => {
       icon: Heart,
       title: "Student First",
       description: "Every decision is made with our students' success in mind",
-      color: "red"
+      detailedContent: "We prioritize student needs above all else, ensuring personalized learning paths, dedicated mentorship, and comprehensive support systems. Our success is measured by the achievements and career growth of our students."
     },
     {
       icon: Lightbulb,
       title: "Innovation",
       description: "Continuously evolving our methods and curriculum",
-      color: "yellow"
+      detailedContent: "We embrace cutting-edge technologies and teaching methodologies to create dynamic, engaging learning experiences. Our curriculum is constantly updated to reflect industry trends and emerging technologies."
     },
     {
       icon: Shield,
       title: "Quality",
       description: "Excellence in everything we do, no compromises",
-      color: "blue"
+      detailedContent: "We maintain the highest standards in education delivery, instructor expertise, and student outcomes. Every course, resource, and interaction is designed to deliver exceptional value and measurable results."
     },
     {
       icon: Handshake,
       title: "Integrity",
       description: "Building trust through transparency and accountability",
-      color: "green"
+      detailedContent: "We operate with complete transparency in our processes, pricing, and promises. Our accountability ensures we take ownership of our commitments and continuously improve based on feedback."
     },
     {
       icon: Globe,
       title: "Inclusivity",
       description: "Creating opportunities for everyone, everywhere",
-      color: "purple"
+      detailedContent: "We believe education should be accessible to all regardless of background, location, or circumstances. Our programs are designed to accommodate diverse learning styles and provide equal opportunities for success."
     },
     {
       icon: Zap,
       title: "Agility",
       description: "Adapting quickly to industry changes and needs",
-      color: "orange"
+      detailedContent: "We respond rapidly to evolving industry demands and technological advancements. Our flexible approach allows us to pivot quickly and ensure our students always learn the most relevant, in-demand skills."
     }
   ];
 
@@ -341,53 +341,58 @@ const About = () => {
     );
 
     const timelineItems = timelineRef.current?.querySelectorAll('[data-timeline-item]');
-    timelineItems?.forEach((item) => observer.observe(item));
+    timelineItems.forEach((item) => {
+      observer.observe(item);
+    });
 
-    return () => observer.disconnect();
+    return () => {
+      timelineItems.forEach((item) => {
+        observer.unobserve(item);
+      });
+    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-slat5e-900 via-blue-900/20 to-slate-900"></div>
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-gray-50 to-gray-50 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
             alt="Education background"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-30"
           />
         </div>
         
-        <div className="relative z-10 container mx-auto max-w-7xl text-center">
+        <div className="relative z-10 container mx-auto max-w-7xl text-center px-4">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
           >
-            <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-blue-400 font-semibold text-sm">About ITTS</span>
-            </div>
+           
           </motion.div>
           
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 leading-tight"
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
           >
             Transforming Lives Through
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Technology Education</span>
+            <br />
+            <span className="text-gray-700">Technology Education</span>
           </motion.h1>
           
           <motion.p
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8"
+            className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12 font-medium"
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
           >
-            We're on a mission to make world-class tech education accessible to everyone, 
-            everywhere. Join 50,000+ students building their dream careers.
+            We're on a mission to democratize world-class tech education and empower individuals 
+            from all backgrounds to build successful careers in the digital economy. 
+            <span className="font-bold text-gray-700"> Join 50,000+ students</span> already transforming their futures.
           </motion.p>
           
           <motion.div
@@ -397,17 +402,14 @@ const About = () => {
             variants={staggerContainer}
           >
             <motion.button
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold transition-all hover:scale-105 flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                const footer = document.querySelector('footer');
-                if (footer) {
-                  footer.scrollIntoView({ behavior: 'smooth' });
-                }
+                window.location.href = '/contact';
               }}
             >
-              Start Your Journey <Rocket className="w-5 h-5" />
+              Start Your Journey
             </motion.button>
           </motion.div>
         </div>
@@ -417,13 +419,13 @@ const About = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
-          <ChevronDown className="w-6 h-6 text-blue-400" />
+          <ChevronDown className="w-6 h-6 text-blue-600" />
         </motion.div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 sm:py-20 md:py-24 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
             variants={staggerContainer}
@@ -439,16 +441,16 @@ const About = () => {
                   className="text-center group"
                   variants={fadeInUp}
                 >
-                  <div className="inline-flex p-4 bg-slate-900 border border-slate-700 rounded-full mb-4 group-hover:bg-blue-500/20 group-hover:border-blue-400 transition-all">
-                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-blue-400" />
+                  <div className="inline-flex p-4 bg-white border border-gray-300 rounded-full mb-4 group-hover:bg-gray-50 group-hover:border-gray-400 transition-all shadow-sm">
+                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-gray-600" />
                   </div>
                   <div 
-                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors"
+                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors"
                     data-stat-index={index}
                   >
                     {countedStats[index] ? stat.value : '0'}
                   </div>
-                  <div className="text-gray-400 font-medium">{stat.label}</div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -457,8 +459,8 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
             initial="hidden"
@@ -466,8 +468,8 @@ const About = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Our Purpose</h2>
-            <p className="text-lg md:text-xl text-gray-400">Driving change through education and innovation</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Purpose</h2>
+            <p className="text-lg md:text-xl text-gray-600">Driving change through education and innovation</p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -480,14 +482,10 @@ const About = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={idx === 0 ? slideInLeft : slideInRight}
-                  className={`group relative overflow-hidden rounded-3xl border-2 transition-all duration-500 ${
-                    item.id === 'mission' 
-                      ? 'border-blue-500 bg-gradient-to-br from-slate-800 via-blue-900/20 to-slate-800 shadow-2xl shadow-blue-500/20' 
-                      : 'border-cyan-500 bg-gradient-to-br from-slate-800 via-cyan-900/20 to-slate-800 shadow-2xl shadow-cyan-500/20'
-                  } hover:scale-105`}
+                  className={`group relative overflow-hidden rounded-3xl border-2 transition-all duration-500 bg-gray-100 border-gray-300 shadow-lg hover:scale-105`}
                 >
-                  {/* Animated background gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${item.id === 'mission' ? 'from-blue-600/10 via-cyan-500/5 to-blue-600/10' : 'from-cyan-600/10 via-teal-500/5 to-cyan-600/10'} opacity-50 transition-opacity duration-500`}></div>
+                  {/* Background gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-gray-50/30 to-gray-100/50 opacity-50 transition-opacity duration-500"></div>
                   
                   {/* Background image with overlay */}
                   <div className="absolute inset-0">
@@ -496,56 +494,46 @@ const About = () => {
                       alt={item.title}
                       className="w-full h-full object-cover opacity-10 transition-opacity duration-500"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${item.id === 'mission' ? 'from-blue-900/20 to-transparent' : 'from-cyan-900/20 to-transparent'} opacity-50 transition-opacity duration-500`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-t from-gray-200/20 to-transparent opacity-50 transition-opacity duration-500`}></div>
                   </div>
                   
                   {/* Floating orbs decoration */}
-                  <div className={`absolute top-4 right-4 w-20 h-20 ${item.id === 'mission' ? 'bg-blue-500/10' : 'bg-cyan-500/10'} rounded-full blur-xl transition-colors duration-500`}></div>
-                  <div className={`absolute bottom-4 left-4 w-16 h-16 ${item.id === 'mission' ? 'bg-cyan-500/10' : 'bg-cyan-500/10'} rounded-full blur-lg transition-colors duration-500`}></div>
+                  <div className="absolute top-4 right-4 w-20 h-20 bg-gray-200/30 rounded-full blur-xl transition-colors duration-500"></div>
+                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-gray-200/30 rounded-full blur-lg transition-colors duration-500"></div>
                   
                   <div className="relative p-8 md:p-10">
                     {/* Icon and title section */}
                     <div className="flex items-center gap-4 mb-6">
-                      <div className={`relative p-4 rounded-2xl border-2 transition-all duration-500 ${
-                        item.id === 'mission' 
-                          ? 'bg-blue-500/20 border-blue-400 group-hover:bg-blue-500/30 group-hover:border-blue-300 group-hover:scale-110' 
-                          : 'bg-cyan-500/20 border-cyan-400 group-hover:bg-cyan-500/30 group-hover:border-cyan-300 group-hover:scale-110'
-                      }`}>
-                        <Icon className={`w-6 h-6 md:w-8 md:h-8 ${item.id === 'mission' ? 'text-blue-300' : 'text-cyan-300'}`} />
+                      <div className="relative p-4 rounded-2xl border-2 transition-all duration-500 bg-gray-100 border-gray-300 group-hover:bg-gray-200 group-hover:border-gray-400 group-hover:scale-110">
+                        <Icon className="w-6 h-6 md:w-8 md:h-8 text-gray-700" />
                         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-blue-300 transition-colors duration-300">
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 group-hover:text-gray-700 transition-colors duration-300">
                           {item.title}
                         </h3>
-                        <div className={`h-1 w-16 rounded-full transition-all duration-500 ${
-                          item.id === 'mission' ? 'bg-blue-400' : 'bg-cyan-400'
-                        } opacity-100`}></div>
+                        <div className="h-1 w-16 rounded-full transition-all duration-500 bg-gray-400 opacity-100"></div>
                       </div>
                     </div>
                     
                     {/* Main content */}
-                    <p className="text-gray-200 mb-6 leading-relaxed text-lg group-hover:text-gray-100 transition-colors duration-300">
+                    <p className="text-gray-700 mb-6 leading-relaxed text-lg group-hover:text-gray-800 transition-colors duration-300">
                       {item.content}
                     </p>
                     
                     {/* Always visible details section */}
-                    <div className="pt-6 border-t border-slate-700/50">
-                      <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
-                        <Sparkles className="w-4 h-4 text-blue-400" />
+                    <div className="pt-6 border-t border-gray-300/50">
+                      <h4 className="text-gray-900 font-semibold mb-4 flex items-center gap-2">
+                        <Sparkles className="w-4 h-4 text-gray-600" />
                         Key Focus Areas
                       </h4>
                       <ul className="space-y-3">
                         {item.details.map((detail, index) => (
                           <li key={index} className="flex items-start gap-3 group/item">
-                            <div className={`mt-1 p-1 rounded-full transition-all duration-300 ${
-                              item.id === 'mission' 
-                                ? 'bg-blue-500/30 group-hover/item:bg-blue-500/40' 
-                                : 'bg-cyan-500/30 group-hover/item:bg-cyan-500/40'
-                            }`}>
-                              <CheckCircle className={`w-4 h-4 ${item.id === 'mission' ? 'text-blue-300' : 'text-cyan-300'}`} />
+                            <div className="mt-1 p-1 rounded-full transition-all duration-300 bg-gray-100 group-hover/item:bg-gray-200">
+                              <CheckCircle className="w-4 h-4 text-gray-600" />
                             </div>
-                            <span className="text-gray-200 text-sm leading-relaxed group-hover/item:text-gray-100 transition-colors duration-300">
+                            <span className="text-gray-700 text-sm leading-relaxed group-hover/item:text-gray-800 transition-colors duration-300">
                               {detail}
                             </span>
                           </li>
@@ -560,26 +548,23 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-16 sm:py-20 md:py-24 bg-black border-t border-slate-700 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      {/* Our Story Section */}
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-blue-400 font-semibold text-sm">Our Journey</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Our Story</h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">From a small classroom to transforming thousands of careers through technology education</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Story</h2>
+            <p className="text-lg md:text-xl text-gray-600">From a classroom to global impact</p>
           </motion.div>
 
           {/* Story Hero */}
           <motion.div 
-            className="relative rounded-3xl overflow-hidden mb-16 border border-slate-700 shadow-2xl"
+            className="relative rounded-3xl overflow-hidden mb-16 border border-gray-300 shadow-lg"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -591,22 +576,22 @@ const About = () => {
                 alt="Our journey"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{story.hero.title}</h3>
-                <p className="text-gray-300 mb-6 max-w-2xl text-lg">{story.hero.subtitle}</p>
+                <p className="text-gray-100 mb-6 max-w-2xl text-lg">{story.hero.subtitle}</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {story.hero.stats.map((stat, index) => (
                     <motion.div 
                       key={index} 
-                      className="text-center bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-600/50"
+                      className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-300 shadow-sm"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">{stat.value}</div>
-                      <div className="text-sm text-gray-400">{stat.label}</div>
+                      <div className="text-2xl md:text-3xl font-bold text-gray-600 mb-1">{stat.value}</div>
+                      <div className="text-sm text-gray-600">{stat.label}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -615,10 +600,16 @@ const About = () => {
           </motion.div>
 
           {/* Enhanced Timeline */}
-          <div ref={timelineRef} className="relative max-w-6xl mx-auto" data-timeline>
-            {/* Enhanced vertical line with glow effect */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 via-purple-500 to-cyan-400 opacity-50"></div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-400 to-cyan-300 shadow-lg shadow-blue-500/50"></div>
+          <div ref={timelineRef} className="relative max-w-7xl mx-auto" data-timeline>
+            {/* Enhanced vertical line with gray/white gradient */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-2 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-300 opacity-80 rounded-full shadow-lg shadow-gray-300/30">
+              <div className="absolute inset-0 bg-gradient-to-b from-gray-200 via-gray-100 to-gray-200 rounded-full animate-pulse"></div>
+            </div>
+            
+            {/* Progress indicator line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5 bg-gradient-to-b from-gray-400 to-gray-500 rounded-full transition-all duration-1000 ease-out" 
+                 style={{ height: `${(visibleTimelineItems.size / story.timeline.length) * 100}%` }}>
+            </div>
             
             {story.timeline.map((event, index) => (
               <motion.div 
@@ -631,76 +622,92 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                {/* Enhanced center dot with glow */}
+                {/* Enhanced center dot with multiple glow layers */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 z-20">
                   <div className="relative">
-                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-slate-800 shadow-xl shadow-blue-500/50">
-                      <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse"></div>
+                    {/* Outer glow ring */}
+                    <div className="absolute inset-0 w-12 h-12 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full blur-xl opacity-40 animate-pulse"></div>
+                    {/* Middle glow ring */}
+                    <div className="absolute inset-0 w-10 h-10 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full blur-lg opacity-60 animate-ping"></div>
+                    {/* Core dot */}
+                    <div className="relative w-10 h-10 bg-gradient-to-r from-gray-500 to-gray-600 rounded-full border-4 border-white shadow-2xl shadow-gray-400/50 flex items-center justify-center">
+                      <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
                     </div>
-                    <div className="absolute inset-0 w-8 h-8 bg-blue-400 rounded-full blur-xl opacity-50 animate-ping"></div>
+                    {/* Rotating ring */}
+                    <div className="absolute inset-0 w-10 h-10 border-2 border-gray-300 rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
                   </div>
                 </div>
                 
                 {/* Enhanced Content Card */}
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'ml-auto pl-12'}`}>
+                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'pr-8 lg:pr-16 text-right' : 'ml-auto pl-8 lg:pl-16'}`}>
                   <motion.div 
-                    className={`group relative bg-gradient-to-br ${index % 2 === 0 ? 'from-slate-800/90 to-blue-900/30' : 'from-slate-800/90 to-purple-900/30'} backdrop-blur-xl rounded-3xl border border-slate-700/50 overflow-hidden hover:border-blue-500/70 transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'} max-w-md`}
-                    whileHover={{ y: -5 }}
+                    className={`group relative bg-gradient-to-br ${index % 2 === 0 ? 'from-white via-gray-50 to-blue-50/50' : 'from-white via-gray-50 to-purple-50/50'} backdrop-blur-xl rounded-3xl border-2 ${index % 2 === 0 ? 'border-blue-200 hover:border-blue-400' : 'border-purple-200 hover:border-purple-400'} overflow-hidden transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/20 ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'} max-w-lg`}
+                    whileHover={{ y: -8, rotateY: 2 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     {/* Animated gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${index % 2 === 0 ? 'from-blue-500/10 via-purple-400/10 to-cyan-500/10' : 'from-purple-500/10 via-pink-400/10 to-blue-500/10'} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${index % 2 === 0 ? 'from-blue-500/5 via-purple-400/5 to-cyan-500/5' : 'from-purple-500/5 via-pink-400/5 to-blue-500/5'} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
                     
-                    <div className="relative h-56 overflow-hidden">
+                    {/* Shimmer effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div className="relative h-64 overflow-hidden">
                       <img
                         src={event.image}
                         alt={event.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
                       
-                      {/* Enhanced year badge with glow */}
-                      <div className="absolute top-4 right-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 backdrop-blur-md rounded-full shadow-xl shadow-blue-500/40 group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-white font-bold text-sm">{event.year}</span>
-                      </div>
-                      
-                      {/* Enhanced icon indicator */}
-                      <div className="absolute top-4 left-4 w-12 h-12 bg-slate-800/90 backdrop-blur-sm rounded-xl flex items-center justify-center border border-blue-500/40 group-hover:border-blue-400 group-hover:bg-blue-500/20 transition-all duration-300">
-                        <Calendar className="w-6 h-6 text-blue-400 group-hover:text-blue-300" />
-                      </div>
+
+                      {/* Floating particles */}
+                      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60 group-hover:animate-ping"></div>
+                      <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-purple-400 rounded-full opacity-40 group-hover:animate-ping" style={{ animationDelay: '0.5s' }}></div>
                     </div>
                     
-                    <div className="p-6 relative">
+                    <div className="p-8 relative">
                       {/* Enhanced title with gradient */}
-                      <h3 className={`text-xl font-bold mb-3 group-hover:scale-105 transition-transform duration-300 ${index % 2 === 0 ? 'text-white group-hover:text-blue-300' : 'text-white group-hover:text-purple-300'}`}>{event.title}</h3>
+                      <h3 className={`text-2xl font-bold mb-4 group-hover:scale-105 transition-transform duration-300 ${index % 2 === 0 ? 'text-gray-900 group-hover:text-blue-600' : 'text-gray-900 group-hover:text-purple-600'}`}>{event.title}</h3>
                       
                       {/* Enhanced description */}
-                      <p className="text-gray-300 mb-4 leading-relaxed text-sm group-hover:text-gray-200 transition-colors duration-300">{event.description}</p>
+                      <p className="text-gray-700 mb-6 leading-relaxed text-base group-hover:text-gray-800 transition-colors duration-300">{event.description}</p>
                       
-                      {/* Enhanced button */}
+                      {/* Enhanced button with better styling */}
                       <motion.button
                         onClick={() => setExpandedStory(expandedStory === index ? null : index)}
-                        className={`inline-flex items-center gap-2 px-4 py-2 ${index % 2 === 0 ? 'bg-blue-500/10 border-blue-500/30 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400' : 'bg-purple-500/10 border-purple-500/30 text-purple-400 hover:bg-purple-500/20 hover:border-purple-400'} rounded-lg font-semibold transition-all duration-300 group-hover:shadow-lg`}
-                        whileHover={{ scale: 1.05 }}
+                        className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-100 to-gray-200 border-gray-300 text-gray-700 hover:from-gray-200 hover:to-gray-300 hover:border-gray-400 rounded-xl font-semibold transition-all duration-300 group-hover:shadow-lg border-2`}
+                        whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        {expandedStory === index ? 'Show less' : 'Learn more'}
+                        {expandedStory === index ? (
+                          <>
+                            <Eye className="w-4 h-4" />
+                            Show less
+                          </>
+                        ) : (
+                          <>
+                            <BookOpen className="w-4 h-4" />
+                            Learn more
+                          </>
+                        )}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${expandedStory === index ? 'rotate-180' : ''}`} />
                       </motion.button>
                       
                       {/* Enhanced expanded content */}
                       {expandedStory === index && (
                         <motion.div 
-                          className="mt-4 pt-4 border-t border-slate-700"
+                          className="mt-6 pt-6 border-t border-gray-300"
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
+                          transition={{ duration: 0.4, ease: 'easeInOut' }}
                         >
-                          <div className={`bg-slate-900/60 backdrop-blur-sm rounded-xl p-4 border ${index % 2 === 0 ? 'border-blue-500/30' : 'border-purple-500/30'}`}>
-                            <p className="text-gray-300 leading-relaxed text-sm mb-3">{event.details}</p>
-                            <div className={`flex items-center gap-2 ${index % 2 === 0 ? 'text-blue-400' : 'text-purple-400'} text-xs`}>
-                              <Sparkles className="w-3 h-3" />
+                          <div className={`bg-gradient-to-br ${index % 2 === 0 ? 'from-blue-50 to-cyan-50' : 'from-purple-50 to-pink-50'} rounded-2xl p-6 border-2 ${index % 2 === 0 ? 'border-blue-200' : 'border-purple-200'} shadow-inner`}>
+                            <p className="text-gray-700 leading-relaxed text-base mb-4">{event.details}</p>
+                            <div className={`flex items-center gap-3 ${index % 2 === 0 ? 'text-blue-600' : 'text-purple-600'} text-sm font-semibold`}>
+                              <Sparkles className="w-4 h-4" />
                               <span>Key milestone in our journey</span>
+                              <div className={`w-2 h-2 rounded-full ${index % 2 === 0 ? 'bg-blue-400' : 'bg-purple-400'} animate-pulse`}></div>
                             </div>
                           </div>
                         </motion.div>
@@ -715,8 +722,8 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
             initial="hidden"
@@ -724,11 +731,11 @@ const About = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-blue-400 font-semibold text-sm">Core Principles</span>
+            <div className="inline-block px-4 py-2 bg-blue-100 border border-blue-300 rounded-full mb-6">
+              <span className="text-blue-700 font-semibold text-sm">Core Principles</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Our Values</h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">The fundamental principles that guide our decisions and shape our culture</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">The fundamental principles that guide our decisions and shape our culture</p>
           </motion.div>
 
           <motion.div 
@@ -753,29 +760,34 @@ const About = () => {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group relative bg-gray-800 rounded-3xl border border-gray-700 hover:border-gray-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-gray-700/20 overflow-hidden"
+                  className="group relative bg-gray-100 rounded-3xl border border-gray-300 hover:border-gray-400 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-gray-300/20 overflow-hidden"
                   whileHover={{ y: -5 }}
                 >
                   <div className="relative p-8">
                     {/* Icon with enhanced design */}
                     <div className="relative mb-6 inline-block">
                       <div className="relative p-4 group-hover:scale-110 transition-all duration-300">
-                        <Icon className="w-8 h-8 text-white" />
+                        <Icon className="w-8 h-8 text-gray-700" />
                       </div>
                     </div>
                     
                     {/* Enhanced title */}
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:scale-105 transition-transform duration-300">
                       {value.title}
                     </h3>
                     
                     {/* Enhanced description */}
-                    <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">
+                    <p className="text-gray-700 leading-relaxed text-lg group-hover:text-gray-800 transition-colors duration-300 mb-4">
                       {value.description}
                     </p>
                     
+                    {/* Additional detailed content */}
+                    <p className="text-gray-600 leading-relaxed text-sm group-hover:text-gray-700 transition-colors duration-300">
+                      {value.detailedContent}
+                    </p>
+                    
                     {/* Decorative bottom line */}
-                    <div className="mt-6 h-1 w-16 rounded-full bg-gray-700 group-hover:bg-gray-500 group-hover:w-24 transition-all duration-500"></div>
+                    <div className="mt-6 h-1 w-16 rounded-full bg-gray-400 group-hover:bg-gray-500 group-hover:w-24 transition-all duration-500"></div>
                   </div>
                 </motion.div>
               );
@@ -786,27 +798,27 @@ const About = () => {
 
       
       {/* Achievements */}
-      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-16 sm:py-20 md:py-24 bg-blue-50">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Achievements & Recognition</h2>
-            <p className="text-lg md:text-xl text-gray-400">Celebrating our milestones and industry recognition</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Achievements & Recognition</h2>
+            <p className="text-lg md:text-xl text-gray-600">Celebrating our milestones and industry recognition</p>
           </div>
 
           <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
             {achievements.map((achievement, index) => {
               const Icon = achievement.icon;
               return (
-                <motion.div key={index} variants={fadeInUp} className="bg-gray-800 p-6 md:p-8 rounded-2xl border border-gray-700 hover:border-gray-600 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-gray-700/20">
+                <motion.div key={index} variants={fadeInUp} className="bg-white p-6 md:p-8 rounded-2xl border border-gray-300 hover:border-gray-400 transition-all hover:scale-105 hover:shadow-lg hover:shadow-gray-300/20">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-gray-900 border border-gray-600 rounded-xl">
-                      <Icon className="w-6 h-6 text-white" />
+                    <div className="p-3 bg-gray-100 border border-gray-300 rounded-xl">
+                      <Icon className="w-6 h-6 text-gray-700" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-1">{achievement.title}</h3>
-                      <p className="text-gray-300 font-semibold mb-2">{achievement.subtitle}</p>
-                      <p className="text-gray-400 mb-3">{achievement.description}</p>
-                      <div className="text-sm font-semibold text-gray-200 bg-gray-900 px-3 py-1 rounded-lg inline-block">
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">{achievement.title}</h3>
+                      <p className="text-gray-700 font-semibold mb-2">{achievement.subtitle}</p>
+                      <p className="text-gray-600 mb-3">{achievement.description}</p>
+                      <div className="text-sm font-semibold text-gray-700 bg-gray-100 px-3 py-1 rounded-lg inline-block">
                         {achievement.metric}
                       </div>
                     </div>
@@ -818,66 +830,22 @@ const About = () => {
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="py-16 sm:py-20 md:py-24 bg-black border-t border-slate-700 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Our Impact</h2>
-            <p className="text-lg md:text-xl text-gray-400">Numbers that tell our story of transformation</p>
-          </motion.div>
-
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-            {impact.map((item, index) => (
-              <motion.div key={index} variants={fadeInUp} className="text-center bg-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{item.number}</div>
-                <div className="text-xl font-bold text-white mb-1">{item.label}</div>
-                <div className="text-gray-400 text-sm">{item.description}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Contact CTA */}
-      <section className="py-16 sm:py-20 md:py-24 bg-black px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-16 sm:py-20 md:py-24 bg-blue-50">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div className="max-w-3xl mx-auto text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Career?</h2>
-            <p className="text-lg md:text-xl text-gray-400 mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Transform Your Career?</h2>
+            <p className="text-lg md:text-xl text-gray-600 mb-8">
               Join 50,000+ students who have already started their journey to successful tech careers. 
               Your future in technology starts here.
             </p>
             
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <motion.button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all hover:scale-105 flex items-center justify-center gap-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => {
-                const footer = document.querySelector('footer');
-                if (footer) {
-                  footer.scrollIntoView({ behavior: 'smooth' });
-                }
+            <motion.div className="flex justify-center mb-8" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <motion.button className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-bold transition-all hover:scale-105" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => {
+                window.location.href = '/contact';
               }}>
-                Start Learning Today <Rocket className="w-5 h-5" />
+                Start Learning Today
               </motion.button>
-              <motion.button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-bold transition-all" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                Talk to an Advisor
-              </motion.button>
-            </motion.div>
-            
-            <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <motion.div variants={fadeInUp} className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                <Mail className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                <div className="text-white font-semibold">Email Us</div>
-                <div className="text-gray-400 text-sm">hello@itts.com</div>
-              </motion.div>
-              <motion.div variants={fadeInUp} className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                <div className="text-white font-semibold">Call Us</div>
-                <div className="text-gray-400 text-sm">+1 (555) 123-4567</div>
-              </motion.div>
-              <motion.div variants={fadeInUp} className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                <MapPin className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                <div className="text-white font-semibold">Visit Us</div>
-                <div className="text-gray-400 text-sm">Global Campuses</div>
-              </motion.div>
             </motion.div>
           </motion.div>
         </div>

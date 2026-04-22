@@ -3,7 +3,7 @@ import './App.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
+import Contact from './components/Contact';
 import Courses from './pages/Courses';
 import Placement from './pages/Placement';
 import WebDevelopment from './coursespage/WebDevelopment';
