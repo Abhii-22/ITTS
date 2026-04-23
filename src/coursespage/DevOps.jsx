@@ -93,7 +93,7 @@ const DevOps = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white overflow-x-hidden overflow-y-hidden">
+        <div className="min-h-screen bg-white overflow-x-hidden overflow-y-hidden pt-20 md:pt-17">
             {/* Hero Section */}
             <section className="relative h-screen overflow-hidden">
                 {/* Background Image */}
@@ -124,7 +124,7 @@ const DevOps = () => {
                                 href="https://register.medinitechnologies.in/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 cursor-pointer inline-block"
+                                className="bg-gray-500 hover:bg-gray-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-gray-500/50 transform hover:scale-105 cursor-pointer inline-block"
                             >
                                 Enroll Now
                             </a>

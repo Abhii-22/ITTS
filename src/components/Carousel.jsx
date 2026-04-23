@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import homeWebImage from '../assets/images/homeweb.jpeg';
 import homeAimlImage from '../assets/images/homeaiml.jpeg';
 import homeCloudImage from '../assets/images/homecloud.jpeg';
 
 const Carousel = () => {
+    const navigate = useNavigate();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [touchStart, setTouchStart] = useState(0);
@@ -123,7 +125,7 @@ const Carousel = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/40"></div>
                         </div>
-                        <div className="relative z-10 h-full flex items-center justify-center md:justify-start">
+                        <div className="relative z-10 h-full flex items-center justify-center md:justify-start md:pt-24">
                             <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 md:py-0">
                                 <div className="max-w-full sm:max-w-2xl md:max-w-3xl">
                                     <h1
@@ -162,8 +164,8 @@ const Carousel = () => {
                                         className={`transform transition-all duration-1000 delay-700 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                             }`}
                                     >
-                                        <button className="w-full sm:w-auto bg-indigo-400 hover:bg-indigo-500 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-2xl hover:shadow-indigo-400/50 transform hover:scale-105 transition-all duration-300 active:scale-95" onClick={() => {
-                                            window.location.href = '/contact';
+                                        <button className="w-full sm:w-auto bg-gray-500 hover:bg-gray-600 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-2xl hover:shadow-gray-500/50 transform hover:scale-105 transition-all duration-300 active:scale-95" onClick={() => {
+                                            navigate('/contact');
                                         }}>
                                             Start Learning Today
                                         </button>
