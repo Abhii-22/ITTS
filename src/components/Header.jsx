@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logo from '../assets/Medini white  logo.png';
+import ittsLogo from '../assets/ITTS LOGO.png';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -78,8 +79,14 @@ const Header = () => {
                             />
                         </Link>
 
-                        {/* Empty Right Section */}
-                        <div></div>
+                        {/* ITTS Logo */}
+                        <div className="flex items-center pr-15">
+                            <img 
+                                src={ittsLogo} 
+                                alt="ITTS" 
+                                className="h-35 w-auto"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
