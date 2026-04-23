@@ -722,7 +722,7 @@ const DevOps = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Enroll Now - Save 25%
+                                Enroll Now
                             </motion.a>
                         </motion.div>
                         <motion.div className="mt-8 flex items-center justify-center gap-6 text-black" variants={staggerContainer}>
