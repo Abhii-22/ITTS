@@ -119,9 +119,12 @@ const Header = () => {
                                             </Link>
                                         )}
                                         {item.hasDropdown && openDropdown === item.name && (
-                                            <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                                            <div className="absolute top-full left-0 mt-2 w-72 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-2xl border border-gray-200/50 backdrop-blur-sm z-50 overflow-hidden">
                                                 <div className="py-2">
-                                                    {courses.map((course) => (
+                                                    <div className="px-4 py-2 bg-gradient-to-r from-[#214C56] to-[#4A7D7C]">
+                                                        <h3 className="text-white font-semibold text-sm">Our Courses</h3>
+                                                    </div>
+                                                    {courses.map((course, index) => (
                                                         <Link
                                                             key={course.name}
                                                             to={course.path}
@@ -129,9 +132,16 @@ const Header = () => {
                                                                 handleNavClick(e, course.path);
                                                                 setOpenDropdown(null);
                                                             }}
-                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                                                            className={`block px-4 py-3 text-sm font-medium transition-all duration-200 border-b border-gray-100 last:border-b-0
+                                                                ${index % 2 === 0 
+                                                                    ? 'text-gray-700 hover:bg-gradient-to-r hover:from-[#214C56]/10 hover:to-[#4A7D7C]/10 hover:text-[#214C56]' 
+                                                                    : 'text-gray-600 hover:bg-gradient-to-r hover:from-[#4A7D7C]/10 hover:to-[#214C56]/10 hover:text-[#4A7D7C]'
+                                                                } hover:translate-x-1 hover:shadow-sm`}
                                                         >
-                                                            {course.name}
+                                                            <div className="flex items-center justify-between">
+                                                                <span>{course.name}</span>
+                                                                <ChevronDown className="w-3 h-3 text-gray-400 rotate-270" />
+                                                            </div>
                                                         </Link>
                                                     ))}
                                                 </div>
