@@ -40,6 +40,7 @@ const PythonFullstack = () => {
             } 
         }
     };
+4
 
     const fadeInRight = {
         hidden: { opacity: 0, x: 60 },

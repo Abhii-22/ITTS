@@ -355,7 +355,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-gray-50 to-gray-50 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 md:pt-32 bg-gradient-to-br from-gray-50 via-gray-50 to-gray-50 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}

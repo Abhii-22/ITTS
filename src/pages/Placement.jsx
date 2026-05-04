@@ -8,11 +8,17 @@ import {
 } from 'lucide-react';
 
 const Placement = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('companies');
   const [searchTerm, setSearchTerm] = useState('');
   const [filterHiring, setFilterHiring] = useState(false);
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [countedStats, setCountedStats] = useState({});
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -229,66 +235,56 @@ const Placement = () => {
   });
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-white overflow-x-hidden overflow-y-hidden pt-20 md:pt-17">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900"></div>
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="relative h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/src/assets/placement.jpg"
+            alt="Placement Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto max-w-7xl text-center">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fadeInUp}
-          >
-            <div className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-green-400 font-semibold text-sm">CAREER SUCCESS</span>
+
+        {/* Content Overlay */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="text-left px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div className={`mb-6 transform transition-all duration-1000 delay-200 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
+              <Briefcase className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-white" />
             </div>
-          </motion.div>
-          
-          <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight"
-            initial="hidden"
-            animate="visible"
-            variants={fadeInUp}
-          >
-            Placement
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Excellence</span>
-          </motion.h1>
-          
-          <motion.p
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8"
-            initial="hidden"
-            animate="visible"
-            variants={fadeInUp}
-          >
-            Join thousands of successful graduates who landed their dream jobs at top tech companies
-          </motion.p>
-          
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-          >
-          </motion.div>
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight transform transition-all duration-1000 delay-300 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
+              Placement
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Excellence</span>
+            </h1>
+            <p className={`text-lg sm:text-xl md:text-2xl text-white mb-8 max-w-3xl leading-relaxed transform transition-all duration-1000 delay-500 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
+              Join thousands of successful graduates who landed their dream jobs at top tech companies
+            </p>
+            <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-700 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
+              <a 
+                href="https://register.medinitechnologies.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-500 hover:bg-gray-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-gray-500/50 transform hover:scale-105 cursor-pointer inline-block"
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
         </div>
-        
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-        >
-          <ChevronDown className="w-6 h-6 text-blue-400" />
-        </motion.div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 sm:py-20 md:py-24 bg-slate-800 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
@@ -305,16 +301,16 @@ const Placement = () => {
                   className="text-center group"
                   variants={fadeInUp}
                 >
-                  <div className="inline-flex p-4 bg-slate-900 border border-slate-700 rounded-full mb-4 group-hover:bg-blue-500/20 group-hover:border-blue-400 transition-all">
-                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-blue-400" />
+                  <div className="inline-flex p-4 bg-gray-50/50 border border-gray-700 rounded-full mb-4 group-hover:bg-purple-500/20 group-hover:border-purple-500 transition-all">
+                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-gray-900" />
                   </div>
                   <div 
-                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors"
+                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors"
                     data-stat-index={index}
                   >
                     {countedStats[index] ? stat.value : '0'}
                   </div>
-                  <div className="text-gray-400 font-medium">{stat.label}</div>
+                  <div className="text-black font-medium">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -323,7 +319,7 @@ const Placement = () => {
       </section>
 
       {/* Tab Navigation */}
-      <section className="py-16 sm:py-20 bg-slate-900 border-t border-slate-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-white px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-12"
@@ -332,8 +328,8 @@ const Placement = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Explore Opportunities</h2>
-            <p className="text-lg md:text-xl text-gray-400">Discover your path to success</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Explore Opportunities</h2>
+            <p className="text-lg md:text-xl text-black">Discover your path to success</p>
           </motion.div>
 
           <motion.div 
@@ -349,8 +345,8 @@ const Placement = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
                   activeTab === tab
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
-                    : 'bg-slate-800/50 backdrop-blur-sm text-gray-400 hover:text-white border border-slate-700 hover:border-slate-600'
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/30 scale-105'
+                    : 'bg-gray-50/50 text-black hover:text-gray-900 border border-gray-700 hover:border-gray-600'
                 }`}
                 whileHover={{ scale: activeTab === tab ? 1.05 : 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -375,18 +371,18 @@ const Placement = () => {
               {/* Search and Filter */}
               <div className="flex justify-center mb-8 max-w-2xl mx-auto">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-900" />
                   <input
                     type="text"
                     placeholder="Search companies..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl pl-12 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-all"
+                    className="w-full bg-gray-50/50 border border-gray-700 rounded-xl pl-12 pr-4 py-3 text-gray-900 placeholder-gray-900 focus:outline-none focus:border-purple-500 transition-all"
                   />
                   {searchTerm && (
                     <button
                       onClick={() => setSearchTerm('')}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-900 hover:text-gray-900 transition-colors"
                     >
                       <X className="w-5 h-5" />
                     </button>
@@ -398,7 +394,7 @@ const Placement = () => {
                 {filteredCompanies.map((company, idx) => (
                   <motion.div
                     key={idx}
-                    className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer"
+                    className="group relative bg-gray-50/50 rounded-2xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -414,7 +410,7 @@ const Placement = () => {
                         />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
                           {company.name}
                         </h3>
                       </div>
@@ -430,8 +426,8 @@ const Placement = () => {
                   whileInView={{ opacity: 1 }}
                 >
                   <Building2 className="w-20 h-20 text-gray-600 mx-auto mb-4" />
-                  <p className="text-gray-400 text-lg mb-2">No companies found</p>
-                  <p className="text-gray-500 text-sm">Try adjusting your search criteria</p>
+                  <p className="text-black text-lg mb-2">No companies found</p>
+                  <p className="text-gray-900 text-sm">Try adjusting your search criteria</p>
                 </motion.div>
               )}
             </motion.div>
@@ -450,22 +446,22 @@ const Placement = () => {
                   return (
                     <motion.div
                       key={idx}
-                      className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20"
+                      className="group relative bg-gray-50/50 rounded-2xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20"
                       variants={fadeInUp}
                       whileHover={{ y: -5 }}
                     >
-                      <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
+                      <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
                         {item.step}
                       </div>
                       <div className="w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                        <Icon className="w-7 h-7 text-white" />
+                        <Icon className="w-7 h-7 text-gray-900" />
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed mb-3">{item.description}</p>
-                      <p className="text-gray-500 text-xs italic">{item.details}</p>
-                      <CheckCircle className="w-5 h-5 text-green-400 absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <p className="text-black text-sm leading-relaxed mb-3">{item.description}</p>
+                      <p className="text-gray-900 text-xs italic">{item.details}</p>
+                      <CheckCircle className="w-5 h-5 text-green-600 absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </motion.div>
                   );
                 })}
@@ -473,12 +469,12 @@ const Placement = () => {
 
               {/* Process Timeline */}
               <motion.div 
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 shadow-2xl"
+                className="bg-gray-50 rounded-2xl max-w-4xl w-full p-8 border border-gray-700 shadow-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Your Journey Timeline</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Your Journey Timeline</h3>
                 <div className="flex items-center justify-between max-w-4xl mx-auto">
                   {placementProcess.slice(0, 6).map((item, idx) => (
                     <React.Fragment key={idx}>
@@ -489,13 +485,13 @@ const Placement = () => {
                         viewport={{ once: true }}
                         transition={{ delay: idx * 0.1 }}
                       >
-                        <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
                           {item.step}
                         </div>
-                        <p className="text-xs text-gray-400 mt-2 text-center max-w-[80px]">{item.title}</p>
+                        <p className="text-xs text-black mt-2 text-center max-w-[80px]">{item.title}</p>
                       </motion.div>
                       {idx < 5 && (
-                        <div className="flex-1 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-2"></div>
+                        <div className="flex-1 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-2"></div>
                       )}
                     </React.Fragment>
                   ))}
@@ -517,17 +513,17 @@ const Placement = () => {
                   return (
                     <motion.div
                       key={idx}
-                      className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20"
+                      className="group relative bg-gray-50/50 rounded-2xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20"
                       variants={fadeInUp}
                       whileHover={{ y: -5 }}
                     >
                       <div className="w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                        <Icon className="w-7 h-7 text-white" />
+                        <Icon className="w-7 h-7 text-gray-900" />
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+                      <p className="text-black text-sm leading-relaxed">{feature.description}</p>
                     </motion.div>
                   );
                 })}
@@ -540,14 +536,14 @@ const Placement = () => {
       {/* Company Modal */}
       {selectedCompany && (
         <motion.div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setSelectedCompany(null)}
         >
           <motion.div 
-            className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl max-w-2xl w-full p-8 border border-slate-700 shadow-2xl"
+            className="bg-gray-50 rounded-2xl max-w-2xl w-full p-8 border border-gray-700 shadow-2xl"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
@@ -563,36 +559,36 @@ const Placement = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">{selectedCompany.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">{selectedCompany.name}</h3>
                 </div>
               </div>
               <button 
                 onClick={() => setSelectedCompany(null)} 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-900 hover:text-gray-900 transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
             <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-slate-800/50 rounded-xl p-4">
-                <p className="text-gray-400 text-sm mb-1">Open Positions</p>
-                <p className="text-white text-2xl font-bold">{selectedCompany.positions}</p>
+              <div className="bg-white/50 rounded-xl p-4">
+                <p className="text-black text-sm mb-1">Open Positions</p>
+                <p className="text-gray-900 text-2xl font-bold">{selectedCompany.positions}</p>
               </div>
-              <div className="bg-slate-800/50 rounded-xl p-4">
-                <p className="text-gray-400 text-sm mb-1">Package Range</p>
-                <p className="text-green-400 text-2xl font-bold">{selectedCompany.package}</p>
+              <div className="bg-white/50 rounded-xl p-4">
+                <p className="text-black text-sm mb-1">Package Range</p>
+                <p className="text-green-600 text-2xl font-bold">{selectedCompany.package}</p>
               </div>
             </div>
             <div className="flex gap-3">
               <motion.button 
-                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all"
+                className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 Apply Now
               </motion.button>
               <motion.button 
-                className="flex-1 bg-slate-700 text-white py-3 rounded-xl font-bold hover:bg-slate-600 transition-all"
+                className="flex-1 bg-gray-600 text-white py-3 rounded-xl font-bold hover:bg-gray-700 transition-all"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
