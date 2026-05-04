@@ -92,7 +92,7 @@ const Placement = () => {
     { icon: Users, value: "10,000+", label: "Students Placed" },
     { icon: Building2, value: "500+", label: "Partner Companies" },
     { icon: Award, value: "96%", label: "Success Rate" },
-    { icon: TrendingUp, value: "8.5LPA", label: "Average Package" }
+    { icon: TrendingUp, value: "15LPA", label: "Average Package" }
   ];
 
   const topCompanies = [
