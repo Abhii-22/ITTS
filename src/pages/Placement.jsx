@@ -6,6 +6,7 @@ import {
   Calendar, Zap, Shield, Rocket, Sparkles, Trophy, Phone, Mail,
   Linkedin, Twitter, Filter, Search, X
 } from 'lucide-react';
+import placementImage from '../assets/placement.jpg';
 
 const Placement = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -241,7 +242,7 @@ const Placement = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/src/assets/placement.jpg"
+            src={placementImage}
             alt="Placement Background"
             className="w-full h-full object-cover"
           />
